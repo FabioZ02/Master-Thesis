@@ -1,17 +1,13 @@
-/*
-This class class will containt, following the EasyLocal++ workflow Input & Output classe.
-*/
+#ifndef BT_INPUT_HH
+#define BT_INPUT_HH
 
-#ifndef BT_DATA_HH
-#define BT_DATA_HH
 #include <iostream>
 #include <vector>
-#include <cstdlib>
 #include <string>
 
-using namespace std;
+// -- Strutture dati allineate al JSON --
 
-struct OrderTypes 
+struct OrderType
 {
     unsigned id;
     unsigned target_group_size;
@@ -19,60 +15,77 @@ struct OrderTypes
     unsigned max_group_size;
 };
 
-struct Task 
+struct Order
 {
     unsigned id;
-    unsigned load;
+    unsigned type_id;        // TypeId nel JSON
+    unsigned quantity;       // Quantity nel JSON (era "load", fuorviante)
     unsigned priority;
-    vector<unsigned> compatible_machines;
+    std::vector<unsigned> valid_resource_ids;  // ValidResourceIds nel JSON
 };
 
-struct Machine
+struct Resource
 {
     unsigned id;
 };
 
-struct Objectives
+struct Objective
 {
-    string type;
+    std::string type;
     double weight;
     int priority;
 };
 
 class BT_Input
 {
-        friend ostream& operator<<(ostream& os, const BT_Input& in);
+    friend std::ostream& operator<<(std::ostream& os, const BT_Input& in);
 public:
-        BT_Input(string file_name);
-        
-        // This block defines the periods' filling constraints (ID, S_tar, S_min, S_max) 
-        unsigned OrderTypeId()     const { return order_type_id;     }
-        unsigned TargetGroupSize() const { return target_group_size; }
-        unsigned MinGroupSize()    const { return min_group_size;    }
-        unsigned MaxGroupSize()    const { return max_group_size;    }
+    explicit BT_Input(const std::string& file_name);
 
-        // This block defines the tasks
-        unsigned Tasks()                                             const { return task.size();                 }
-        unsigned Task_ID(unsigned i)                                 const { return task[i].id;                  }
-        unsigned Task_Load(unsigned i)                               const { return task[i].load;                }
-        unsigned Task_Priority(unsigned i)                           const { return task[i].priority;            }
-        const vector<unsigned>& Task_Compatible_Machines(unsigned i) const { return task[i].compatible_machines; }
+    // OrderTypes
+    unsigned OrderTypesCount()                      const { return order_types.size();                    }
+    unsigned OrderType_ID(unsigned i)               const { return order_types[i].id;                     }
+    unsigned OrderType_TargetGroupSize(unsigned i)  const { return order_types[i].target_group_size;      }
+    unsigned OrderType_MinGroupSize(unsigned i)     const { return order_types[i].min_group_size;         }
+    unsigned OrderType_MaxGroupSize(unsigned i)     const { return order_types[i].max_group_size;         }
 
-        // This block defines the machines
-        unsigned Machines()              const { return machine.size(); }
-        unsigned Machine_ID(unsigned i)  const { return machine[i].id;  }
+    // Orders
+    unsigned OrdersCount()                                          const { return orders.size();                         }
+    unsigned Order_ID(unsigned i)                                   const { return orders[i].id;                          }
+    unsigned Order_TypeId(unsigned i)                               const { return orders[i].type_id;                     }
+    unsigned Order_Quantity(unsigned i)                             const { return orders[i].quantity;                    }
+    unsigned Order_Priority(unsigned i)                             const { return orders[i].priority;                    }
+    const std::vector<unsigned>& Order_ValidResourceIds(unsigned i) const { return orders[i].valid_resource_ids;          }
 
-        // Methods for Objectives (Access by index i)
-        unsigned ObjectivesCount()       const { return objective.size();   }
-        string Objective_Type(unsigned i) const { return objective[i].type;   }
-        double Weight(unsigned i)         const { return objective[i].weight; }
-        int Priority(unsigned i)       const { return objective[i].priority; }
-    
+    // Resources
+    unsigned ResourcesCount()             const { return resources.size(); }
+    unsigned Resource_ID(unsigned i)      const { return resources[i].id;  }
+
+    // Objectives
+    unsigned ObjectivesCount()                const { return objectives.size();       }
+    std::string Objective_Type(unsigned i)    const { return objectives[i].type;      }
+    double      Objective_Weight(unsigned i)  const { return objectives[i].weight;    }
+    int         Objective_Priority(unsigned i) const { return objectives[i].priority; }
+
+    // Parametri globali
+    const std::string& RankingMode()  const { return ranking_mode;      }
+    unsigned MaxRunTimeMS()           const { return max_run_time_ms;   }
+
+    // Methods and structures build in the input class to help the solver
+    unsigned ComputebigM()                                  const { return bigM;                 }
+    std::vector<std::vector<bool>> CompatibilityMatrix()    const { return compatibility_matrix; }
+
 private:
-        unsigned order_type_id, target_group_size, min_group_size, max_group_size;
-        vector<Task> task;
-        vector<Machine> machine;
-        vector<Objectives> objective;
+    std::vector<OrderType>  order_types;
+    std::vector<Order>      orders;
+    std::vector<Resource>   resources;
+    std::vector<Objective>  objectives;
+
+    std::string ranking_mode;
+    unsigned    max_run_time_ms = 0;
+
+    unsigned bigM;
+    std::vector<std::vector<bool>> compatibility_matrix;
 };
 
-#endif
+#endif // BT_INPUT_HH
