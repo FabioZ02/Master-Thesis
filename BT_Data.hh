@@ -73,7 +73,7 @@ public:
     // Methods and structures build in the input class to help the solver
     unsigned ComputebigM()                                     const { return bigM;                                        }
     std::vector<std::vector<bool>> CompatibilityMatrix()       const { return compatibility_matrix;                        }
-    bool isCompatible(unsigned order_id, unsigned resource_id) const { return compatibility_matrix[order_id][resource_id]; }
+    bool IsCompatible(unsigned order_id, unsigned resource_id) const { return compatibility_matrix[order_id][resource_id]; }
 
 private:
     std::vector<OrderType>  order_types;
@@ -84,11 +84,11 @@ private:
     std::string ranking_mode;
     unsigned    max_run_time_ms = 0;
 
-    unsigned bigM;
+    unsigned bigM = 0;
     std::vector<std::vector<bool>> compatibility_matrix;
 };
 
-class BT
+class BT_Output
 {
     friend std::ostream& operator<<(std::ostream& os, const BT_Output& out);
     friend std::istream& operator>>(std::istream& is, BT_Output& out);
@@ -98,19 +98,19 @@ public:
     BT_Output& operator=(const BT_Output& out);
 
     void Assign(unsigned t, unsigned r, unsigned period);
-    bool isAssigned(unsigned t)                    const         
+    bool IsAssigned(unsigned t)                    const;         
     unsigned AssignedResource(unsigned t)          const { return assigned_resource[t]; }
     unsigned AssignedPeriod(unsigned t)            const { return assigned_period[t];   }
 
-    unsigned Load(unsigned r, unsigned period) const { return load[r][period]; }
+    unsigned Load(unsigned r, unsigned period)     const { return load[r][period]; }
 
-    void Reset():
+    void Reset();
     void Dump(std::ostream& os) const;
 
 private:
     const BT_Input& in;
-    std::vector<unsigned> assigned_resource; // assigned_resource[t] = r if t is assigned to resource r
-    std::vector<unsigned> assigned_period;   // assigned_period[t] = p if t is assigned to period p
+    std::vector<int> assigned_resource; // assigned_resource[t] = r if t is assigned to resource r
+    std::vector<int> assigned_period;   // assigned_period[t] = p if t is assigned to period p
     std::vector<std::vector<unsigned>> load; // load[r][p] = load of the machine r in period p
 
 
