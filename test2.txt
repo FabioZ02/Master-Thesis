@@ -861,3 +861,866 @@ O413    0  0  0  0  0  0  0  0  0  1
 O414    0  0  0  0  0  1  0  1  0  0
 O415    0  0  0  1  0  0  0  1  0  0
 O416    0  0  0  0  0  0  0  1  0  0
+=== BT_Input Summary ===
+OrderTypes: 1
+  [0] target=207 min=197 max=215
+
+Orders: 417
+  [  0] typeId=1 qty= 24 priority=4
+  [  1] typeId=1 qty= 30 priority=2
+  [  2] typeId=1 qty= 33 priority=1
+  [  3] typeId=1 qty= 29 priority=4
+  [  4] typeId=1 qty= 98 priority=3
+  [  5] typeId=1 qty= 82 priority=3
+  [  6] typeId=1 qty= 71 priority=1
+  [  7] typeId=1 qty= 17 priority=2
+  [  8] typeId=1 qty= 25 priority=4
+  [  9] typeId=1 qty= 50 priority=5
+  [ 10] typeId=1 qty= 30 priority=1
+  [ 11] typeId=1 qty= 36 priority=4
+  [ 12] typeId=1 qty= 90 priority=4
+  [ 13] typeId=1 qty= 65 priority=2
+  [ 14] typeId=1 qty= 16 priority=3
+  [ 15] typeId=1 qty= 63 priority=1
+  [ 16] typeId=1 qty= 89 priority=4
+  [ 17] typeId=1 qty= 20 priority=1
+  [ 18] typeId=1 qty= 17 priority=2
+  [ 19] typeId=1 qty=  7 priority=1
+  [ 20] typeId=1 qty= 18 priority=1
+  [ 21] typeId=1 qty= 20 priority=1
+  [ 22] typeId=1 qty= 49 priority=4
+  [ 23] typeId=1 qty=  9 priority=3
+  [ 24] typeId=1 qty= 42 priority=2
+  [ 25] typeId=1 qty= 49 priority=4
+  [ 26] typeId=1 qty= 17 priority=3
+  [ 27] typeId=1 qty=  6 priority=4
+  [ 28] typeId=1 qty= 40 priority=1
+  [ 29] typeId=1 qty= 83 priority=1
+  [ 30] typeId=1 qty=  6 priority=3
+  [ 31] typeId=1 qty= 44 priority=1
+  [ 32] typeId=1 qty= 16 priority=5
+  [ 33] typeId=1 qty= 24 priority=4
+  [ 34] typeId=1 qty= 25 priority=3
+  [ 35] typeId=1 qty= 62 priority=4
+  [ 36] typeId=1 qty= 36 priority=5
+  [ 37] typeId=1 qty= 30 priority=2
+  [ 38] typeId=1 qty= 85 priority=4
+  [ 39] typeId=1 qty= 75 priority=3
+  [ 40] typeId=1 qty= 49 priority=4
+  [ 41] typeId=1 qty= 49 priority=3
+  [ 42] typeId=1 qty= 54 priority=3
+  [ 43] typeId=1 qty= 62 priority=3
+  [ 44] typeId=1 qty= 82 priority=5
+  [ 45] typeId=1 qty= 71 priority=3
+  [ 46] typeId=1 qty= 22 priority=1
+  [ 47] typeId=1 qty= 91 priority=3
+  [ 48] typeId=1 qty= 32 priority=5
+  [ 49] typeId=1 qty=  3 priority=3
+  [ 50] typeId=1 qty= 16 priority=5
+  [ 51] typeId=1 qty= 16 priority=3
+  [ 52] typeId=1 qty= 43 priority=5
+  [ 53] typeId=1 qty= 93 priority=5
+  [ 54] typeId=1 qty= 57 priority=2
+  [ 55] typeId=1 qty= 15 priority=5
+  [ 56] typeId=1 qty= 30 priority=4
+  [ 57] typeId=1 qty= 64 priority=2
+  [ 58] typeId=1 qty= 78 priority=4
+  [ 59] typeId=1 qty= 72 priority=4
+  [ 60] typeId=1 qty= 21 priority=2
+  [ 61] typeId=1 qty= 10 priority=2
+  [ 62] typeId=1 qty= 49 priority=2
+  [ 63] typeId=1 qty= 94 priority=1
+  [ 64] typeId=1 qty= 43 priority=4
+  [ 65] typeId=1 qty= 43 priority=3
+  [ 66] typeId=1 qty= 52 priority=1
+  [ 67] typeId=1 qty=  7 priority=5
+  [ 68] typeId=1 qty= 95 priority=4
+  [ 69] typeId=1 qty= 21 priority=5
+  [ 70] typeId=1 qty= 52 priority=5
+  [ 71] typeId=1 qty= 80 priority=1
+  [ 72] typeId=1 qty= 75 priority=3
+  [ 73] typeId=1 qty= 72 priority=2
+  [ 74] typeId=1 qty= 20 priority=3
+  [ 75] typeId=1 qty= 13 priority=2
+  [ 76] typeId=1 qty= 18 priority=5
+  [ 77] typeId=1 qty= 35 priority=3
+  [ 78] typeId=1 qty= 99 priority=1
+  [ 79] typeId=1 qty= 75 priority=3
+  [ 80] typeId=1 qty= 52 priority=1
+  [ 81] typeId=1 qty= 87 priority=4
+  [ 82] typeId=1 qty= 87 priority=5
+  [ 83] typeId=1 qty= 64 priority=4
+  [ 84] typeId=1 qty=  1 priority=4
+  [ 85] typeId=1 qty= 43 priority=3
+  [ 86] typeId=1 qty= 32 priority=4
+  [ 87] typeId=1 qty= 97 priority=5
+  [ 88] typeId=1 qty= 77 priority=2
+  [ 89] typeId=1 qty=  6 priority=3
+  [ 90] typeId=1 qty= 91 priority=2
+  [ 91] typeId=1 qty= 88 priority=3
+  [ 92] typeId=1 qty= 66 priority=2
+  [ 93] typeId=1 qty= 81 priority=2
+  [ 94] typeId=1 qty= 15 priority=5
+  [ 95] typeId=1 qty= 77 priority=2
+  [ 96] typeId=1 qty= 83 priority=4
+  [ 97] typeId=1 qty= 10 priority=5
+  [ 98] typeId=1 qty= 86 priority=4
+  [ 99] typeId=1 qty= 15 priority=4
+  [100] typeId=1 qty= 35 priority=1
+  [101] typeId=1 qty= 43 priority=5
+  [102] typeId=1 qty=  7 priority=5
+  [103] typeId=1 qty= 25 priority=4
+  [104] typeId=1 qty=100 priority=4
+  [105] typeId=1 qty= 27 priority=5
+  [106] typeId=1 qty= 21 priority=5
+  [107] typeId=1 qty= 54 priority=1
+  [108] typeId=1 qty=  8 priority=5
+  [109] typeId=1 qty= 71 priority=4
+  [110] typeId=1 qty= 31 priority=5
+  [111] typeId=1 qty= 77 priority=4
+  [112] typeId=1 qty= 42 priority=1
+  [113] typeId=1 qty= 49 priority=3
+  [114] typeId=1 qty= 17 priority=4
+  [115] typeId=1 qty= 78 priority=2
+  [116] typeId=1 qty= 12 priority=2
+  [117] typeId=1 qty= 43 priority=4
+  [118] typeId=1 qty= 31 priority=3
+  [119] typeId=1 qty= 27 priority=4
+  [120] typeId=1 qty= 41 priority=1
+  [121] typeId=1 qty= 86 priority=3
+  [122] typeId=1 qty= 96 priority=5
+  [123] typeId=1 qty= 32 priority=1
+  [124] typeId=1 qty=  7 priority=2
+  [125] typeId=1 qty= 82 priority=3
+  [126] typeId=1 qty=  1 priority=1
+  [127] typeId=1 qty= 32 priority=3
+  [128] typeId=1 qty= 15 priority=3
+  [129] typeId=1 qty= 86 priority=3
+  [130] typeId=1 qty= 80 priority=5
+  [131] typeId=1 qty= 29 priority=4
+  [132] typeId=1 qty= 88 priority=1
+  [133] typeId=1 qty= 52 priority=4
+  [134] typeId=1 qty= 44 priority=5
+  [135] typeId=1 qty= 11 priority=5
+  [136] typeId=1 qty=  8 priority=1
+  [137] typeId=1 qty= 12 priority=5
+  [138] typeId=1 qty=  8 priority=3
+  [139] typeId=1 qty= 75 priority=5
+  [140] typeId=1 qty= 82 priority=2
+  [141] typeId=1 qty= 25 priority=4
+  [142] typeId=1 qty= 32 priority=5
+  [143] typeId=1 qty= 24 priority=2
+  [144] typeId=1 qty= 70 priority=5
+  [145] typeId=1 qty= 26 priority=5
+  [146] typeId=1 qty= 68 priority=4
+  [147] typeId=1 qty= 43 priority=4
+  [148] typeId=1 qty= 92 priority=1
+  [149] typeId=1 qty= 45 priority=2
+  [150] typeId=1 qty= 24 priority=5
+  [151] typeId=1 qty= 25 priority=1
+  [152] typeId=1 qty= 11 priority=1
+  [153] typeId=1 qty= 28 priority=4
+  [154] typeId=1 qty= 15 priority=3
+  [155] typeId=1 qty= 92 priority=2
+  [156] typeId=1 qty= 41 priority=1
+  [157] typeId=1 qty=  8 priority=3
+  [158] typeId=1 qty= 50 priority=4
+  [159] typeId=1 qty= 80 priority=3
+  [160] typeId=1 qty=  7 priority=5
+  [161] typeId=1 qty= 37 priority=3
+  [162] typeId=1 qty= 44 priority=3
+  [163] typeId=1 qty= 87 priority=5
+  [164] typeId=1 qty= 19 priority=5
+  [165] typeId=1 qty= 71 priority=5
+  [166] typeId=1 qty= 30 priority=2
+  [167] typeId=1 qty= 48 priority=3
+  [168] typeId=1 qty=  6 priority=1
+  [169] typeId=1 qty= 77 priority=2
+  [170] typeId=1 qty=  9 priority=1
+  [171] typeId=1 qty= 11 priority=5
+  [172] typeId=1 qty= 91 priority=3
+  [173] typeId=1 qty= 48 priority=5
+  [174] typeId=1 qty= 87 priority=1
+  [175] typeId=1 qty= 12 priority=5
+  [176] typeId=1 qty=  7 priority=5
+  [177] typeId=1 qty= 36 priority=5
+  [178] typeId=1 qty= 52 priority=4
+  [179] typeId=1 qty= 17 priority=2
+  [180] typeId=1 qty= 79 priority=2
+  [181] typeId=1 qty= 32 priority=4
+  [182] typeId=1 qty= 94 priority=4
+  [183] typeId=1 qty= 71 priority=5
+  [184] typeId=1 qty= 71 priority=5
+  [185] typeId=1 qty= 62 priority=3
+  [186] typeId=1 qty= 18 priority=5
+  [187] typeId=1 qty= 31 priority=4
+  [188] typeId=1 qty= 40 priority=5
+  [189] typeId=1 qty= 16 priority=5
+  [190] typeId=1 qty= 29 priority=4
+  [191] typeId=1 qty= 54 priority=5
+  [192] typeId=1 qty=  1 priority=1
+  [193] typeId=1 qty=  1 priority=4
+  [194] typeId=1 qty= 37 priority=1
+  [195] typeId=1 qty= 84 priority=4
+  [196] typeId=1 qty= 67 priority=5
+  [197] typeId=1 qty= 27 priority=2
+  [198] typeId=1 qty= 79 priority=1
+  [199] typeId=1 qty= 32 priority=1
+  [200] typeId=1 qty= 34 priority=1
+  [201] typeId=1 qty= 29 priority=4
+  [202] typeId=1 qty= 67 priority=2
+  [203] typeId=1 qty=  1 priority=2
+  [204] typeId=1 qty= 67 priority=4
+  [205] typeId=1 qty= 68 priority=5
+  [206] typeId=1 qty= 88 priority=3
+  [207] typeId=1 qty= 94 priority=4
+  [208] typeId=1 qty= 41 priority=2
+  [209] typeId=1 qty= 70 priority=3
+  [210] typeId=1 qty= 92 priority=1
+  [211] typeId=1 qty= 99 priority=4
+  [212] typeId=1 qty=  3 priority=5
+  [213] typeId=1 qty= 43 priority=2
+  [214] typeId=1 qty= 24 priority=4
+  [215] typeId=1 qty= 27 priority=2
+  [216] typeId=1 qty=  2 priority=2
+  [217] typeId=1 qty= 69 priority=1
+  [218] typeId=1 qty=  8 priority=5
+  [219] typeId=1 qty= 64 priority=2
+  [220] typeId=1 qty= 92 priority=5
+  [221] typeId=1 qty= 57 priority=3
+  [222] typeId=1 qty= 10 priority=1
+  [223] typeId=1 qty= 17 priority=3
+  [224] typeId=1 qty= 10 priority=2
+  [225] typeId=1 qty=  2 priority=1
+  [226] typeId=1 qty= 46 priority=4
+  [227] typeId=1 qty= 81 priority=5
+  [228] typeId=1 qty= 30 priority=2
+  [229] typeId=1 qty= 48 priority=1
+  [230] typeId=1 qty= 18 priority=3
+  [231] typeId=1 qty= 51 priority=2
+  [232] typeId=1 qty= 54 priority=3
+  [233] typeId=1 qty=  8 priority=3
+  [234] typeId=1 qty= 86 priority=1
+  [235] typeId=1 qty=  5 priority=2
+  [236] typeId=1 qty= 53 priority=3
+  [237] typeId=1 qty= 17 priority=3
+  [238] typeId=1 qty= 93 priority=2
+  [239] typeId=1 qty= 17 priority=2
+  [240] typeId=1 qty= 19 priority=1
+  [241] typeId=1 qty= 20 priority=1
+  [242] typeId=1 qty=  3 priority=3
+  [243] typeId=1 qty= 58 priority=3
+  [244] typeId=1 qty= 44 priority=3
+  [245] typeId=1 qty= 16 priority=3
+  [246] typeId=1 qty= 62 priority=3
+  [247] typeId=1 qty= 34 priority=5
+  [248] typeId=1 qty= 53 priority=2
+  [249] typeId=1 qty= 58 priority=5
+  [250] typeId=1 qty= 85 priority=2
+  [251] typeId=1 qty= 53 priority=5
+  [252] typeId=1 qty= 10 priority=1
+  [253] typeId=1 qty= 37 priority=5
+  [254] typeId=1 qty= 18 priority=5
+  [255] typeId=1 qty= 61 priority=2
+  [256] typeId=1 qty= 28 priority=2
+  [257] typeId=1 qty= 16 priority=3
+  [258] typeId=1 qty= 79 priority=4
+  [259] typeId=1 qty= 95 priority=1
+  [260] typeId=1 qty= 14 priority=2
+  [261] typeId=1 qty= 43 priority=4
+  [262] typeId=1 qty= 32 priority=5
+  [263] typeId=1 qty=  4 priority=3
+  [264] typeId=1 qty= 62 priority=5
+  [265] typeId=1 qty= 72 priority=1
+  [266] typeId=1 qty= 90 priority=3
+  [267] typeId=1 qty= 33 priority=2
+  [268] typeId=1 qty= 43 priority=2
+  [269] typeId=1 qty= 18 priority=2
+  [270] typeId=1 qty= 77 priority=1
+  [271] typeId=1 qty=  7 priority=2
+  [272] typeId=1 qty= 21 priority=5
+  [273] typeId=1 qty= 30 priority=2
+  [274] typeId=1 qty= 47 priority=2
+  [275] typeId=1 qty= 65 priority=3
+  [276] typeId=1 qty= 50 priority=1
+  [277] typeId=1 qty= 33 priority=3
+  [278] typeId=1 qty= 56 priority=2
+  [279] typeId=1 qty= 16 priority=3
+  [280] typeId=1 qty= 59 priority=3
+  [281] typeId=1 qty= 20 priority=5
+  [282] typeId=1 qty= 28 priority=3
+  [283] typeId=1 qty= 18 priority=4
+  [284] typeId=1 qty= 22 priority=2
+  [285] typeId=1 qty= 18 priority=5
+  [286] typeId=1 qty= 34 priority=1
+  [287] typeId=1 qty= 34 priority=5
+  [288] typeId=1 qty= 51 priority=3
+  [289] typeId=1 qty= 91 priority=3
+  [290] typeId=1 qty= 32 priority=3
+  [291] typeId=1 qty= 39 priority=4
+  [292] typeId=1 qty= 20 priority=4
+  [293] typeId=1 qty= 25 priority=2
+  [294] typeId=1 qty=  2 priority=5
+  [295] typeId=1 qty=  4 priority=3
+  [296] typeId=1 qty= 64 priority=2
+  [297] typeId=1 qty= 34 priority=1
+  [298] typeId=1 qty= 34 priority=4
+  [299] typeId=1 qty= 71 priority=1
+  [300] typeId=1 qty= 21 priority=5
+  [301] typeId=1 qty= 94 priority=2
+  [302] typeId=1 qty= 82 priority=2
+  [303] typeId=1 qty= 50 priority=1
+  [304] typeId=1 qty= 50 priority=3
+  [305] typeId=1 qty= 11 priority=4
+  [306] typeId=1 qty= 73 priority=3
+  [307] typeId=1 qty= 70 priority=5
+  [308] typeId=1 qty= 71 priority=2
+  [309] typeId=1 qty= 55 priority=2
+  [310] typeId=1 qty= 30 priority=1
+  [311] typeId=1 qty= 43 priority=3
+  [312] typeId=1 qty= 15 priority=1
+  [313] typeId=1 qty= 95 priority=1
+  [314] typeId=1 qty=  8 priority=5
+  [315] typeId=1 qty= 69 priority=3
+  [316] typeId=1 qty= 25 priority=5
+  [317] typeId=1 qty= 97 priority=3
+  [318] typeId=1 qty= 45 priority=5
+  [319] typeId=1 qty= 83 priority=4
+  [320] typeId=1 qty= 10 priority=3
+  [321] typeId=1 qty= 74 priority=4
+  [322] typeId=1 qty= 58 priority=5
+  [323] typeId=1 qty= 99 priority=1
+  [324] typeId=1 qty= 60 priority=5
+  [325] typeId=1 qty= 70 priority=4
+  [326] typeId=1 qty= 67 priority=2
+  [327] typeId=1 qty=  9 priority=3
+  [328] typeId=1 qty= 45 priority=5
+  [329] typeId=1 qty= 32 priority=1
+  [330] typeId=1 qty= 18 priority=4
+  [331] typeId=1 qty= 36 priority=1
+  [332] typeId=1 qty= 35 priority=1
+  [333] typeId=1 qty= 30 priority=1
+  [334] typeId=1 qty= 22 priority=5
+  [335] typeId=1 qty= 23 priority=2
+  [336] typeId=1 qty= 75 priority=4
+  [337] typeId=1 qty= 92 priority=5
+  [338] typeId=1 qty= 58 priority=4
+  [339] typeId=1 qty= 88 priority=5
+  [340] typeId=1 qty= 42 priority=1
+  [341] typeId=1 qty= 62 priority=4
+  [342] typeId=1 qty= 93 priority=4
+  [343] typeId=1 qty= 55 priority=2
+  [344] typeId=1 qty= 56 priority=5
+  [345] typeId=1 qty= 59 priority=5
+  [346] typeId=1 qty= 63 priority=3
+  [347] typeId=1 qty= 81 priority=1
+  [348] typeId=1 qty=100 priority=2
+  [349] typeId=1 qty= 47 priority=3
+  [350] typeId=1 qty= 22 priority=1
+  [351] typeId=1 qty= 10 priority=2
+  [352] typeId=1 qty=  5 priority=2
+  [353] typeId=1 qty= 67 priority=5
+  [354] typeId=1 qty= 46 priority=1
+  [355] typeId=1 qty=  4 priority=5
+  [356] typeId=1 qty=  1 priority=5
+  [357] typeId=1 qty= 16 priority=1
+  [358] typeId=1 qty= 21 priority=5
+  [359] typeId=1 qty= 47 priority=5
+  [360] typeId=1 qty= 12 priority=5
+  [361] typeId=1 qty= 62 priority=2
+  [362] typeId=1 qty= 82 priority=1
+  [363] typeId=1 qty=  6 priority=5
+  [364] typeId=1 qty= 89 priority=2
+  [365] typeId=1 qty=  8 priority=2
+  [366] typeId=1 qty= 36 priority=3
+  [367] typeId=1 qty= 62 priority=2
+  [368] typeId=1 qty= 62 priority=2
+  [369] typeId=1 qty=  5 priority=5
+  [370] typeId=1 qty= 33 priority=3
+  [371] typeId=1 qty= 37 priority=2
+  [372] typeId=1 qty= 33 priority=2
+  [373] typeId=1 qty= 49 priority=1
+  [374] typeId=1 qty= 35 priority=1
+  [375] typeId=1 qty= 86 priority=2
+  [376] typeId=1 qty= 80 priority=5
+  [377] typeId=1 qty=  2 priority=5
+  [378] typeId=1 qty= 85 priority=4
+  [379] typeId=1 qty= 95 priority=4
+  [380] typeId=1 qty= 26 priority=4
+  [381] typeId=1 qty= 45 priority=1
+  [382] typeId=1 qty=  4 priority=5
+  [383] typeId=1 qty= 61 priority=3
+  [384] typeId=1 qty= 57 priority=3
+  [385] typeId=1 qty= 15 priority=4
+  [386] typeId=1 qty= 69 priority=4
+  [387] typeId=1 qty= 28 priority=3
+  [388] typeId=1 qty= 40 priority=5
+  [389] typeId=1 qty=  8 priority=5
+  [390] typeId=1 qty= 36 priority=3
+  [391] typeId=1 qty=  7 priority=4
+  [392] typeId=1 qty= 17 priority=4
+  [393] typeId=1 qty= 28 priority=3
+  [394] typeId=1 qty= 11 priority=2
+  [395] typeId=1 qty= 26 priority=2
+  [396] typeId=1 qty= 23 priority=5
+  [397] typeId=1 qty= 76 priority=1
+  [398] typeId=1 qty= 68 priority=3
+  [399] typeId=1 qty= 10 priority=4
+  [400] typeId=1 qty= 62 priority=1
+  [401] typeId=1 qty= 81 priority=1
+  [402] typeId=1 qty= 27 priority=4
+  [403] typeId=1 qty=  8 priority=5
+  [404] typeId=1 qty= 18 priority=5
+  [405] typeId=1 qty= 25 priority=4
+  [406] typeId=1 qty= 35 priority=3
+  [407] typeId=1 qty=  7 priority=1
+  [408] typeId=1 qty= 56 priority=2
+  [409] typeId=1 qty= 48 priority=3
+  [410] typeId=1 qty=  6 priority=3
+  [411] typeId=1 qty= 89 priority=5
+  [412] typeId=1 qty= 43 priority=1
+  [413] typeId=1 qty= 89 priority=5
+  [414] typeId=1 qty= 42 priority=3
+  [415] typeId=1 qty= 11 priority=4
+  [416] typeId=1 qty= 92 priority=3
+
+Resources: 10
+  [0] id=1
+  [1] id=2
+  [2] id=3
+  [3] id=4
+  [4] id=5
+  [5] id=6
+  [6] id=7
+  [7] id=8
+  [8] id=9
+  [9] id=10
+
+Objectives: 3
+  [0] type=orderPriority weight=1 priority=1
+  [1] type=targetGroupSizeDeviation weight=1 priority=1
+  [2] type=balancedCapacityLoad weight=1 priority=1
+
+RankingMode:  average
+MaxRunTimeMS: 60000
+BigM:         1031620
+
+=== Compatibility Matrix (417 orders x 10 resources) ===
+       R0 R1 R2 R3 R4 R5 R6 R7 R8 R9
+O  0    0  0  0  0  0  0  1  1  0  0
+O  1    0  0  0  0  0  0  1  1  0  0
+O  2    0  0  0  0  0  1  0  1  1  0
+O  3    1  0  1  0  0  1  0  0  0  0
+O  4    0  0  0  0  1  1  0  0  0  0
+O  5    1  1  0  0  0  0  1  0  0  1
+O  6    0  0  0  1  1  0  0  0  0  0
+O  7    0  0  0  1  0  0  1  0  0  0
+O  8    0  1  0  0  1  0  1  0  0  0
+O  9    0  1  0  0  0  0  0  0  0  0
+O 10    0  0  0  0  0  0  0  1  0  0
+O 11    0  0  0  0  1  0  1  0  0  0
+O 12    1  0  0  1  1  0  0  0  0  0
+O 13    1  0  0  0  0  0  0  0  0  1
+O 14    1  1  0  1  1  1  0  0  0  0
+O 15    1  0  0  1  0  0  0  0  0  0
+O 16    1  0  0  0  0  0  0  1  0  0
+O 17    0  1  0  1  1  0  1  0  0  0
+O 18    0  0  0  1  0  1  0  0  1  0
+O 19    0  0  0  0  0  1  1  0  1  1
+O 20    0  0  0  0  0  0  0  1  1  0
+O 21    1  0  0  1  0  0  0  0  0  0
+O 22    1  0  0  0  0  1  0  0  0  0
+O 23    0  0  0  0  1  0  0  0  0  0
+O 24    1  1  0  1  0  0  0  0  0  0
+O 25    0  0  1  1  1  1  0  1  1  0
+O 26    0  0  1  0  0  0  1  1  0  0
+O 27    0  1  1  0  0  0  0  0  0  0
+O 28    0  0  0  1  0  1  0  0  0  0
+O 29    1  0  0  0  1  0  0  0  0  0
+O 30    0  0  0  0  0  1  1  0  0  1
+O 31    0  0  1  0  0  0  0  0  0  0
+O 32    0  1  0  1  0  0  0  0  0  1
+O 33    0  0  0  0  0  0  1  0  0  1
+O 34    0  0  0  1  1  0  0  0  0  1
+O 35    0  1  0  1  0  0  0  0  0  0
+O 36    1  0  0  0  0  0  0  1  0  1
+O 37    0  0  0  0  0  0  0  0  0  1
+O 38    0  0  0  0  0  0  0  0  0  1
+O 39    0  0  0  0  0  0  0  1  0  0
+O 40    0  0  0  0  1  0  1  1  1  0
+O 41    0  1  0  0  0  0  0  1  0  0
+O 42    0  0  0  1  0  1  0  0  0  0
+O 43    0  1  0  0  1  0  0  0  1  0
+O 44    0  1  0  0  0  0  0  0  1  0
+O 45    0  0  0  0  0  0  1  0  0  0
+O 46    0  0  0  0  1  0  1  0  1  0
+O 47    0  0  0  1  0  0  0  0  0  0
+O 48    0  0  0  0  1  1  0  0  0  0
+O 49    0  0  0  0  1  0  0  0  0  0
+O 50    0  0  1  0  0  1  0  0  0  0
+O 51    1  0  0  0  0  0  0  0  0  0
+O 52    0  1  1  0  0  1  0  1  0  0
+O 53    0  0  0  0  0  0  0  0  1  0
+O 54    0  0  0  1  0  0  0  0  0  0
+O 55    1  1  0  0  0  0  1  0  0  0
+O 56    0  0  1  0  0  0  0  0  0  1
+O 57    0  0  0  0  0  0  1  0  0  0
+O 58    0  0  1  0  0  0  1  0  0  0
+O 59    1  0  0  1  0  0  0  0  0  0
+O 60    0  0  0  0  1  0  1  0  1  0
+O 61    0  1  0  1  0  0  0  0  1  1
+O 62    0  0  0  0  0  1  0  0  0  0
+O 63    0  0  0  1  1  0  0  0  1  1
+O 64    0  1  0  0  0  0  1  0  1  1
+O 65    0  1  0  1  0  0  1  0  0  0
+O 66    0  1  0  1  0  0  1  0  0  1
+O 67    0  0  1  1  0  0  0  0  0  0
+O 68    0  1  0  1  0  0  0  0  1  0
+O 69    1  1  0  0  0  0  0  0  0  0
+O 70    0  1  1  0  0  0  0  0  0  1
+O 71    0  1  0  0  0  0  0  0  0  0
+O 72    1  0  0  0  0  0  0  1  0  1
+O 73    0  0  0  0  1  1  1  0  1  0
+O 74    0  0  0  0  0  0  1  0  0  0
+O 75    1  0  0  1  0  0  1  0  1  0
+O 76    0  1  1  1  0  0  1  0  0  0
+O 77    0  0  0  0  0  0  1  0  0  0
+O 78    1  0  0  0  0  0  0  1  0  0
+O 79    1  0  1  1  0  0  0  0  0  1
+O 80    0  0  1  0  1  1  1  0  1  0
+O 81    1  0  1  0  0  0  0  0  1  0
+O 82    0  1  0  0  0  0  0  0  1  0
+O 83    0  1  1  0  0  0  0  0  1  0
+O 84    0  1  0  0  0  0  0  0  1  0
+O 85    1  0  0  0  0  1  0  0  0  0
+O 86    0  0  0  0  0  0  1  0  0  1
+O 87    1  0  0  0  1  1  0  0  0  1
+O 88    0  0  0  0  0  0  1  0  0  1
+O 89    1  1  0  0  0  0  0  0  0  1
+O 90    1  0  0  0  0  0  0  1  0  0
+O 91    0  0  1  0  0  1  0  0  0  0
+O 92    0  0  0  0  0  1  0  0  1  0
+O 93    1  0  0  0  1  1  0  0  0  0
+O 94    0  0  1  0  1  1  0  1  0  0
+O 95    0  0  0  1  0  1  0  0  1  0
+O 96    1  0  0  0  0  0  0  0  0  0
+O 97    0  0  0  0  0  0  1  0  0  0
+O 98    0  0  1  0  1  0  0  1  1  0
+O 99    0  1  0  0  1  0  0  0  0  0
+O100    0  1  0  0  0  0  0  0  1  0
+O101    0  0  0  1  0  0  0  1  1  0
+O102    0  0  0  1  0  1  0  0  0  0
+O103    0  0  0  1  0  0  0  0  1  0
+O104    0  1  0  0  1  0  0  0  0  0
+O105    0  0  0  1  0  0  1  0  0  0
+O106    1  0  0  0  1  0  1  0  0  0
+O107    0  0  0  0  0  0  0  1  0  0
+O108    1  0  0  0  0  1  1  1  0  1
+O109    0  1  1  0  0  1  0  1  1  0
+O110    0  0  1  1  0  0  0  1  0  0
+O111    0  1  0  0  0  0  0  0  0  0
+O112    1  1  0  0  0  0  0  0  0  0
+O113    0  0  0  1  0  0  0  1  0  1
+O114    0  0  1  1  1  0  0  0  0  0
+O115    0  0  1  0  0  0  1  0  1  0
+O116    0  0  0  0  0  0  1  0  1  0
+O117    0  0  0  0  0  0  1  0  0  0
+O118    0  0  0  0  0  0  1  0  0  0
+O119    0  1  0  0  1  0  1  0  0  0
+O120    1  0  0  0  0  0  0  1  1  0
+O121    0  1  0  0  1  0  0  0  0  0
+O122    1  0  0  0  0  0  0  0  0  0
+O123    0  0  1  0  0  0  0  0  0  0
+O124    0  0  1  0  0  0  0  1  0  0
+O125    0  0  0  0  1  0  0  0  1  0
+O126    0  0  0  0  0  0  0  0  1  1
+O127    1  0  0  0  1  1  0  1  0  0
+O128    0  1  1  0  0  0  0  0  0  0
+O129    0  0  1  1  0  1  0  0  0  0
+O130    0  0  0  0  0  0  1  0  1  0
+O131    0  0  0  1  0  0  1  1  0  0
+O132    0  0  0  1  0  1  0  0  1  0
+O133    0  0  1  0  0  0  0  1  0  0
+O134    0  0  1  0  1  1  1  0  0  0
+O135    0  0  0  0  0  0  0  0  1  0
+O136    0  0  0  0  0  0  1  0  0  1
+O137    1  0  0  1  0  1  0  0  0  0
+O138    1  1  0  0  0  0  0  0  1  0
+O139    0  0  1  0  0  1  0  0  0  1
+O140    0  1  1  0  0  0  1  1  0  0
+O141    1  0  0  0  1  1  0  1  0  0
+O142    0  0  0  0  1  0  0  0  0  0
+O143    0  0  1  1  0  0  1  0  0  0
+O144    0  0  1  0  1  0  0  0  0  0
+O145    1  0  0  0  1  0  0  0  0  0
+O146    0  0  0  1  0  0  1  0  0  0
+O147    1  1  0  0  1  1  0  0  0  1
+O148    0  0  0  1  0  0  0  0  0  1
+O149    0  0  0  0  0  0  1  1  0  0
+O150    0  1  0  1  0  0  0  0  0  0
+O151    0  0  0  1  0  0  0  0  1  0
+O152    0  0  1  0  0  1  0  0  0  0
+O153    0  0  0  0  1  1  0  1  0  0
+O154    0  0  0  0  1  0  0  0  0  1
+O155    1  0  0  0  0  1  0  0  1  0
+O156    0  0  0  0  1  1  1  0  0  0
+O157    0  1  1  0  0  1  0  0  0  0
+O158    0  0  0  0  1  0  0  0  1  0
+O159    0  1  0  1  0  1  0  1  1  0
+O160    0  1  0  0  0  1  0  1  0  1
+O161    1  0  1  0  0  0  1  0  1  0
+O162    0  0  0  0  0  1  0  1  1  0
+O163    0  0  0  1  1  0  0  0  0  0
+O164    1  0  1  1  0  1  0  0  0  0
+O165    1  0  0  1  0  0  0  0  0  1
+O166    0  1  1  0  0  0  0  0  0  0
+O167    0  0  0  0  0  0  0  0  1  0
+O168    0  0  1  0  0  0  1  0  1  0
+O169    1  0  0  0  0  0  0  0  0  1
+O170    0  0  0  0  0  0  0  1  0  0
+O171    0  0  0  0  0  0  1  0  0  1
+O172    1  1  0  0  0  0  1  1  1  0
+O173    0  0  0  1  0  1  0  0  0  1
+O174    1  0  0  1  1  0  0  0  0  0
+O175    0  0  0  0  0  0  1  0  0  0
+O176    0  0  0  0  1  0  1  0  1  1
+O177    0  0  0  0  0  0  0  0  1  0
+O178    1  0  0  0  0  0  0  0  0  0
+O179    0  1  0  0  0  0  0  0  0  0
+O180    0  0  0  0  0  0  1  0  0  1
+O181    0  0  0  0  1  0  0  0  1  0
+O182    0  0  0  0  0  0  0  0  1  0
+O183    0  0  0  0  1  1  1  0  0  0
+O184    1  0  0  0  0  1  0  0  0  0
+O185    0  0  0  0  0  0  1  0  0  0
+O186    0  1  0  0  0  0  0  0  0  1
+O187    0  0  0  0  1  1  1  0  0  0
+O188    0  1  1  0  0  0  0  0  0  0
+O189    0  1  0  0  1  0  0  0  1  0
+O190    0  0  0  0  0  1  0  0  0  0
+O191    0  1  1  0  0  0  0  0  0  0
+O192    0  0  0  0  0  1  0  0  0  0
+O193    0  0  0  0  1  1  0  1  0  0
+O194    0  1  1  0  0  0  0  0  1  0
+O195    1  0  0  0  0  1  0  0  1  0
+O196    0  0  0  0  0  0  0  1  1  0
+O197    1  0  1  0  0  1  0  0  0  1
+O198    0  0  0  0  1  1  1  0  0  0
+O199    0  0  0  0  0  1  0  1  0  1
+O200    0  0  1  0  1  1  0  0  1  0
+O201    0  0  0  0  0  0  0  1  0  1
+O202    0  0  0  0  1  0  0  1  1  0
+O203    0  1  0  0  0  0  0  0  0  0
+O204    0  1  0  1  0  0  1  0  1  0
+O205    0  0  0  1  0  1  0  1  0  0
+O206    0  0  0  0  0  0  0  1  1  0
+O207    1  0  0  0  0  0  1  0  0  0
+O208    0  0  1  0  0  0  0  0  0  1
+O209    0  1  0  0  0  0  0  0  0  1
+O210    1  0  0  0  1  0  0  0  1  0
+O211    0  0  0  0  0  0  1  1  0  1
+O212    1  0  1  0  0  0  0  0  0  0
+O213    0  1  1  0  1  0  0  0  0  0
+O214    0  0  1  0  1  0  0  0  0  0
+O215    0  0  0  0  0  1  1  0  0  0
+O216    0  0  0  0  1  1  0  1  0  0
+O217    1  1  0  1  1  0  0  1  0  1
+O218    0  0  0  1  1  1  0  0  0  0
+O219    0  0  0  0  0  0  0  1  1  0
+O220    0  0  0  1  0  1  0  0  0  0
+O221    1  0  0  0  0  1  0  0  0  0
+O222    0  1  0  0  0  0  1  0  0  0
+O223    0  1  1  0  0  0  1  0  0  0
+O224    0  0  0  1  0  1  0  0  1  0
+O225    1  0  0  0  1  0  0  1  0  0
+O226    0  0  0  0  0  1  0  0  1  0
+O227    0  0  0  0  0  0  0  0  0  1
+O228    1  0  1  0  0  0  1  0  0  1
+O229    1  0  0  0  0  0  0  0  0  0
+O230    0  0  0  0  0  0  1  1  0  0
+O231    1  0  0  0  1  0  0  0  0  0
+O232    0  0  0  0  0  1  0  0  0  1
+O233    0  0  1  1  0  0  0  0  0  0
+O234    0  0  0  0  1  1  0  0  0  0
+O235    0  0  0  0  1  0  1  0  1  0
+O236    0  0  0  0  0  0  0  0  0  1
+O237    0  0  1  0  0  0  0  1  0  0
+O238    0  0  0  0  1  0  0  0  0  0
+O239    1  0  0  1  0  1  0  0  1  0
+O240    0  1  0  0  1  0  0  0  0  0
+O241    0  0  0  0  0  0  0  0  0  1
+O242    0  0  0  1  0  1  0  0  0  0
+O243    0  0  0  0  0  1  1  0  0  0
+O244    0  0  1  0  0  1  0  0  0  0
+O245    1  0  0  0  1  1  0  0  0  0
+O246    0  1  0  0  0  0  0  0  0  1
+O247    0  0  0  0  0  1  1  0  0  0
+O248    0  0  0  0  0  0  1  0  0  0
+O249    0  0  0  0  1  0  1  0  0  0
+O250    0  0  1  0  0  0  0  1  0  0
+O251    0  0  1  0  0  1  0  0  0  0
+O252    1  1  0  1  0  0  0  0  0  1
+O253    1  1  0  0  0  0  0  0  0  0
+O254    0  1  0  1  1  0  1  0  0  0
+O255    0  0  0  1  1  0  0  0  1  0
+O256    0  1  0  1  0  1  0  0  1  0
+O257    0  0  0  1  0  0  0  0  0  0
+O258    1  0  0  0  0  0  0  0  0  0
+O259    0  0  0  1  0  0  0  0  0  1
+O260    1  0  0  0  0  0  0  0  0  0
+O261    0  0  1  0  0  1  1  1  0  0
+O262    1  0  0  0  0  1  0  1  1  0
+O263    0  0  0  0  0  0  0  0  1  0
+O264    0  0  0  0  1  0  1  0  0  0
+O265    0  1  0  0  1  1  0  1  1  0
+O266    0  0  1  0  0  0  0  0  0  0
+O267    0  0  1  0  0  0  0  1  1  0
+O268    0  1  0  1  0  0  0  0  0  0
+O269    1  0  0  0  0  0  0  1  0  0
+O270    0  1  0  0  0  0  1  0  1  0
+O271    0  1  0  1  0  0  0  0  1  1
+O272    0  0  0  0  1  1  0  0  0  0
+O273    0  1  1  0  0  0  0  0  1  0
+O274    0  0  0  1  0  0  0  0  1  0
+O275    1  0  0  0  0  0  0  1  0  0
+O276    0  1  0  1  0  0  0  0  0  0
+O277    1  0  0  0  0  1  0  1  0  0
+O278    0  0  0  1  1  0  0  0  1  0
+O279    0  0  1  0  1  0  1  0  0  1
+O280    0  0  0  0  0  0  0  0  1  0
+O281    1  0  0  1  1  0  0  1  0  0
+O282    0  0  0  0  0  1  1  0  0  0
+O283    1  1  0  1  0  0  0  0  0  0
+O284    1  0  1  0  0  0  0  0  0  0
+O285    1  0  1  0  0  0  0  1  0  0
+O286    0  0  0  0  0  0  1  1  0  1
+O287    1  0  0  0  0  0  0  0  0  1
+O288    0  0  1  0  0  1  0  0  0  0
+O289    0  0  0  0  0  1  0  1  0  0
+O290    0  1  1  0  0  0  1  0  0  0
+O291    1  0  0  0  1  0  0  0  1  0
+O292    0  1  0  0  0  0  0  0  1  0
+O293    0  0  0  0  0  0  0  0  0  1
+O294    0  0  0  0  0  0  0  0  0  1
+O295    0  0  0  0  0  0  0  0  1  0
+O296    0  0  0  1  0  1  1  0  0  0
+O297    0  0  1  0  0  0  0  0  0  1
+O298    0  0  0  0  0  0  0  0  0  1
+O299    1  0  1  0  0  1  0  0  1  0
+O300    0  0  0  0  0  0  1  0  1  0
+O301    0  0  0  0  0  0  0  0  0  1
+O302    1  0  1  1  1  0  1  0  0  0
+O303    1  0  1  0  0  0  0  1  0  0
+O304    0  0  0  1  0  0  0  0  0  1
+O305    0  1  0  0  0  0  0  0  0  1
+O306    0  1  0  0  0  0  0  0  0  0
+O307    0  0  0  0  1  1  0  1  0  1
+O308    1  0  1  0  0  0  0  0  0  0
+O309    0  1  0  1  1  0  1  0  1  0
+O310    0  0  1  0  0  0  0  1  0  1
+O311    0  0  1  0  0  1  0  0  0  0
+O312    0  1  0  0  0  0  0  0  0  0
+O313    0  0  0  0  0  0  0  1  1  0
+O314    0  0  1  1  1  0  1  0  1  1
+O315    0  1  0  1  0  0  0  0  1  0
+O316    0  0  0  0  0  0  0  1  1  1
+O317    0  0  0  0  0  1  0  0  0  1
+O318    1  1  0  0  0  0  1  0  0  0
+O319    0  0  0  0  0  1  1  0  0  0
+O320    0  0  0  0  0  1  0  0  1  0
+O321    0  1  0  0  0  0  0  0  1  0
+O322    0  0  0  0  0  0  0  0  0  1
+O323    0  1  0  0  0  0  1  0  1  0
+O324    0  0  0  0  1  1  0  0  0  0
+O325    1  0  0  0  0  0  1  0  0  0
+O326    1  1  0  0  0  1  0  0  0  0
+O327    0  0  0  1  0  0  1  0  0  0
+O328    0  0  0  0  1  0  0  0  1  1
+O329    0  0  0  1  0  0  1  0  1  1
+O330    1  1  0  0  0  0  0  0  0  0
+O331    0  1  0  0  0  0  0  0  0  0
+O332    0  0  1  1  0  0  0  1  0  1
+O333    0  0  0  0  0  0  1  0  0  0
+O334    0  0  0  1  0  1  0  0  1  1
+O335    1  0  0  0  0  0  0  0  0  0
+O336    0  0  0  0  1  0  0  0  1  0
+O337    0  0  1  0  1  0  1  0  0  0
+O338    0  0  0  0  0  0  0  0  0  1
+O339    0  0  1  0  0  0  0  0  0  0
+O340    0  0  0  1  1  0  0  0  0  0
+O341    0  1  1  0  0  1  0  0  0  1
+O342    1  0  1  0  1  1  0  0  0  0
+O343    1  0  0  0  0  0  0  0  1  1
+O344    0  1  0  0  0  0  1  1  0  1
+O345    1  0  1  0  0  0  0  0  0  0
+O346    1  1  0  0  0  0  0  0  0  0
+O347    1  0  0  1  0  0  0  0  0  0
+O348    0  1  1  1  0  0  0  0  1  1
+O349    0  1  0  0  0  0  0  0  0  1
+O350    0  0  0  0  0  0  0  0  0  1
+O351    0  0  1  1  0  0  0  0  0  0
+O352    0  0  0  0  0  1  0  0  0  0
+O353    0  0  1  0  0  0  0  0  0  1
+O354    0  0  0  1  0  0  0  1  0  0
+O355    0  0  1  1  0  0  1  1  0  0
+O356    0  0  0  0  0  0  0  0  1  0
+O357    0  0  0  1  1  0  1  0  1  0
+O358    0  0  0  1  1  1  0  0  0  0
+O359    0  0  0  0  0  0  0  1  0  0
+O360    0  0  1  1  1  0  0  0  1  0
+O361    0  1  0  0  1  0  0  0  0  0
+O362    0  0  0  0  0  0  1  0  0  0
+O363    0  0  0  1  0  1  1  0  0  0
+O364    0  1  1  0  0  0  0  1  0  1
+O365    0  0  1  0  0  1  0  0  0  1
+O366    0  0  1  0  1  0  0  1  0  0
+O367    1  0  0  0  0  0  0  0  0  1
+O368    0  0  0  0  0  0  0  0  1  0
+O369    1  0  0  1  1  0  0  0  0  1
+O370    0  0  0  0  0  0  1  0  0  1
+O371    1  0  0  0  0  1  0  0  0  0
+O372    0  0  0  0  1  0  0  0  0  1
+O373    0  0  1  1  1  1  0  1  0  1
+O374    0  0  1  0  0  0  0  0  0  1
+O375    0  0  1  0  0  1  0  1  0  0
+O376    0  0  0  1  0  0  0  0  1  0
+O377    0  0  0  0  0  1  1  0  0  0
+O378    0  1  1  0  1  1  0  1  0  0
+O379    1  1  0  0  0  0  0  0  0  0
+O380    0  0  0  0  1  1  0  1  0  0
+O381    0  0  1  0  1  1  0  0  0  1
+O382    0  1  1  0  0  0  0  1  0  1
+O383    0  1  0  0  0  0  0  1  0  0
+O384    0  0  0  1  0  1  0  0  0  1
+O385    0  0  0  0  1  0  0  0  0  0
+O386    0  0  0  0  0  0  0  0  1  0
+O387    0  0  1  0  0  0  0  1  1  0
+O388    1  0  0  1  0  1  0  0  1  0
+O389    0  0  0  0  0  1  0  1  0  0
+O390    0  0  0  1  0  0  1  0  0  0
+O391    0  0  0  0  0  0  1  1  0  0
+O392    1  0  0  0  1  0  0  0  0  0
+O393    1  0  1  0  0  0  0  1  0  1
+O394    1  0  0  0  0  0  0  0  0  0
+O395    0  0  0  0  0  0  0  1  1  0
+O396    0  0  1  0  0  0  0  1  0  0
+O397    1  0  0  0  0  0  0  1  0  0
+O398    0  1  0  0  0  0  0  0  0  0
+O399    0  0  0  0  1  0  0  0  0  0
+O400    0  1  0  0  0  1  0  0  0  0
+O401    1  1  0  1  0  0  0  0  0  0
+O402    0  0  0  1  0  0  0  0  0  0
+O403    0  0  0  1  1  0  1  0  0  0
+O404    1  0  0  0  0  0  0  0  1  0
+O405    1  0  0  0  1  0  0  0  0  1
+O406    1  0  0  1  0  1  1  1  0  0
+O407    0  1  0  0  0  1  1  0  0  0
+O408    1  1  1  1  0  1  0  0  1  0
+O409    0  0  0  0  0  1  0  0  0  0
+O410    0  1  0  0  0  0  0  0  0  1
+O411    0  0  1  1  0  0  0  0  0  0
+O412    1  0  0  0  0  1  0  0  0  0
+O413    0  0  0  0  0  0  0  0  0  1
+O414    0  0  0  0  0  1  0  1  0  0
+O415    0  0  0  1  0  0  0  1  0  0
+O416    0  0  0  0  0  0  0  1  0  0

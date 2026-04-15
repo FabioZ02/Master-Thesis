@@ -103,6 +103,11 @@ private:
     std::vector<int> assigned_resource; // assigned_resource[t] = r if t is assigned to resource r
     std::vector<int> assigned_period;   // assigned_period[t] = p if t is assigned to period p
     std::vector<std::vector<unsigned>> load; // load[r][p] = load of machine r in period p
+    /*
+    I need to implement also another vector, that stores the load for each period.
+    The solution is a list of periods, where each period is a list of resources, and each resource is a list of task. 
+    Moreover, I must introduce a variable that higlights the last period, because the S_min soft costraint isn't applied to it.
+    */ 
 };
 
 #endif
