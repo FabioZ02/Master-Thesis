@@ -1,0 +1,254 @@
+{
+  "OrderTypes": [
+    {
+      "OrderTypeId": 1,
+      "TargetGroupSize": 392,
+      "MinGroupSize": 229,
+      "MaxGroupSize": 492
+    }
+  ],
+  "Orders": [
+    {
+      "OrderId": 1,
+      "TypeId": 1,
+      "Quantity": 74,
+      "Priority": 12,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 2,
+      "TypeId": 1,
+      "Quantity": 69,
+      "Priority": 2,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 3,
+      "TypeId": 1,
+      "Quantity": 57,
+      "Priority": 6,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 4,
+      "TypeId": 1,
+      "Quantity": 38,
+      "Priority": 14,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 5,
+      "TypeId": 1,
+      "Quantity": 94,
+      "Priority": 12,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 6,
+      "TypeId": 1,
+      "Quantity": 59,
+      "Priority": 4,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 7,
+      "TypeId": 1,
+      "Quantity": 21,
+      "Priority": 9,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 8,
+      "TypeId": 1,
+      "Quantity": 73,
+      "Priority": 7,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 9,
+      "TypeId": 1,
+      "Quantity": 49,
+      "Priority": 9,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 10,
+      "TypeId": 1,
+      "Quantity": 1,
+      "Priority": 9,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 11,
+      "TypeId": 1,
+      "Quantity": 3,
+      "Priority": 17,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 12,
+      "TypeId": 1,
+      "Quantity": 50,
+      "Priority": 8,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 13,
+      "TypeId": 1,
+      "Quantity": 92,
+      "Priority": 9,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 14,
+      "TypeId": 1,
+      "Quantity": 54,
+      "Priority": 1,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 15,
+      "TypeId": 1,
+      "Quantity": 80,
+      "Priority": 11,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 16,
+      "TypeId": 1,
+      "Quantity": 40,
+      "Priority": 7,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 17,
+      "TypeId": 1,
+      "Quantity": 16,
+      "Priority": 15,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 18,
+      "TypeId": 1,
+      "Quantity": 70,
+      "Priority": 2,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 19,
+      "TypeId": 1,
+      "Quantity": 65,
+      "Priority": 4,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 20,
+      "TypeId": 1,
+      "Quantity": 26,
+      "Priority": 7,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 21,
+      "TypeId": 1,
+      "Quantity": 14,
+      "Priority": 5,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 22,
+      "TypeId": 1,
+      "Quantity": 62,
+      "Priority": 10,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 23,
+      "TypeId": 1,
+      "Quantity": 57,
+      "Priority": 5,
+      "ValidResourceIds": [
+        1
+      ]
+    },
+    {
+      "OrderId": 24,
+      "TypeId": 1,
+      "Quantity": 45,
+      "Priority": 1,
+      "ValidResourceIds": [
+        1
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "ResourceId": 1
+    }
+  ],
+  "Objectives": [
+    {
+      "Priority": 1,
+      "Weight": 1,
+      "Type": "orderPriority"
+    },
+    {
+      "Priority": 1,
+      "Weight": 1,
+      "Type": "targetGroupSizeDeviation"
+    },
+    {
+      "Priority": 1,
+      "Weight": 1,
+      "Type": "balancedCapacityLoad"
+    }
+  ],
+  "RankingMode": "average",
+  "Parameters": {
+    "MaxRunTimeMS": 60000
+  }
+}
