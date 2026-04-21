@@ -30,6 +30,7 @@ void BT_SolutionManager::GreedyState(BT_Output& out)
 
         unsigned selected_machine = in.ResourcesCount(); 
         unsigned min_load = UINT_MAX;
+        // Traduction of assigning task t to the compatible machine with the least load
         for(unsigned m = 0; m < in.ResourcesCount(); m++)
             if(in.IsCompatible(t, m) && machine_load[m] < min_load)
                 { min_load = machine_load[m]; selected_machine = m; }
@@ -109,7 +110,7 @@ void BT_LoadDeviation::PrintViolations(const BT_Output& out, std::ostream& os) c
     }
 }
 
-// f2: sum_p sum_m |Star - MSp,m|
+// f2: sum_p sum_m |S_tar - MSp,m|
 long long BT_TargetDeviation::ComputeCost(const BT_Output& out) const
 {
     long long cost     = 0;
