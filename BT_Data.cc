@@ -187,3 +187,39 @@ std::ostream& operator<<(std::ostream& os, const BT_Output& out)
 
     return os;
 }
+
+std::istream& operator>>(std::istream& is, BT_Output& out)
+{
+    unsigned r, p;
+    char ch;
+
+    out.Reset();
+
+    is >> ch; // '['
+    for(unsigned t = 0; t < out.in.OrdersCount(); t++)
+    {
+        is >> r >> ch;
+        out.assigned_resource[t] = r;
+    }
+
+    is >> ch; // '['
+    for(unsigned t = 0; t < out.in.OrdersCount(); t++)
+    {
+        is >> p >> ch;
+        out.assigned_period[t] = p;
+    }
+
+    for(unsigned t = 0; t < out.in.OrdersCount(); t++)
+        out.Assign(t, out.assigned_resource[t], out.assigned_period[t]);
+
+    return is;
+}
+
+bool operator==(const BT_Output& out1, const BT_Output& out2)
+{
+    for(unsigned t = 0; t < out1.in.OrdersCount(); t++)
+        if(out1.assigned_resource[t] != out2.assigned_resource[t] ||
+           out1.assigned_period[t]   != out2.assigned_period[t])
+            return false;
+    return true;
+}

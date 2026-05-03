@@ -5,6 +5,9 @@
 #include <climits>
 
 
+BT_SolutionManager::BT_SOlutionManager(const BT_Input& pin)
+    : SolutionManager<BT_Input, BT_Output>(pin, "BT_SolutionManager") {}
+
 /* Greedy Algorithm
  Input:  sorted list of tasks T (by priority desc), machines M, compatibility matrix V, Smax
  Output: period assignments PAt, machine assignments MAt
@@ -210,4 +213,45 @@ void BT_MinLoadPenalty::PrintViolations(const BT_Output& out, std::ostream& os) 
                    << ": Smin violation = " << viol << "\n";
         }
     }
+}
+
+/*****************************************************************************
+  * BT_Shift Neighborhood Methods
+*****************************************************************************/
+
+BT_Shift::BT_Shift()
+{
+    task =0;
+    new_machine = 0;
+    new_period = 0;
+}
+
+bool operator==(const BT_Shift& mv1, const BT_Shift& mv2)
+{
+    return mv1.task == mv2.task && mv1.new_machine == mv2.new_machine && mv1.new_period == mv2.new_period;
+}
+
+bool operator!=(const BT_Shift& mv1, const BT_Shift& mv2)
+{
+    return mv1.task != mv2.task || mv1.new_machine != mv2.new_machine || mv1.new_period != mv2.new_period;
+}
+
+bool operator<(const BT_Shift& mv1, const BT_Shift& mv2)
+{
+    if (mv1.task != mv2.task) return mv1.task < mv2.task;
+    if (mv1.new_machine != mv2.new_machine) return mv1.new_machine < mv2.new_machine;
+    return mv1.new_period < mv2.new_period;
+}
+
+std::istream& operator>>(std::istream& is, BT_Shift& mv)
+{
+    char ch;
+    is >> mv.task >> ch >> mv.new_machine >> ch >> mv.new_period;
+    return is;
+}
+
+std::ostream& operator<<(std::ostream& os, const BT_Shift& mv)
+{
+    os << "(" << mv.task << "->" << "M" << mv.new_machine << ", P" << mv.new_period << ")";
+    return os; 
 }
