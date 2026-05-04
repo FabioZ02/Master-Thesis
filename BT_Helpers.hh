@@ -15,7 +15,7 @@ class BT_Shift
     friend std::ostream& operator<<(std::ostream& os, const BT_Shift& c);
     friend std::istream& operator>>(std::istream& is, BT_Shift& c);
    public:
-    int task, new_period, new_machine;
+    int task, new_period, new_machine, old_period, old_machine;
     BT_Shift();
 };
 

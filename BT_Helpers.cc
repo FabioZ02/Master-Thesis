@@ -222,8 +222,10 @@ void BT_MinLoadPenalty::PrintViolations(const BT_Output& out, std::ostream& os) 
 BT_Shift::BT_Shift()
 {
     task =0;
-    new_machine = 0;
     new_period = 0;
+    new_machine = 0;
+    old_period = 0;
+    old_machine = 0;
 }
 
 bool operator==(const BT_Shift& mv1, const BT_Shift& mv2)
@@ -255,3 +257,79 @@ std::ostream& operator<<(std::ostream& os, const BT_Shift& mv)
     os << "(" << mv.task << "->" << "M" << mv.new_machine << ", P" << mv.new_period << ")";
     return os; 
 }
+
+/*****************************************************************************
+  * BT_Shift Neighborhood Explorer
+*****************************************************************************/
+void BT_ShiftNeighborhoodExplorer::RandomMove(const BT_Output& st, BT_Shift& mv) const
+{
+    mv.task = Random::Uniform<unsigned>(0, in.OrdersCount() - 1);
+    mv.old_period = st.AssignedPeriod(mv.task);
+    mv.old_machine = st.AssignedResource(mv.task);
+
+    do{
+        mv.new_period = Random::Uniform<unsigned>(0, in.UpperBuondPeriods() - 1);
+        const auto& valid = in.Order_ValidResourceIds(mv.task);
+        unsigned id = Random::Uniform<unsigned>(0, valid.size() - 1);
+        mv.new_machine = valid[id] - 1;
+    } while(mv.new_period == mv.old_period || mv.new_machine == mv.old_machine); // a shift move may also only change the assigned machine (or period) without changing the period (or machine).
+}
+
+bool BT_ShiftNeighborhoodExplorer::FeasibleMove(const BT_Output& st, const BT_Shift& mv) const
+{
+    return (mv.task < in.OrdersCount() && mv.new_period < in.UpperBoundPeriods() && mv.new_machine < in.ResourcesCount() && mv.old_period != mv.new_period && mv.old_machine != mv.new_machine);
+}
+
+void BT_ShiftNeighborhoodExplorer::MakeMove(BT_Output& st, const BT_Change& mv) const
+{
+    st.Assign(mv.task, mv.new_machine, mv.new_period);
+}
+
+void BT_ShiftNeighborhoodExplorer::FirstMove(const BT_Output& st, BT_Shift& mv) const
+{
+    mv.task = 0;
+    mv.old_period = st.AssignedPeriod(mv.task);
+    mv.old_machine = st.AssignedResource(mv.task);
+
+    mv.new_period = 0;
+    const auto& valid = in.Order_ValidResourceIds(mv.task);
+    mv.new_machine = valid[0] - 1;
+
+    if(mv.new_period == mv.old_period && mv.new_machine == mv.old_machine)
+    {
+        NextMove(st,mv)
+    }
+}
+
+bool BT_ShiftNeighborhoodExplorer::NextMove(const BT_Output& st, BT_Change& mv) const
+{
+    do
+      if(!AnyNextMove(st, mv))
+        return false;
+    while(!FeasibleMove(st, mv));
+    return true;
+}
+
+bool BT_ShiftNeighborhoodExplorer::AnyNextMove(const BT_Output& st, BT_Shift& mv) const 
+{
+    mv.new_period++;
+    
+    if(mv.new_period >= in.UpperBoundPeriods())
+    {
+        mv.new_period = 0;
+        mv.machine++:
+
+        if(mv.new_machine >= in.ResourcesCount())
+        {
+            mv.new_machine = 0;
+            mv.task++;
+
+            if(mv.task >= in.OrdersCount())
+                return false;
+
+            mv.old_period = st.AssignedPeriod(mv.task);
+            mv.old_machine = st.AssignedResource(mv.task);
+        }
+    }
+}
+
