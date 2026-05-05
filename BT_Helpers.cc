@@ -428,12 +428,12 @@ long long BT_ShiftDeltaTargetDeviation::ComputeDeltaCost(const BT_Output& st, co
     long long S_tar = in.OrderType_TargetGroupSize(in.Order_TypeId(mv.task) - 1);
     unsigned  qty   = in.Order_Quantity(mv.task);
 
-    // ── Vecchia macchina, vecchio periodo — perde qty ──
+    // Old period, Old machine
     long long old_load_old = st.Load(mv.old_machine, mv.old_period);
     delta -= std::abs(S_tar - old_load_old);           // contributo prima
     delta += std::abs(S_tar - (old_load_old - qty));   // contributo dopo
 
-    // ── Nuova macchina, nuovo periodo — guadagna qty ──
+    // New Period, new machine
     long long old_load_new = st.Load(mv.new_machine, mv.new_period);
     delta -= std::abs(S_tar - old_load_new);           // contributo prima
     delta += std::abs(S_tar - (old_load_new + qty));   // contributo dopo
@@ -445,7 +445,7 @@ long long BT_ShiftDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, 
 {
     long long delta = 0;
 
-    // ── f3 PRIMA nel old_period (mv.task è ancora qui) ──
+    // Cost function before the move
     {
         double   sum_prio = 0.0;
         unsigned count    = 0;
@@ -462,7 +462,7 @@ long long BT_ShiftDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, 
         }
     }
 
-    // ── f3 DOPO nel old_period (mv.task rimosso) ──
+    // Cost function after the move
     {
         double   sum_prio = 0.0;
         unsigned count    = 0;
@@ -479,10 +479,8 @@ long long BT_ShiftDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, 
         }
     }
 
-    // ── Periodo nuovo solo se diverso dal vecchio ──
     if(mv.old_period != mv.new_period)
     {
-        // f3 PRIMA nel new_period (mv.task non ancora qui)
         {
             double   sum_prio = 0.0;
             unsigned count    = 0;
@@ -499,7 +497,6 @@ long long BT_ShiftDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, 
             }
         }
 
-        // f3 DOPO nel new_period (mv.task aggiunto)
         {
             double   sum_prio = 0.0;
             unsigned count    = 0;
@@ -549,3 +546,106 @@ long long BT_ShiftDeltaMinLoadPenalty::ComputeDeltaCost(const BT_Output& st, con
 
     return delta;
 }
+
+/*****************************************************************************
+  * BT_Swap Neighborhood Methods
+*****************************************************************************/
+
+BT_Swap::BT_Swap()
+{
+    task1 = 0;
+    task2 = 0;
+    old_period1 = 0;
+    old_machine1 = 0;
+    old_period2 = 0;
+    old_machine2 = 0;
+}
+
+bool operator==(const BT_Swap& mv1, const BT_Swap& mv2)
+{
+    return (mv1.task1 == mv2.task1 && mv1.task2 == mv2.task2)||(mv1.task1 == mv2.task2 && mv1.task2 == mv2.task1);
+}
+
+bool operator!=(const BT_Swap& mv1, const BT_Swap& mv2)
+{
+    return !(mv1 == mv2);
+}
+
+bool operator<(const BT_Svap& mv1, const BT_Swap& mv2)
+{
+    unsigned a1,a2;
+    if(mv1.task1 < mv1.task2) { a1 = mv1.task1; a2 = mv1.task2; }
+    else                      { a1 = mv1.task2; a2 = mv1.task1; }
+    
+    unsigned b1, b2; 
+    if(mv2.task1 < mv2.task2) { b1 = mv2.task1; b2 = mv2.task2; }
+    else                      { b1 = mv2.task2; b2 = mv2.task1; } 
+    
+    if (a1 != b1) return a1 < b1;
+    return a2 < b2;
+}
+
+std::istream& operator>>(std::istream& is, BT_Swap& mv)
+{
+    char ch;
+    is >> mv.task1 >> ch >> mv.task2;
+    return is;
+}
+
+std::ostream& operator<<(std::ostream& os, const BT_Swap& mv)
+{
+    os << "Swap(t1="<< mv.task1 << ", t2=" << mv.task2 << ")";
+    return os;
+}
+
+/*****************************************************************************
+  * BT_Swap Neighborhood Explorer
+*****************************************************************************/
+
+void BT_SwapNeighborhoodExplorer::RandomMove(const BT_Output& st, BT_Swap& mv) const
+{
+    mv.task1 = Random::Uniform<unsigned>(0, in.OrdersCount() - 1);
+    mv.old_period1  = st.AssignedPeriod(mv.task1);
+    mv.old_machine1 = st.AssignedResource(mv.task1);
+    
+
+    do{
+        mv.task2 = Random::Uniform<unsigned>(0, in.OrdersCount() - 1);
+        mv.old_period2  = st.AssignedPeriod(mv.task2);
+        mv.old_machine2 = st.AssignedResource(mv.task2);
+    } while(mv.task2 == mv.task1);
+}
+
+bool BT_SwapNeighborhoodExplorer::FeasibleMove(const BT_Output& st, const BT_Swap& mv) const
+{
+    // 1. Task must be different
+    if(mv.task1 == mv.task2) return false;
+
+    // 2. Not assigned to same machine and same period
+    if(mv.old_machine1 == mv.old_machine2 && mv.old_period1 == mv.old_period2)
+        return false;
+
+    // 3. Task-machine compatibility
+    if(!in.IsCompatible(mv.task1, mv.old_machine2)) return false;
+    if(!in.IsCompatible(mv.task2, mv.old_machine1)) return false;
+
+    // 4. Smax not violated after swap
+    unsigned S_max = in.OrderType_MaxGroupSize(in.Order_TypeId(mv.task1) - 1);
+    unsigned qty1  = in.Order_Quantity(mv.task1);
+    unsigned qty2  = in.Order_Quantity(mv.task2);
+
+    unsigned load_after_1 = st.Load(mv.old_machine2, mv.old_period2) - qty2 + qty1;
+    if(load_after_1 > S_max) return false;
+
+    unsigned load_after_2 = st.Load(mv.old_machine1, mv.old_period1) - qty1 + qty2;
+    if(load_after_2 > S_max) return false;
+
+    return true;
+}
+
+void BT_SwapNeighborhoodExplorer::MakeMove(BT_Output& st, const BT_Swap& mv) const
+{
+    st.Assign(mv.task1, mv.old_machine2, mv.old_period2);
+    st.Assign(mv.task2, mv.old_machine1, mv.old_period1);
+}
+ 
