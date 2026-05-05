@@ -680,7 +680,7 @@ bool BT_SwapNeighborhoodExplorer::NextMove(const BT_Output& st, BT_Swap& mv) con
     return true;
 }
 
-bool BT_SwapNeighborhoodExplorer::AnyNextMove(const BT_Output&, BT_Swap& mv) const
+bool BT_SwapNeighborhoodExplorer::AnyNextMove(const BT_Output& st, BT_Swap& mv) const
 {
     mv.task2++;
 
@@ -707,5 +707,8 @@ bool BT_SwapNeighborhoodExplorer::AnyNextMove(const BT_Output&, BT_Swap& mv) con
         if(mv.task2 >= in.OrdersCount())
             return false;
     }
+    mv.old_pariod2 = st.AssignedPeriod(mv.task2);
+    mv.old_machine2 = st.AssignedResource(mv.task2);
+    
     return true;
 }
