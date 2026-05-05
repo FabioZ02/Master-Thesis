@@ -571,7 +571,7 @@ bool operator!=(const BT_Swap& mv1, const BT_Swap& mv2)
     return !(mv1 == mv2);
 }
 
-bool operator<(const BT_Svap& mv1, const BT_Swap& mv2)
+bool operator<(const BT_Swap& mv1, const BT_Swap& mv2)
 {
     unsigned a1,a2;
     if(mv1.task1 < mv1.task2) { a1 = mv1.task1; a2 = mv1.task2; }
@@ -648,4 +648,64 @@ void BT_SwapNeighborhoodExplorer::MakeMove(BT_Output& st, const BT_Swap& mv) con
     st.Assign(mv.task1, mv.old_machine2, mv.old_period2);
     st.Assign(mv.task2, mv.old_machine1, mv.old_period1);
 }
- 
+
+void BT_NeighborhoodExplorer::FirstMove(const BT_Output& st, BT_Swap& mv) const
+{
+    mv.task1 = 0;
+    mv.old_period1  = st.AssignedPeriod(mv.task1);
+    mv.old_machine1 = st.AssignedResource(mv.task1);
+
+    mv.task2 = 0;
+
+    while(mv.task1 == mv.task2)
+    {
+        mv.task2++;
+    }
+
+    mv.old_period2  = st.AssignedPeriod(mv.task2);
+    mv.old_machine2 = st.AssignedResource(mv.task2);
+
+    if(mv.task2 >= in.OrdersCount())
+    {
+        NextMove(st,mv);
+    }
+}
+
+bool BT_SwapNeighborhoodExplorer::NextMove(const BT_Output& st, BT_Swap& mv) const
+{
+    do
+      if(!AnyNextMove(st,mv))
+        return false;
+    while(!FeasibleMove(st,mv));
+    return true;
+}
+
+bool BT_SwapNeighborhoodExplorer::AnyNextMove(const BT_Output&, BT_Swap& mv) const
+{
+    mv.task2++;
+
+    if(mv.task2 == mv.task1)
+      mv.task2++;
+
+    if(mv.task2 >= in.OrdersCount())
+    {
+        mv.task1++;
+
+        if(mv.task1 >= in.OrdersCount())
+            return false;
+
+        mv.old_period1 = st.AssignedPeriod(mv.task1);
+        mv.old_machine1 = st.AssignedResource(mv.task1);
+
+        mv.task2 = 0;
+        mv.old_period2 = st.AssignedPeriod(mv.task2);
+        mv.old_machine2 = st.AssignedResource(mv.task2);
+
+        if(mv.task1 == mv.task2)
+            mv.task2++;
+
+        if(mv.task2 >= in.OrdersCount())
+            return false;
+    }
+    return true;
+}
