@@ -5,7 +5,7 @@
 #include <climits>
 
 
-BT_SolutionManager::BT_SOlutionManager(const BT_Input& pin)
+BT_SolutionManager::BT_SolutionManager(const BT_Input& pin)
     : SolutionManager<BT_Input, BT_Output>(pin, "BT_SolutionManager") {}
 
 /* Greedy Algorithm
@@ -268,19 +268,44 @@ void BT_ShiftNeighborhoodExplorer::RandomMove(const BT_Output& st, BT_Shift& mv)
     mv.old_machine = st.AssignedResource(mv.task);
 
     do{
-        mv.new_period = Random::Uniform<unsigned>(0, in.UpperBuondPeriods() - 1);
+        mv.new_period = Random::Uniform<unsigned>(0, in.UpperBoundPeriods() - 1);
         const auto& valid = in.Order_ValidResourceIds(mv.task);
         unsigned id = Random::Uniform<unsigned>(0, valid.size() - 1);
         mv.new_machine = valid[id] - 1;
-    } while(mv.new_period == mv.old_period || mv.new_machine == mv.old_machine); // a shift move may also only change the assigned machine (or period) without changing the period (or machine).
+    } while(mv.new_period == mv.old_period && mv.new_machine == mv.old_machine); // a shift move may also only change the assigned machine (or period) without changing the period (or machine).
 }
 
 bool BT_ShiftNeighborhoodExplorer::FeasibleMove(const BT_Output& st, const BT_Shift& mv) const
 {
-    return (mv.task < in.OrdersCount() && mv.new_period < in.UpperBoundPeriods() && mv.new_machine < in.ResourcesCount() && mv.old_period != mv.new_period && mv.old_machine != mv.new_machine);
+    // 1. Valid indices
+    if(mv.task >= (int)in.OrdersCount()) return false;
+    if(mv.new_machine >= (int)in.ResourcesCount()) return false;
+    if(mv.new_period >= (int)in.UpperBoundPeriods()) return false;
+
+    // 2. Null move — neither machine nor period changes
+    if(mv.new_machine == mv.old_machine && mv.new_period == mv.old_period)
+        return false;
+
+    // 3. Task-machine compatibility
+    if(!in.IsCompatible(mv.task, mv.new_machine))
+        return false;
+
+    // 4. Smax not violated in the new cell
+    unsigned S_max    = in.OrderType_MaxGroupSize(in.Order_TypeId(mv.task) - 1);
+    unsigned qty      = in.Order_Quantity(mv.task);
+    unsigned cur_load = 0;
+
+    // If the new period already exists, get the current load
+    if(mv.new_period <= (int)st.LastPeriod())
+        cur_load = st.Load(mv.new_machine, mv.new_period);
+
+    if(cur_load + qty > S_max)
+        return false;
+
+    return true;
 }
 
-void BT_ShiftNeighborhoodExplorer::MakeMove(BT_Output& st, const BT_Change& mv) const
+void BT_ShiftNeighborhoodExplorer::MakeMove(BT_Output& st, const BT_Shift& mv) const
 {
     st.Assign(mv.task, mv.new_machine, mv.new_period);
 }
@@ -297,11 +322,11 @@ void BT_ShiftNeighborhoodExplorer::FirstMove(const BT_Output& st, BT_Shift& mv) 
 
     if(mv.new_period == mv.old_period && mv.new_machine == mv.old_machine)
     {
-        NextMove(st,mv)
+        NextMove(st,mv);
     }
 }
 
-bool BT_ShiftNeighborhoodExplorer::NextMove(const BT_Output& st, BT_Change& mv) const
+bool BT_ShiftNeighborhoodExplorer::NextMove(const BT_Output& st, BT_Shift& mv) const
 {
     do
       if(!AnyNextMove(st, mv))
@@ -317,7 +342,7 @@ bool BT_ShiftNeighborhoodExplorer::AnyNextMove(const BT_Output& st, BT_Shift& mv
     if(mv.new_period >= in.UpperBoundPeriods())
     {
         mv.new_period = 0;
-        mv.machine++:
+        mv.new_machine++;
 
         if(mv.new_machine >= in.ResourcesCount())
         {
@@ -331,5 +356,196 @@ bool BT_ShiftNeighborhoodExplorer::AnyNextMove(const BT_Output& st, BT_Shift& mv
             mv.old_machine = st.AssignedResource(mv.task);
         }
     }
+    return true;
 }
 
+long long BT_ShiftDeltaLoadDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const 
+{
+    long long delta = 0;
+    unsigned s_t = in.Order_Quantity(mv.task);
+    unsigned m_count = in.ResourcesCount();
+
+    if (mv.old_period == mv.new_period) 
+    {
+        // Case 1: Shift within the same period
+        unsigned p = mv.old_period;
+        unsigned old_max = 0;
+        unsigned new_max = 0;
+        
+        for (unsigned m = 0; m < m_count; m++) 
+        {
+            unsigned load = st.Load(m, p);
+            old_max = std::max(old_max, load);
+            
+            if (m == mv.old_machine) load -= s_t;
+            else if (m == mv.new_machine) load += s_t;
+            
+            new_max = std::max(new_max, load);
+        }
+        
+        delta = static_cast<long long>(new_max - old_max) * m_count;
+    } 
+    else 
+    {
+        // Case: SHift between different periods
+        // Old period
+        unsigned p0 = mv.old_period;
+        unsigned old_max0 = 0, new_max0 = 0;
+        
+        for (unsigned m = 0; m < m_count; m++) 
+        {
+            unsigned load = st.Load(m, p0);
+            old_max0 = std::max(old_max0, load);
+            
+            if (m == mv.old_machine) load -= s_t;
+            
+            new_max0 = std::max(new_max0, load);
+        }
+        delta += static_cast<long long>(new_max0 - old_max0) * m_count + s_t;
+
+        // --- New period ---
+        unsigned p1 = mv.new_period;
+        unsigned old_max1 = 0, new_max1 = 0;
+        
+        for (unsigned m = 0; m < m_count; m++) 
+        {
+            unsigned load = st.Load(m, p1);
+            old_max1 = std::max(old_max1, load);
+            
+            if (m == mv.new_machine) load += s_t;
+            
+            new_max1 = std::max(new_max1, load);
+        }
+        delta += static_cast<long long>(new_max1 - old_max1) * m_count - s_t;
+    }
+    
+    return delta;
+}
+
+long long BT_ShiftDeltaTargetDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
+{
+    long long delta = 0;
+    long long S_tar = in.OrderType_TargetGroupSize(in.Order_TypeId(mv.task) - 1);
+    unsigned  qty   = in.Order_Quantity(mv.task);
+
+    // ── Vecchia macchina, vecchio periodo — perde qty ──
+    long long old_load_old = st.Load(mv.old_machine, mv.old_period);
+    delta -= std::abs(S_tar - old_load_old);           // contributo prima
+    delta += std::abs(S_tar - (old_load_old - qty));   // contributo dopo
+
+    // ── Nuova macchina, nuovo periodo — guadagna qty ──
+    long long old_load_new = st.Load(mv.new_machine, mv.new_period);
+    delta -= std::abs(S_tar - old_load_new);           // contributo prima
+    delta += std::abs(S_tar - (old_load_new + qty));   // contributo dopo
+
+    return delta;
+}
+
+long long BT_ShiftDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
+{
+    long long delta = 0;
+
+    // ── f3 PRIMA nel old_period (mv.task è ancora qui) ──
+    {
+        double   sum_prio = 0.0;
+        unsigned count    = 0;
+        for(unsigned t = 0; t < in.OrdersCount(); t++)
+            if(st.AssignedPeriod(t) == (unsigned)mv.old_period)
+                { sum_prio += in.Order_Priority(t); count++; }
+
+        if(count > 0)
+        {
+            long long avg = static_cast<long long>(std::ceil(sum_prio / count));
+            for(unsigned t = 0; t < in.OrdersCount(); t++)
+                if(st.AssignedPeriod(t) == (unsigned)mv.old_period)
+                    delta -= std::abs(avg - static_cast<long long>(in.Order_Priority(t)));
+        }
+    }
+
+    // ── f3 DOPO nel old_period (mv.task rimosso) ──
+    {
+        double   sum_prio = 0.0;
+        unsigned count    = 0;
+        for(unsigned t = 0; t < in.OrdersCount(); t++)
+            if(t != (unsigned)mv.task && st.AssignedPeriod(t) == (unsigned)mv.old_period)
+                { sum_prio += in.Order_Priority(t); count++; }
+
+        if(count > 0)
+        {
+            long long avg = static_cast<long long>(std::ceil(sum_prio / count));
+            for(unsigned t = 0; t < in.OrdersCount(); t++)
+                if(t != (unsigned)mv.task && st.AssignedPeriod(t) == (unsigned)mv.old_period)
+                    delta += std::abs(avg - static_cast<long long>(in.Order_Priority(t)));
+        }
+    }
+
+    // ── Periodo nuovo solo se diverso dal vecchio ──
+    if(mv.old_period != mv.new_period)
+    {
+        // f3 PRIMA nel new_period (mv.task non ancora qui)
+        {
+            double   sum_prio = 0.0;
+            unsigned count    = 0;
+            for(unsigned t = 0; t < in.OrdersCount(); t++)
+                if(st.AssignedPeriod(t) == (unsigned)mv.new_period)
+                    { sum_prio += in.Order_Priority(t); count++; }
+
+            if(count > 0)
+            {
+                long long avg = static_cast<long long>(std::ceil(sum_prio / count));
+                for(unsigned t = 0; t < in.OrdersCount(); t++)
+                    if(st.AssignedPeriod(t) == (unsigned)mv.new_period)
+                        delta -= std::abs(avg - static_cast<long long>(in.Order_Priority(t)));
+            }
+        }
+
+        // f3 DOPO nel new_period (mv.task aggiunto)
+        {
+            double   sum_prio = 0.0;
+            unsigned count    = 0;
+            for(unsigned t = 0; t < in.OrdersCount(); t++)
+                if(t == (unsigned)mv.task || st.AssignedPeriod(t) == (unsigned)mv.new_period)
+                    { sum_prio += in.Order_Priority(t); count++; }
+
+            if(count > 0)
+            {
+                long long avg = static_cast<long long>(std::ceil(sum_prio / count));
+                for(unsigned t = 0; t < in.OrdersCount(); t++)
+                    if(t == (unsigned)mv.task || st.AssignedPeriod(t) == (unsigned)mv.new_period)
+                        delta += std::abs(avg - static_cast<long long>(in.Order_Priority(t)));
+            }
+        }
+    }
+
+    return delta;
+}
+
+long long BT_ShiftDeltaMinLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
+{
+    long long delta = 0;
+    long long S_min = in.OrderType_MinGroupSize(in.Order_TypeId(mv.task) - 1);
+    unsigned  qty   = in.Order_Quantity(mv.task);
+
+    // Old machine, old period — loses qty
+    // Smin not enforced on remainder period
+    if(!st.IsRemainderPeriod(mv.old_period))
+    {
+        long long load_before = st.Load(mv.old_machine, mv.old_period);
+        long long load_after  = load_before - qty;
+        delta -= std::max(0LL, S_min - load_before); // penalty before
+        delta += std::max(0LL, S_min - load_after);  // penalty after
+    }
+
+    // New machine, new period — gains qty
+    // Smin not enforced on remainder period
+    if(!st.IsRemainderPeriod(mv.new_period))
+    {
+        long long load_before = (mv.new_period <= (int)st.LastPeriod())
+                                ? st.Load(mv.new_machine, mv.new_period) : 0;
+        long long load_after  = load_before + qty;
+        delta -= std::max(0LL, S_min - load_before); // penalty before
+        delta += std::max(0LL, S_min - load_after);  // penalty after
+    }
+
+    return delta;
+}
