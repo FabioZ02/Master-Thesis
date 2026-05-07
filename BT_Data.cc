@@ -223,3 +223,10 @@ bool operator==(const BT_Output& out1, const BT_Output& out2)
             return false;
     return true;
 }
+
+std::ostream& operator<<(std::ostream& os, const BT_Input& in)
+{
+    os << "Orders:    " << in.OrdersCount()    << "\n";
+    os << "Resources: " << in.ResourcesCount() << "\n";
+    return os;
+}
