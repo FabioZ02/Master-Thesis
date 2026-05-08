@@ -138,95 +138,82 @@ void BT_Output::Reset()
 
 void BT_Output::Dump(std::ostream& os) const
 {
-    os << "MAt = [";
-    for(unsigned t = 0; t < in.OrdersCount(); t++)
-    {
-        os << assigned_resource[t];
-        if(t < in.OrdersCount() - 1) os << ", ";
-    }
-    os << "]" << std::endl;
+    // Global parameters
+    unsigned type_idx = in.Order_TypeId(0) - 1;
+    unsigned S_min = in.OrderType_MinGroupSize(type_idx);
+    unsigned S_max = in.OrderType_MaxGroupSize(type_idx);
+    unsigned S_tar = in.OrderType_TargetGroupSize(type_idx);
 
-    os << "PAt = [";
-    for(unsigned t = 0; t < in.OrdersCount(); t++)
-    {
-        os << assigned_period[t];
-        if(t < in.OrdersCount() - 1) os << ", ";
-    }
-    os << "]" << std::endl;
+    os << "S_min: " << S_min << "\n";
+    os << "S_target: " << S_tar << "\n";
+    os << "S_max: " << S_max << "\n\n";
 
-    os << "MSp,m = [|";
-    for(unsigned p = 0; p <= last_period; p++)
+    os << "Load Matrix:\n";
+    os << "M \\ P\t";
+    for (unsigned p = 0; p <= last_period; p++)
     {
-        for(unsigned r = 0; r < in.ResourcesCount(); r++)
+        os << "P" << p << "\t";
+    }
+    os << "\n";
+
+    // Resources
+    for (unsigned m = 0; m < in.ResourcesCount(); m++)
+    {
+        os << "M" << m << "\t";
+        for (unsigned p = 0; p <= last_period; p++)
         {
-            os << load[r][p];
-            if(r < in.ResourcesCount() - 1) os << ", ";
+            os << load[m][p] << "\t";
         }
-        os << (IsRemainderPeriod(p) ? "| (R)" : "|") << std::endl;
+        os << "\n";
     }
-    os << "]" << std::endl;
+    os << "\n";
+
+    // Tasks
+    os << "Task Assignments:\n";
+    for (unsigned t = 0; t < in.OrdersCount(); t++)
+    {
+        if (IsAssigned(t))
+        {
+            os << "Task " << t << "\t-> M" << assigned_resource[t] << "\tP" << assigned_period[t] << "\n";
+        }
+        else
+        {
+            os << "Task " << t << "\t-> Unassigned\n";
+        }
+    }
+    os << "\n";
 }
 
 std::ostream& operator<<(std::ostream& os, const BT_Output& out)
 {
-    os << "[";
-    for(unsigned t = 0; t < out.in.OrdersCount(); t++)
-    {
-        os << out.assigned_resource[t];
-        if(t < out.in.OrdersCount() - 1) os << ", ";
-    }
-    os << "]" << std::endl;
-
-    os << "[";
-    for(unsigned t = 0; t < out.in.OrdersCount(); t++)
-    {
-        os << out.assigned_period[t];
-        if(t < out.in.OrdersCount() - 1) os << ", ";
-    }
-    os << "]" << std::endl;
-
+    out.Dump(os);
     return os;
 }
 
 std::istream& operator>>(std::istream& is, BT_Output& out)
 {
-    unsigned r, p;
-    char ch;
-
     out.Reset();
-
-    is >> ch; // '['
-    for(unsigned t = 0; t < out.in.OrdersCount(); t++)
+    unsigned t, r, p;
+    while (is >> t >> r >> p)
     {
-        is >> r >> ch;
-        out.assigned_resource[t] = r;
+        out.Assign(t, r, p);
     }
-
-    is >> ch; // '['
-    for(unsigned t = 0; t < out.in.OrdersCount(); t++)
-    {
-        is >> p >> ch;
-        out.assigned_period[t] = p;
-    }
-
-    for(unsigned t = 0; t < out.in.OrdersCount(); t++)
-        out.Assign(t, out.assigned_resource[t], out.assigned_period[t]);
-
     return is;
 }
 
 bool operator==(const BT_Output& out1, const BT_Output& out2)
 {
-    for(unsigned t = 0; t < out1.in.OrdersCount(); t++)
-        if(out1.assigned_resource[t] != out2.assigned_resource[t] ||
-           out1.assigned_period[t]   != out2.assigned_period[t])
-            return false;
-    return true;
+    return out1.assigned_resource == out2.assigned_resource &&
+           out1.assigned_period == out2.assigned_period;
 }
 
 std::ostream& operator<<(std::ostream& os, const BT_Input& in)
 {
-    os << "Orders:    " << in.OrdersCount()    << "\n";
-    os << "Resources: " << in.ResourcesCount() << "\n";
+    os << "=== DATI DELL'ISTANZA ===\n";
+    os << "Orders : " << in.OrdersCount() << "\n";
+    os << "Resources : " << in.ResourcesCount() << "\n";
+    os << "Upper Bound Periods : " << in.UpperBoundPeriods() << "\n";
+
+
     return os;
 }
