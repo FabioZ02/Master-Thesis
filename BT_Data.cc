@@ -209,7 +209,7 @@ bool operator==(const BT_Output& out1, const BT_Output& out2)
 
 std::ostream& operator<<(std::ostream& os, const BT_Input& in)
 {
-    os << "=== DATI DELL'ISTANZA ===\n";
+    os << "=== Parameters ===\n";
     os << "Orders : " << in.OrdersCount() << "\n";
     os << "Resources : " << in.ResourcesCount() << "\n";
     os << "Upper Bound Periods : " << in.UpperBoundPeriods() << "\n";
