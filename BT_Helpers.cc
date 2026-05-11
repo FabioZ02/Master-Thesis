@@ -31,29 +31,31 @@ void BT_SolutionManager::GreedyState(BT_Output& out)
         unsigned S_max = in.OrderType_MaxGroupSize(in.Order_TypeId(t) - 1);
         unsigned s_t   = in.Order_Quantity(t);
 
-        unsigned selected_machine = in.ResourcesCount(); 
+        unsigned selected_machine = in.ResourcesCount();
         unsigned min_load = UINT_MAX;
-        // Traduction of assigning task t to the compatible machine with the least load
         for(unsigned m = 0; m < in.ResourcesCount(); m++)
-            if(in.IsCompatible(t, m) && machine_load[m] < min_load)
+            if(in.IsCompatible(t, m)
+               && machine_load[m] + s_t <= S_max   
+               && machine_load[m] < min_load)
                 { min_load = machine_load[m]; selected_machine = m; }
 
         if(selected_machine == in.ResourcesCount())
         {
-            std::cerr << "GreedyState: no compatible machine for task " << t << "\n";
-            exit(1);
-        }
-
-        if(S_max - machine_load[selected_machine] < s_t && current_period + 1 < in.UpperBoundPeriods())
-        {
-            current_period++;
-
-            std::fill(machine_load.begin(), machine_load.end(), 0);
-
-            selected_machine = in.ResourcesCount();
+            if(current_period + 1 < in.UpperBoundPeriods())
+            {
+                current_period++;
+                std::fill(machine_load.begin(), machine_load.end(), 0);
+            }
             for(unsigned m = 0; m < in.ResourcesCount(); m++)
                 if(in.IsCompatible(t, m)) { selected_machine = m; break; }
+
+            if(selected_machine == in.ResourcesCount())
+            {
+                std::cerr << "GreedyState: no compatible machine for task " << t << "\n";
+                exit(1);
+            }
         }
+
         out.Assign(t, selected_machine, current_period);
         machine_load[selected_machine] += s_t;
     }
@@ -215,6 +217,34 @@ void BT_MinLoadPenalty::PrintViolations(const BT_Output& out, std::ostream& os) 
     }
 }
 
+int BT_MaxLoadPenalty::ComputeCost(const BT_Output& out) const
+{
+    long long penalty = 0;
+    long long S_max   = in.OrderType_MaxGroupSize(in.Order_TypeId(0) - 1);
+    for(unsigned p = 0; p <= out.LastPeriod(); p++)
+    {
+        for(unsigned m = 0; m < in.ResourcesCount(); m++)
+            penalty += std::max(0LL, static_cast<long long>(out.Load(m, p)) - S_max);
+    }
+    return penalty;
+}
+
+void BT_MaxLoadPenalty::PrintViolations(const BT_Output& out, std::ostream& os) const
+{
+    long long S_max = in.OrderType_MaxGroupSize(in.Order_TypeId(0) - 1);
+    for(unsigned p = 0; p <= out.LastPeriod(); p++)
+    {
+        for(unsigned m = 0; m < in.ResourcesCount(); m++)
+        {
+            long long viol = static_cast<long long>(out.Load(m, p)) - S_max;
+            if(viol > 0)
+                os << "Period " << p << ", Machine " << m
+                   << ": Smax violation = " << viol << "\n";
+        }
+    }
+}
+
+
 /*****************************************************************************
   * BT_Shift Neighborhood Methods
 *****************************************************************************/
@@ -292,18 +322,6 @@ bool BT_ShiftNeighborhoodExplorer::FeasibleMove(const BT_Output& st, const BT_Sh
 
     // 4. No gaps — new period cannot skip beyond LastPeriod + 1
     if(mv.new_period > (int)(st.LastPeriod() + 1))
-        return false;
-
-    // 5. Smax not violated in the new cell
-    unsigned S_max    = in.OrderType_MaxGroupSize(in.Order_TypeId(mv.task) - 1);
-    unsigned qty      = in.Order_Quantity(mv.task);
-    unsigned cur_load = 0;
-
-    // If the new period already exists, get the current load
-    if(mv.new_period <= (int)st.LastPeriod())
-        cur_load = st.Load(mv.new_machine, mv.new_period);
-
-    if(cur_load + qty > S_max)
         return false;
 
     return true;
@@ -571,6 +589,37 @@ int BT_ShiftDeltaMinLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_
 
     return delta;
 }
+
+int BT_ShiftDeltaMaxLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
+{
+    long long delta = 0;
+    long long S_max = in.OrderType_MaxGroupSize(in.Order_TypeId(mv.task) - 1);
+    unsigned  qty   = in.Order_Quantity(mv.task);
+
+    // Old machine, old period — loses qty
+    // Skipped if old_period is remainder (Smin not enforced)
+    {
+        long long load_before = st.Load(mv.old_machine, mv.old_period);
+        long long load_after  = load_before - qty;
+        delta -= std::max(0LL, load_before - S_max);
+        delta += std::max(0LL, load_after - S_max );
+    }
+
+    // New machine, new period — gains qty
+    if(mv.new_period > (int)st.LastPeriod())
+    { 
+        delta += std::max(0LL, qty - S_max);
+    }
+    else 
+    {
+        long long load_before = st.Load(mv.new_machine, mv.new_period);
+        long long load_after  = load_before + qty;
+        delta -= std::max(0LL, load_before - S_max);
+        delta += std::max(0LL, load_after - S_max);
+    }
+
+    return delta;
+}
 /*****************************************************************************
   * BT_Swap Neighborhood Methods
 *****************************************************************************/
@@ -652,17 +701,6 @@ bool BT_SwapNeighborhoodExplorer::FeasibleMove(const BT_Output& st, const BT_Swa
     // 3. Task-machine compatibility
     if(!in.IsCompatible(mv.task1, mv.old_machine2)) return false;
     if(!in.IsCompatible(mv.task2, mv.old_machine1)) return false;
-
-    // 4. Smax not violated after swap
-    unsigned S_max = in.OrderType_MaxGroupSize(in.Order_TypeId(mv.task1) - 1);
-    unsigned qty1  = in.Order_Quantity(mv.task1);
-    unsigned qty2  = in.Order_Quantity(mv.task2);
-
-    unsigned load_after_1 = st.Load(mv.old_machine2, mv.old_period2) - qty2 + qty1;
-    if(load_after_1 > S_max) return false;
-
-    unsigned load_after_2 = st.Load(mv.old_machine1, mv.old_period1) - qty1 + qty2;
-    if(load_after_2 > S_max) return false;
 
     return true;
 }
@@ -946,6 +984,34 @@ int BT_SwapDeltaMinLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_S
         long long load_after  = load_before - qty2 + qty1;
         delta -= std::max(0LL, S_min - load_before);
         delta += std::max(0LL, S_min - load_after);
+    }
+
+    return delta;
+}
+
+int BT_SwapDeltaMaxLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
+{
+    long long delta = 0;
+    long long S_max = in.OrderType_MaxGroupSize(in.Order_TypeId(mv.task1) - 1); // S_max, non S_min
+    unsigned  qty1  = in.Order_Quantity(mv.task1);
+    unsigned  qty2  = in.Order_Quantity(mv.task2);
+
+    // (old_machine1, old_period1) — loses qty1, gains qty2
+    // Nessun skip per remainder: Smax vale per tutti i periodi
+    {
+        long long load_before = st.Load(mv.old_machine1, mv.old_period1);
+        long long load_after  = load_before - qty1 + qty2;
+        delta -= std::max(0LL, load_before - S_max); // load - S_max, non S_max - load
+        delta += std::max(0LL, load_after  - S_max);
+    }
+
+    // (old_machine2, old_period2) — loses qty2, gains qty1
+    // Nessun skip per remainder: Smax vale per tutti i periodi
+    {
+        long long load_before = st.Load(mv.old_machine2, mv.old_period2);
+        long long load_after  = load_before - qty2 + qty1;
+        delta -= std::max(0LL, load_before - S_max); // load - S_max, non S_max - load
+        delta += std::max(0LL, load_after  - S_max);
     }
 
     return delta;

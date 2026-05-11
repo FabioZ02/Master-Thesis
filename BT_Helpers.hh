@@ -82,6 +82,15 @@ public:
     void      PrintViolations(const BT_Output& out, std::ostream& os = std::cout) const override;
 };
 
+class BT_MaxLoadPenalty : public CostComponent<BT_Input, BT_Output>
+{
+public:
+    BT_MaxLoadPenalty(const BT_Input& in, int w, bool hard)
+        : CostComponent<BT_Input, BT_Output>(in, w, hard, "BT_MaxLoadPenalty") {}
+    int ComputeCost(const BT_Output& out) const override;
+    void      PrintViolations(const BT_Output& out, std::ostream& os = std::cout) const override;
+};
+
 /***************************************************************************
  * BT_ShiftNeighborhood Explorer:
 ***************************************************************************/
@@ -122,6 +131,14 @@ public:
     int ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
 };
 
+class BT_ShiftDeltaMaxLoadPenalty
+    : public DeltaCostComponent<BT_Input, BT_Output, BT_Shift>
+{
+public:
+    BT_ShiftDeltaMaxLoadPenalty(const BT_Input& in, BT_MaxLoadPenalty& cc)
+        : DeltaCostComponent<BT_Input, BT_Output, BT_Shift>(in, cc, "BT_ShiftDeltaMaxLoadPenalty") {}
+    int ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
+};
 class BT_ShiftNeighborhoodExplorer
   : public NeighborhoodExplorer<BT_Input, BT_Output, BT_Shift>
 {
@@ -174,6 +191,15 @@ class BT_SwapDeltaMinLoadPenalty
 public:
     BT_SwapDeltaMinLoadPenalty(const BT_Input& in, BT_MinLoadPenalty& cc)
         : DeltaCostComponent<BT_Input, BT_Output, BT_Swap>(in, cc, "BT_SwapDeltaMinLoadPenalty") {}
+    int ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const override;
+};
+
+class BT_SwapDeltaMaxLoadPenalty
+    : public DeltaCostComponent<BT_Input, BT_Output, BT_Swap>
+{
+public:
+    BT_SwapDeltaMaxLoadPenalty(const BT_Input& in, BT_MaxLoadPenalty& cc)
+        : DeltaCostComponent<BT_Input, BT_Output, BT_Swap>(in, cc, "BT_SwapDeltaMaxLoadPenalty") {}
     int ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const override;
 };
 

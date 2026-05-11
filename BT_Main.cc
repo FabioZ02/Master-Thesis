@@ -30,18 +30,20 @@ int main(int argc, const char* argv[])
     BT_TargetDeviation   cc2(in, 1, false);
     BT_PriorityDeviation cc3(in, 1, false);
     BT_MinLoadPenalty    cc4(in, 1, true);
+    BT_MaxLoadPenalty    cc5(in, 1, true);
 
     // Delta cost components — Shift
     BT_ShiftDeltaLoadDeviation     dcc1_shift(in, cc1);
     BT_ShiftDeltaTargetDeviation   dcc2_shift(in, cc2);
     BT_ShiftDeltaPriorityDeviation dcc3_shift(in, cc3);
     BT_ShiftDeltaMinLoadPenalty    dcc4_shift(in, cc4);
-
+    BT_ShiftDeltaMaxLoadPenalty    dcc5_shift(in, cc5);
     // Delta cost components — Swap
     BT_SwapDeltaLoadDeviation     dcc1_swap(in, cc1);
     BT_SwapDeltaTargetDeviation   dcc2_swap(in, cc2);
     BT_SwapDeltaPriorityDeviation dcc3_swap(in, cc3);
     BT_SwapDeltaMinLoadPenalty    dcc4_swap(in, cc4);
+    BT_SwapDeltaMaxLoadPenalty    dcc5_swap(in, cc5);
 
     // Helpers
     BT_SolutionManager           BT_sm(in);
@@ -53,17 +55,19 @@ int main(int argc, const char* argv[])
     BT_sm.AddCostComponent(cc2);
     BT_sm.AddCostComponent(cc3);
     BT_sm.AddCostComponent(cc4);
-
+    BT_sm.AddCostComponent(cc5);
     // Add delta cost components to neighborhood explorers
     BT_shift_nhe.AddDeltaCostComponent(dcc1_shift);
     BT_shift_nhe.AddDeltaCostComponent(dcc2_shift);
     BT_shift_nhe.AddDeltaCostComponent(dcc3_shift);
     BT_shift_nhe.AddDeltaCostComponent(dcc4_shift);
+    BT_shift_nhe.AddDeltaCostComponent(dcc5_shift);
 
     BT_swap_nhe.AddDeltaCostComponent(dcc1_swap);
     BT_swap_nhe.AddDeltaCostComponent(dcc2_swap);
     BT_swap_nhe.AddDeltaCostComponent(dcc3_swap);
     BT_swap_nhe.AddDeltaCostComponent(dcc4_swap);
+    BT_swap_nhe.AddDeltaCostComponent(dcc5_swap);
 
     // Tester
     Tester<BT_Input, BT_Output> tester(in, BT_sm);
