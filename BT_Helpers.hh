@@ -139,6 +139,7 @@ public:
         : DeltaCostComponent<BT_Input, BT_Output, BT_Shift>(in, cc, "BT_ShiftDeltaMaxLoadPenalty") {}
     int ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
 };
+
 class BT_ShiftNeighborhoodExplorer
   : public NeighborhoodExplorer<BT_Input, BT_Output, BT_Shift>
 {
@@ -217,4 +218,5 @@ public:
 protected:
   bool AnyNextMove(const BT_Output&, BT_Swap&) const;
 };
+
 #endif

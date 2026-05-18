@@ -1,3 +1,4 @@
+
 Instance;orders;resources;MinGroupSize;TargetGroupSize;MaxGroupSize;ValidResourceProbability;PriorityLevels;ReferenceSolution_Cost;ReferenceSolution_ExactCost;ReferenceSolution_PlanningGroups
 instance_test_1;417;10;197;207;215;0,153390438;5;1739;1691,032673;9
 instance_test_2;342;5;113;215;401;0,934575821;19;10120;10115,57294;10
