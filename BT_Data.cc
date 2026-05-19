@@ -123,6 +123,21 @@ void BT_Output::Assign(unsigned t, unsigned r, unsigned p)
         last_period = p;
 }
 
+void BT_Output::RemovePeriod(unsigned p)
+{
+    // Shift left the indexes of the assigned periods greater than p
+    for(unsigned t = 0; t < in.OrdersCount(); t++)
+        if(assigned_period[t] > (int)p)
+            assigned_period[t]--;
+
+    // Remove column p from the load matrix
+    for(unsigned m = 0; m < in.ResourcesCount(); m++)
+        load[m].erase(load[m].begin() + p);
+
+    if(last_period > 0)
+        last_period--;
+}
+
 void BT_Output::Reset()
 {
     for(unsigned t = 0; t < in.OrdersCount(); t++)

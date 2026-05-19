@@ -94,11 +94,13 @@ public:
     bool     IsAssigned(unsigned t)            const { return assigned_resource[t] != -1; }
     unsigned AssignedResource(unsigned t)      const { return assigned_resource[t];       }
     unsigned AssignedPeriod(unsigned t)        const { return assigned_period[t];         }
+    void RemovePeriod(unsigned p);
     unsigned Load(unsigned r, unsigned period) const { return load[r][period];            }
 
     // Remainder period: the last period used, Smin is not enforced here
     unsigned LastPeriod()                  const { return last_period;      }
     bool     IsRemainderPeriod(unsigned p) const { return p == last_period; }
+
 
     void Reset();
     void Dump(std::ostream& os) const;

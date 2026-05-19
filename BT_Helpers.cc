@@ -329,7 +329,17 @@ bool BT_ShiftNeighborhoodExplorer::FeasibleMove(const BT_Output& st, const BT_Sh
 
 void BT_ShiftNeighborhoodExplorer::MakeMove(BT_Output& st, const BT_Shift& mv) const
 {
+    unsigned old_period = mv.old_period;
+
     st.Assign(mv.task, mv.new_machine, mv.new_period);
+
+    // Old period empty? Then remove it
+    bool empty = true;
+    for(unsigned m = 0; m < in.ResourcesCount(); m++)
+        if(st.Load(m, old_period) > 0) { empty = false; break; }
+
+    if(empty)
+        st.RemovePeriod(old_period);
 }
 
 void BT_ShiftNeighborhoodExplorer::FirstMove(const BT_Output& st, BT_Shift& mv) const
