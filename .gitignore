@@ -1,0 +1,6 @@
+# Ignora l'eseguibile compilato
+bt_main
+
+# Ignora tutti i file oggetto intermedi
+*.o
+
