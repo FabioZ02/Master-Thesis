@@ -878,8 +878,8 @@ int BT_SwapDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, const B
     // Cost function before in old_period1
     {
         long long sum_prio = 0;
-        unsigned count    = 0;
-        for(unsigned t = 0; t < in.OrdersCount(); t++)
+        unsigned count     = 0;
+        for(unsigned t     = 0; t < in.OrdersCount(); t++)
             if(st.AssignedPeriod(t) == (unsigned)mv.old_period1)
                 { sum_prio += in.Order_Priority(t); count++; }
 
@@ -895,7 +895,7 @@ int BT_SwapDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, const B
     // Cost function after in old_period1 (task1 removed, task2 added)
     {
         long long sum_prio = 0;
-        unsigned count    = 0;
+        unsigned count     = 0;
         for(unsigned t = 0; t < in.OrdersCount(); t++)
         {
             if(t == (unsigned)mv.task1) continue;
@@ -908,7 +908,7 @@ int BT_SwapDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, const B
 
         if(count > 0)
         {
-            long long avg = ( static_cast<long long>(sum_prio) + count - 1) / count;
+            long long avg  = ( static_cast<long long>(sum_prio) + count - 1) / count;
             for(unsigned t = 0; t < in.OrdersCount(); t++)
             {
                 if(t == (unsigned)mv.task1) continue;
@@ -926,7 +926,7 @@ int BT_SwapDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, const B
         {
             long long sum_prio = 0;
             unsigned count    = 0;
-            for(unsigned t = 0; t < in.OrdersCount(); t++)
+            for(unsigned t     = 0; t < in.OrdersCount(); t++)
                 if(st.AssignedPeriod(t) == (unsigned)mv.old_period2)
                     { sum_prio += in.Order_Priority(t); count++; }
 
@@ -942,8 +942,8 @@ int BT_SwapDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, const B
         // Cost function after in old_period2 (task2 removed, task1 added)
         {
             long long sum_prio = 0;
-            unsigned count    = 0;
-            for(unsigned t = 0; t < in.OrdersCount(); t++)
+            unsigned count     = 0;
+            for(unsigned t     = 0; t < in.OrdersCount(); t++)
             {
                 if(t == (unsigned)mv.task1) continue;
                 if(t == (unsigned)mv.task2) continue;
