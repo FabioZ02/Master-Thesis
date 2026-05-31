@@ -14,6 +14,7 @@ struct OrderType
 
 struct Order
 {
+    unsigned order_id;
     unsigned type_id;
     unsigned quantity;
     unsigned priority;
@@ -41,6 +42,7 @@ public:
 
     // Orders
     unsigned OrdersCount()                                          const { return orders.size();                 }
+    unsigned Order_Id(unsigned i)                                   const { return orders[i].order_id;           }
     unsigned Order_TypeId(unsigned i)                               const { return orders[i].type_id;            }
     unsigned Order_Quantity(unsigned i)                             const { return orders[i].quantity;           }
     unsigned Order_Priority(unsigned i)                             const { return orders[i].priority;           }
@@ -104,6 +106,7 @@ public:
 
     void Reset();
     void Dump(std::ostream& os) const;
+    void WriteValidatorJSON(std::ostream& os) const;
 
 private:
     const BT_Input& in;

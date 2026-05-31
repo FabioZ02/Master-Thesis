@@ -30,11 +30,12 @@ BT_Input::BT_Input(const std::string& file_name)
 
     for(const auto& o : j["Orders"])
     {
+        unsigned order_id = o["OrderId"];
         unsigned type_id  = o["TypeId"];
         unsigned quantity = o["Quantity"];
         unsigned priority = o["Priority"];
         std::vector<unsigned> valid_resource_ids = o["ValidResourceIds"].get<std::vector<unsigned>>();
-        orders.push_back({type_id, quantity, priority, valid_resource_ids});
+        orders.push_back({order_id, type_id, quantity, priority, valid_resource_ids});
     }
 
     for(const auto& r : j["Resources"])
@@ -199,9 +200,51 @@ void BT_Output::Dump(std::ostream& os) const
     os << "\n";
 }
 
+// In BT_Data.cc (aggiungi questa funzione)
+void BT_Output::WriteValidatorJSON(std::ostream& os) const
+{
+    nlohmann::json j;
+    j["PlanningGroups"] = nlohmann::json::array();
+
+    // Iteriamo per tutti i periodi (Rank) fino a last_period
+    for (unsigned p = 0; p <= last_period; p++)
+    {
+        nlohmann::json group;
+        group["Rank"] = p;
+        group["PlannedOrders"] = nlohmann::json::array();
+
+        // Cerchiamo tutti i task assegnati a questo periodo
+        for (unsigned t = 0; t < in.OrdersCount(); t++)
+        {
+            if (IsAssigned(t) && assigned_period[t] == static_cast<int>(p))
+            {
+                nlohmann::json order;
+                // Usiamo gli ID originali, non gli indici interni (t, m)
+                order["OrderId"] = in.Order_Id(t);
+                order["ResourceId"] = in.Resource_ID(assigned_resource[t]); 
+                group["PlannedOrders"].push_back(order);
+            }
+        }
+        
+        if (!group["PlannedOrders"].empty()) {
+            j["PlanningGroups"].push_back(group);
+        }
+    }
+
+    // dump(2) formatta il JSON con un'indentazione di 2 spazi
+    os << j.dump(2) << "\n"; 
+}
+
+// In BT_Data.cc (modifica l'operatore esistente)
 std::ostream& operator<<(std::ostream& os, const BT_Output& out)
 {
-    out.Dump(os);
+    // Se stampi su std::cout (la console), potresti voler vedere il Dump testuale.
+    // Se stampi su file (os non è cout), scrivi il JSON.
+    if (&os == &std::cout) {
+        out.Dump(os);
+    } else {
+        out.WriteValidatorJSON(os);
+    }
     return os;
 }
 

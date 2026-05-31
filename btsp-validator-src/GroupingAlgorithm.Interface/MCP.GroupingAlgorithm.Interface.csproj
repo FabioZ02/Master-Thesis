@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net4.8</TargetFramework>
+    <Version>0.2.0</Version>
+    <Company>MCP GmbH</Company>
+    <Description>MCP GroupingAlgorithm</Description>
+    <Copyright>Copyright © MCP GmbH 2023</Copyright>
+    <AssemblyVersion>0.2.0</AssemblyVersion>
+    <Configurations>Debug;Release;Verify</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="7.0.3" />
+  </ItemGroup>
+
+</Project>

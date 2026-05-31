@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net4.8</TargetFramework>
+    <Configurations>Debug;Release;Verify</Configurations>
+    <AssemblyVersion>0.2.0</AssemblyVersion>
+    <Company>MCP GmbH</Company>
+    <Authors>MCP GmbH (mcpfna)</Authors>
+    <Description>MCP GroupingAlgorithm</Description>
+    <Copyright>Copyright © MCP GmbH 2023</Copyright>
+    <Version>0.2.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MCP.GroupingAlgorithm.Interface\MCP.GroupingAlgorithm.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

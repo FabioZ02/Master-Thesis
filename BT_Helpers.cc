@@ -16,7 +16,7 @@ void BT_SolutionManager::GreedyState(BT_Output& out)
 {
     out.Reset();
 
-    // Sort tasks by priority descending
+    // 1. Sort tasks by descending priority
     std::vector<unsigned> sorted_tasks(in.OrdersCount());
     std::iota(sorted_tasks.begin(), sorted_tasks.end(), 0);
     std::sort(sorted_tasks.begin(), sorted_tasks.end(), [&](unsigned a, unsigned b){
@@ -31,31 +31,45 @@ void BT_SolutionManager::GreedyState(BT_Output& out)
         unsigned S_max = in.OrderType_MaxGroupSize(in.Order_TypeId(t) - 1);
         unsigned s_t   = in.Order_Quantity(t);
 
+        // 2. Find the compatible machine with the absolute MINIMUM load in the current period
         unsigned selected_machine = in.ResourcesCount();
         unsigned min_load = UINT_MAX;
+        
         for(unsigned m = 0; m < in.ResourcesCount(); m++)
-            if(in.IsCompatible(t, m)
-               && machine_load[m] + s_t <= S_max   
-               && machine_load[m] < min_load)
-                { min_load = machine_load[m]; selected_machine = m; }
-
-        if(selected_machine == in.ResourcesCount())
         {
-            if(current_period + 1 < in.UpperBoundPeriods())
+            if(in.IsCompatible(t, m) && machine_load[m] < min_load)
             {
-                current_period++;
-                std::fill(machine_load.begin(), machine_load.end(), 0);
-            }
-            for(unsigned m = 0; m < in.ResourcesCount(); m++)
-                if(in.IsCompatible(t, m)) { selected_machine = m; break; }
-
-            if(selected_machine == in.ResourcesCount())
-            {
-                std::cerr << "GreedyState: no compatible machine for task " << t << "\n";
-                exit(1);
+                min_load = machine_load[m];
+                selected_machine = m;
             }
         }
 
+        // Safety check: if a task has no compatible machines defined at all
+        if(selected_machine == in.ResourcesCount())
+        {
+            std::cerr << "GreedyState: no compatible machine for task " << t << "\n";
+            exit(1);
+        }
+
+        // 3. If the machine with the minimum load does NOT have enough space, open a new period
+        if(machine_load[selected_machine] + s_t > S_max)
+        {
+            current_period++;
+            std::fill(machine_load.begin(), machine_load.end(), 0);
+            
+            // In the new period (all machines at 0 load), simply pick the first compatible machine
+            selected_machine = in.ResourcesCount();
+            for(unsigned m = 0; m < in.ResourcesCount(); m++)
+            {
+                if(in.IsCompatible(t, m))
+                {
+                    selected_machine = m;
+                    break;
+                }
+            }
+        }
+
+        // 4. Assign the task and update the load
         out.Assign(t, selected_machine, current_period);
         machine_load[selected_machine] += s_t;
     }
