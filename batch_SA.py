@@ -5,13 +5,13 @@ import random
 import math
 
 # list of all 100 instances
-instances = [f"instance_test_{i}.json" for i in range(1, 100)]
+instances = [f"instance_test_{i}.json" for i in range(1, 6)]
 
 # number of repetitions
 repetitions = 1
 
 # directory of the instances
-instance_directory = "./Instances"
+instance_directory = "./Instances/medium"
 
 # directory of the solutions
 solution_directory = "Solutions"
@@ -26,7 +26,7 @@ min_temp_array = [0.02, 0.05, 0.1]
 cooling_rate_array = [0.98, 0.99, 0.995]
 
 today = date.today()
-log_file = "Log_BT_SA_" + today.isoformat() + ".log"
+log_file = "Log_BT_BSA_" + today.isoformat() + ".log"
 with open(log_file, "a") as f:
     f.write("Trial Instance Cost Seed Time Start_Temp Min_Temp Cooling_Rate Status\n")
 
@@ -89,12 +89,12 @@ for i in range(repetitions):
                         command = (
                             "./bt_main"
                             " --main::instance " + in_file_path +
-                            " --main::method SA" +
+                            " --main::method BSA" +
                             " --main::seed " + str(seed) +
-                            " --SA::start_temperature " + str(start_temp) +
-                            " --SA::min_temperature " + str(min_temp) +
-                            " --SA::cooling_rate " + str(cooling_rate) +
-                            " --SA::max_evaluations " + str(total_iterations) +
+                            " --BSA::start_temperature " + str(start_temp) +
+                            " --BSA::min_temperature " + str(min_temp) +
+                            " --BSA::cooling_rate " + str(cooling_rate) +
+                            " --BSA::max_evaluations " + str(total_iterations) +
                             " --main::output_file " + sol_file
                         )
 

@@ -1,0 +1,2269 @@
+instance_test_1: 423 (time: 0.182638)
+instance_test_1: 301 (time: 0.750506)
+instance_test_1: 294 (time: 0.691883)
+instance_test_1: 295 (time: 0.811713)
+instance_test_1: 296 (time: 0.726005)
+instance_test_1: 447 (time: 0.143565)
+instance_test_1: 419 (time: 0.181685)
+instance_test_1: 464 (time: 0.112997)
+instance_test_1: 408 (time: 0.220127)
+instance_test_1: 301 (time: 0.699257)
+instance_test_1: 419 (time: 0.156894)
+instance_test_1: 427 (time: 0.160467)
+instance_test_1: 431 (time: 0.190363)
+instance_test_1: 417 (time: 0.272911)
+instance_test_1: 290 (time: 0.718846)
+instance_test_1: 415 (time: 0.243162)
+instance_test_1: 304 (time: 0.71807)
+instance_test_1: 453 (time: 0.143643)
+instance_test_1: 439 (time: 0.163621)
+instance_test_1: 428 (time: 0.176497)
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 43164387 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-0-0-0_0.txt
+Result: Cost=423, Time=0.182638, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 85843729 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-0-0-1_0.txt
+Result: Cost=301, Time=0.750506, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 14555004 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-0-0-2_0.txt
+Result: Cost=294, Time=0.691883, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 56726726 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-0-1-0_0.txt
+Result: Cost=295, Time=0.811713, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 79714524 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-0-1-1_0.txt
+Result: Cost=296, Time=0.726005, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 97034223 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-0-1-2_0.txt
+Result: Cost=447, Time=0.143565, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 54114041 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-0-2-0_0.txt
+Result: Cost=419, Time=0.181685, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 48470598 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-0-2-1_0.txt
+Result: Cost=464, Time=0.112997, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 51802533 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-0-2-2_0.txt
+Result: Cost=408, Time=0.220127, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 57628724 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-1-0-0_0.txt
+Result: Cost=301, Time=0.699257, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 11045379 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-1-0-1_0.txt
+Result: Cost=419, Time=0.156894, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 70349010 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-1-0-2_0.txt
+Result: Cost=427, Time=0.160467, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 14539223 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-1-1-0_0.txt
+Result: Cost=431, Time=0.190363, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 19562435 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-1-1-1_0.txt
+Result: Cost=417, Time=0.272911, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 96522699 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-1-1-2_0.txt
+Result: Cost=290, Time=0.718846, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 32285801 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-1-2-0_0.txt
+Result: Cost=415, Time=0.243162, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 12402389 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-1-2-1_0.txt
+Result: Cost=304, Time=0.71807, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 22942250 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-1-2-2_0.txt
+Result: Cost=453, Time=0.143643, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 84940798 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-2-0-0_0.txt
+Result: Cost=439, Time=0.163621, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 12774207 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-2-0-1_0.txt
+Result: Cost=428, Time=0.176497, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 64286127 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-2-0-2_0.txt
+instance_test_1: 435 (time: 0.240908)
+instance_test_1: 397 (time: 0.25577)
+instance_test_1: 371 (time: 0.281435)
+instance_test_1: 298 (time: 0.764343)
+instance_test_1: 411 (time: 0.312275)
+instance_test_1: 458 (time: 0.232464)
+instance_test_1: 292 (time: 0.698995)
+instance_test_2: 1485 (time: 0.374138)
+instance_test_2: 1471 (time: 0.383262)
+instance_test_2: 1450 (time: 0.395164)
+instance_test_2: 1466 (time: 0.390904)
+instance_test_2: 1512 (time: 0.393419)
+instance_test_2: 1452 (time: 0.377613)
+instance_test_2: 1449 (time: 0.387166)
+instance_test_2: 1456 (time: 0.393709)
+instance_test_2: 1458 (time: 0.395175)
+instance_test_2: 1473 (time: 0.39032)
+instance_test_2: 1425 (time: 0.379168)
+instance_test_2: 1445 (time: 0.378511)
+instance_test_2: 1481 (time: 0.398479)
+instance_test_2: 1410 (time: 0.385807)
+
+Processing solution file: Solutions/sol-instance_test_1.json-2-0-2_0.txt
+Result: Cost=435, Time=0.240908, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 99264165 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-2-1-0_0.txt
+Result: Cost=397, Time=0.25577, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 72498921 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-2-1-1_0.txt
+Result: Cost=371, Time=0.281435, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 94219313 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-2-1-2_0.txt
+Result: Cost=298, Time=0.764343, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 99122350 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-2-2-0_0.txt
+Result: Cost=411, Time=0.312275, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 81511965 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-2-2-1_0.txt
+Result: Cost=458, Time=0.232464, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_1.json --main::method BSA --main::seed 46178018 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_1.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_1.json-2-2-2_0.txt
+Result: Cost=292, Time=0.698995, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 18863436 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-0-0-0_0.txt
+Result: Cost=1485, Time=0.374138, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 94639082 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-0-0-1_0.txt
+Result: Cost=1471, Time=0.383262, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 52837313 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-0-0-2_0.txt
+Result: Cost=1450, Time=0.395164, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 61891814 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-0-1-0_0.txt
+Result: Cost=1466, Time=0.390904, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 41045804 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-0-1-1_0.txt
+Result: Cost=1512, Time=0.393419, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 31298664 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-0-1-2_0.txt
+Result: Cost=1452, Time=0.377613, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 67442911 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-0-2-0_0.txt
+Result: Cost=1449, Time=0.387166, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 45056049 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-0-2-1_0.txt
+Result: Cost=1456, Time=0.393709, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 93359182 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-0-2-2_0.txt
+Result: Cost=1458, Time=0.395175, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 38945725 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-1-0-0_0.txt
+Result: Cost=1473, Time=0.39032, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 20887629 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-1-0-1_0.txt
+Result: Cost=1425, Time=0.379168, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 8700180 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-1-0-2_0.txt
+Result: Cost=1445, Time=0.378511, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 90416306 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-1-1-0_0.txt
+Result: Cost=1481, Time=0.398479, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 41940904 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-1-1-1_0.txt
+Result: Cost=1410, Time=0.385807, Status=OK
+instance_test_2: 1503 (time: 0.401125)
+instance_test_2: 1454 (time: 0.388965)
+instance_test_2: 1493 (time: 0.400381)
+instance_test_2: 1438 (time: 0.391655)
+instance_test_2: 1436 (time: 0.517632)
+instance_test_2: 1535 (time: 0.663341)
+instance_test_2: 1514 (time: 0.77654)
+instance_test_2: 1474 (time: 0.46308)
+instance_test_2: 1498 (time: 0.526691)
+instance_test_2: 1533 (time: 0.454466)
+instance_test_2: 1412 (time: 0.405951)
+instance_test_2: 1414 (time: 0.428011)
+instance_test_2: 1515 (time: 0.426115)
+instance_test_3: 14807 (time: 0.710605)
+instance_test_3: 15979 (time: 0.679148)
+instance_test_3: 15981 (time: 0.695473)
+instance_test_3: 15991 (time: 0.693189)
+instance_test_3: 14801 (time: 0.691368)
+instance_test_3: 14792 (time: 0.678971)
+instance_test_3: 15986 (time: 0.668016)
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 79987869 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-1-1-2_0.txt
+Result: Cost=1503, Time=0.401125, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 41438729 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-1-2-0_0.txt
+Result: Cost=1454, Time=0.388965, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 98652397 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-1-2-1_0.txt
+Result: Cost=1493, Time=0.400381, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 62285897 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-1-2-2_0.txt
+Result: Cost=1438, Time=0.391655, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 78200874 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-2-0-0_0.txt
+Result: Cost=1436, Time=0.517632, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 23517773 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-2-0-1_0.txt
+Result: Cost=1535, Time=0.663341, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 23404024 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-2-0-2_0.txt
+Result: Cost=1514, Time=0.77654, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 20121414 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-2-1-0_0.txt
+Result: Cost=1474, Time=0.46308, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 50521044 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-2-1-1_0.txt
+Result: Cost=1498, Time=0.526691, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 59869885 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-2-1-2_0.txt
+Result: Cost=1533, Time=0.454466, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 87883588 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-2-2-0_0.txt
+Result: Cost=1412, Time=0.405951, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 15187120 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-2-2-1_0.txt
+Result: Cost=1414, Time=0.428011, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_2.json --main::method BSA --main::seed 21519448 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_2.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_2.json-2-2-2_0.txt
+Result: Cost=1515, Time=0.426115, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 27476562 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-0-0-0_0.txt
+Result: Cost=14807, Time=0.710605, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 29562542 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-0-0-1_0.txt
+Result: Cost=15979, Time=0.679148, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 22010587 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-0-0-2_0.txt
+Result: Cost=15981, Time=0.695473, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 65632186 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-0-1-0_0.txt
+Result: Cost=15991, Time=0.693189, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 96803365 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-0-1-1_0.txt
+Result: Cost=14801, Time=0.691368, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 24556385 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-0-1-2_0.txt
+Result: Cost=14792, Time=0.678971, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 25683858 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-0-2-0_0.txt
+Result: Cost=15986, Time=0.668016, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 56361824 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-0-2-1_0.txt
+instance_test_3: 15987 (time: 0.672099)
+instance_test_3: 15989 (time: 0.681698)
+instance_test_3: 14796 (time: 0.714759)
+instance_test_3: 14789 (time: 0.684716)
+instance_test_3: 14802 (time: 0.678053)
+instance_test_3: 14811 (time: 0.66771)
+instance_test_3: 15987 (time: 0.679093)
+instance_test_3: 15978 (time: 0.673806)
+instance_test_3: 14788 (time: 0.67812)
+instance_test_3: 13584 (time: 0.685852)
+instance_test_3: 14776 (time: 0.673837)
+instance_test_3: 13574 (time: 0.669133)
+instance_test_3: 14795 (time: 0.679014)
+instance_test_3: 14789 (time: 0.676828)
+instance_test_3: 14787 (time: 0.682681)
+instance_test_3: 15999 (time: 0.688262)
+instance_test_3: 14780 (time: 0.704586)
+instance_test_3: 14787 (time: 0.715647)
+instance_test_3: 14809 (time: 0.679553)
+instance_test_3: 14775 (time: 0.68493)
+instance_test_4: 2990 (time: 0.86535)
+
+Processing solution file: Solutions/sol-instance_test_3.json-0-2-1_0.txt
+Result: Cost=15987, Time=0.672099, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 17167558 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-0-2-2_0.txt
+Result: Cost=15989, Time=0.681698, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 73141301 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-1-0-0_0.txt
+Result: Cost=14796, Time=0.714759, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 58524633 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-1-0-1_0.txt
+Result: Cost=14789, Time=0.684716, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 3072301 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-1-0-2_0.txt
+Result: Cost=14802, Time=0.678053, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 39451631 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-1-1-0_0.txt
+Result: Cost=14811, Time=0.66771, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 54714714 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-1-1-1_0.txt
+Result: Cost=15987, Time=0.679093, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 94036 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-1-1-2_0.txt
+Result: Cost=15978, Time=0.673806, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 95949768 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-1-2-0_0.txt
+Result: Cost=14788, Time=0.67812, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 10269374 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-1-2-1_0.txt
+Result: Cost=13584, Time=0.685852, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 34219403 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-1-2-2_0.txt
+Result: Cost=14776, Time=0.673837, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 68292899 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-2-0-0_0.txt
+Result: Cost=13574, Time=0.669133, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 89712965 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-2-0-1_0.txt
+Result: Cost=14795, Time=0.679014, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 54092392 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-2-0-2_0.txt
+Result: Cost=14789, Time=0.676828, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 82761754 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-2-1-0_0.txt
+Result: Cost=14787, Time=0.682681, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 84897566 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-2-1-1_0.txt
+Result: Cost=15999, Time=0.688262, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 52968962 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-2-1-2_0.txt
+Result: Cost=14780, Time=0.704586, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 55310156 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-2-2-0_0.txt
+Result: Cost=14787, Time=0.715647, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 21507302 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-2-2-1_0.txt
+Result: Cost=14809, Time=0.679553, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_3.json --main::method BSA --main::seed 22770780 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_3.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_3.json-2-2-2_0.txt
+Result: Cost=14775, Time=0.68493, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 30422495 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-0-0-0_0.txtinstance_test_4: 3013 (time: 0.826395)
+instance_test_4: 2959 (time: 0.829628)
+instance_test_4: 222 (time: 0.82597)
+instance_test_4: 268 (time: 0.880172)
+instance_test_4: 217 (time: 0.835492)
+instance_test_4: 213 (time: 0.844074)
+instance_test_4: 220 (time: 0.843281)
+instance_test_4: 2982 (time: 0.846111)
+instance_test_4: 215 (time: 0.842133)
+instance_test_4: 250 (time: 0.845544)
+instance_test_4: 2968 (time: 0.85205)
+instance_test_4: 254 (time: 0.862107)
+instance_test_4: 224 (time: 0.870911)
+instance_test_4: 209 (time: 0.865062)
+instance_test_4: 224 (time: 0.860796)
+instance_test_4: 216 (time: 0.85679)
+instance_test_4: 217 (time: 0.856719)
+instance_test_4: 260 (time: 0.854704)
+instance_test_4: 256 (time: 0.855079)
+instance_test_4: 254 (time: 0.909638)
+
+Result: Cost=2990, Time=0.86535, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 40461931 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-0-0-1_0.txt
+Result: Cost=3013, Time=0.826395, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 94873154 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-0-0-2_0.txt
+Result: Cost=2959, Time=0.829628, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 74434032 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-0-1-0_0.txt
+Result: Cost=222, Time=0.82597, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 86395715 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-0-1-1_0.txt
+Result: Cost=268, Time=0.880172, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 93689521 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-0-1-2_0.txt
+Result: Cost=217, Time=0.835492, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 28164231 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-0-2-0_0.txt
+Result: Cost=213, Time=0.844074, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 97618883 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-0-2-1_0.txt
+Result: Cost=220, Time=0.843281, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 57594398 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-0-2-2_0.txt
+Result: Cost=2982, Time=0.846111, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 12124857 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-1-0-0_0.txt
+Result: Cost=215, Time=0.842133, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 16278725 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-1-0-1_0.txt
+Result: Cost=250, Time=0.845544, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 48255632 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-1-0-2_0.txt
+Result: Cost=2968, Time=0.85205, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 32062988 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-1-1-0_0.txt
+Result: Cost=254, Time=0.862107, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 24889382 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-1-1-1_0.txt
+Result: Cost=224, Time=0.870911, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 70192382 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-1-1-2_0.txt
+Result: Cost=209, Time=0.865062, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 95505528 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-1-2-0_0.txt
+Result: Cost=224, Time=0.860796, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 15941973 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-1-2-1_0.txt
+Result: Cost=216, Time=0.85679, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 93580327 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-1-2-2_0.txt
+Result: Cost=217, Time=0.856719, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 38528371 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-2-0-0_0.txt
+Result: Cost=260, Time=0.854704, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 21412660 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-2-0-1_0.txt
+Result: Cost=256, Time=0.855079, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 81411015 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-2-0-2_0.txt
+Result: Cost=254, Time=0.909638, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 51439253 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-2-1-0_0.txt
+instance_test_4: 215 (time: 0.851651)
+instance_test_4: 207 (time: 0.838441)
+instance_test_4: 222 (time: 0.916339)
+instance_test_4: 264 (time: 0.845166)
+instance_test_4: 218 (time: 0.855096)
+instance_test_4: 232 (time: 0.853726)
+instance_test_5: 176 (time: 0.0533606)
+instance_test_5: 175 (time: 0.0480222)
+instance_test_5: 180 (time: 0.0503784)
+instance_test_5: 160 (time: 0.0565404)
+instance_test_5: 175 (time: 0.0526605)
+instance_test_5: 155 (time: 0.434109)
+instance_test_5: 158 (time: 0.416854)
+instance_test_5: 153 (time: 0.407293)
+instance_test_5: 172 (time: 0.0431757)
+instance_test_5: 161 (time: 0.436544)
+instance_test_5: 177 (time: 0.0362862)
+instance_test_5: 180 (time: 0.0408834)
+instance_test_5: 188 (time: 0.0254092)
+instance_test_5: 165 (time: 0.0383871)
+instance_test_5: 186 (time: 0.0372361)
+
+Processing solution file: Solutions/sol-instance_test_4.json-2-1-0_0.txt
+Result: Cost=215, Time=0.851651, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 10721379 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-2-1-1_0.txt
+Result: Cost=207, Time=0.838441, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 22087915 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-2-1-2_0.txt
+Result: Cost=222, Time=0.916339, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 83493106 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-2-2-0_0.txt
+Result: Cost=264, Time=0.845166, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 40066915 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-2-2-1_0.txt
+Result: Cost=218, Time=0.855096, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_4.json --main::method BSA --main::seed 19082538 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_4.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_4.json-2-2-2_0.txt
+Result: Cost=232, Time=0.853726, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 5489555 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-0-0-0_0.txt
+Result: Cost=176, Time=0.0533606, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 18335563 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-0-0-1_0.txt
+Result: Cost=175, Time=0.0480222, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 89418435 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-0-0-2_0.txt
+Result: Cost=180, Time=0.0503784, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 25811660 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-0-1-0_0.txt
+Result: Cost=160, Time=0.0565404, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 92323008 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-0-1-1_0.txt
+Result: Cost=175, Time=0.0526605, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 57480664 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-0-1-2_0.txt
+Result: Cost=155, Time=0.434109, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 43512348 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-0-2-0_0.txt
+Result: Cost=158, Time=0.416854, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 57516719 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-0-2-1_0.txt
+Result: Cost=153, Time=0.407293, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 13494567 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-0-2-2_0.txt
+Result: Cost=172, Time=0.0431757, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 83399127 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-1-0-0_0.txt
+Result: Cost=161, Time=0.436544, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 91164621 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-1-0-1_0.txt
+Result: Cost=177, Time=0.0362862, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 70013285 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-1-0-2_0.txt
+Result: Cost=180, Time=0.0408834, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 99768126 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-1-1-0_0.txt
+Result: Cost=188, Time=0.0254092, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 78528369 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-1-1-1_0.txt
+Result: Cost=165, Time=0.0383871, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 8520080 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-1-1-2_0.txt
+Result: Cost=186, Time=0.0372361, Status=OK
+instance_test_5: 182 (time: 0.029777)
+instance_test_5: 182 (time: 0.0298121)
+instance_test_5: 178 (time: 0.0350224)
+instance_test_5: 180 (time: 0.0313972)
+instance_test_5: 184 (time: 0.0301514)
+instance_test_5: 178 (time: 0.0399106)
+instance_test_5: 153 (time: 0.432775)
+instance_test_5: 170 (time: 0.143962)
+instance_test_5: 173 (time: 0.0529965)
+instance_test_5: 178 (time: 0.034291)
+instance_test_5: 155 (time: 0.422089)
+instance_test_5: 200 (time: 0.0323331)
+instance_test_6: 1280 (time: 0.388088)
+instance_test_6: 1274 (time: 0.384207)
+instance_test_6: 1271 (time: 0.386188)
+instance_test_6: 1276 (time: 0.387041)
+instance_test_6: 1262 (time: 0.374246)
+instance_test_6: 1265 (time: 0.386791)
+instance_test_6: 1265 (time: 0.387161)
+instance_test_6: 1281 (time: 0.37509)
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 89250355 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-1-2-0_0.txt
+Result: Cost=182, Time=0.029777, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 43791121 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-1-2-1_0.txt
+Result: Cost=182, Time=0.0298121, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 85926721 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-1-2-2_0.txt
+Result: Cost=178, Time=0.0350224, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 343286 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-2-0-0_0.txt
+Result: Cost=180, Time=0.0313972, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 63236430 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-2-0-1_0.txt
+Result: Cost=184, Time=0.0301514, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 42304463 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-2-0-2_0.txt
+Result: Cost=178, Time=0.0399106, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 5386593 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-2-1-0_0.txt
+Result: Cost=153, Time=0.432775, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 48160463 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-2-1-1_0.txt
+Result: Cost=170, Time=0.143962, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 75753857 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-2-1-2_0.txt
+Result: Cost=173, Time=0.0529965, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 21302572 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-2-2-0_0.txt
+Result: Cost=178, Time=0.034291, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 40684333 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-2-2-1_0.txt
+Result: Cost=155, Time=0.422089, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_5.json --main::method BSA --main::seed 79764618 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_5.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_5.json-2-2-2_0.txt
+Result: Cost=200, Time=0.0323331, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 54204944 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-0-0-0_0.txt
+Result: Cost=1280, Time=0.388088, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 96295687 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-0-0-1_0.txt
+Result: Cost=1274, Time=0.384207, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 40534611 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-0-0-2_0.txt
+Result: Cost=1271, Time=0.386188, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 27787530 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-0-1-0_0.txt
+Result: Cost=1276, Time=0.387041, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 21175269 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-0-1-1_0.txt
+Result: Cost=1262, Time=0.374246, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 47806215 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-0-1-2_0.txt
+Result: Cost=1265, Time=0.386791, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 12335010 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-0-2-0_0.txt
+Result: Cost=1265, Time=0.387161, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 80968484 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-0-2-1_0.txt
+Result: Cost=1281, Time=0.37509, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 68535522 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-0-2-2_0.txt
+instance_test_6: 1271 (time: 0.398245)
+instance_test_6: 1276 (time: 0.407376)
+instance_test_6: 1279 (time: 0.372708)
+instance_test_6: 1285 (time: 0.402028)
+instance_test_6: 1265 (time: 0.399081)
+instance_test_6: 1272 (time: 0.404492)
+instance_test_6: 1274 (time: 0.413722)
+instance_test_6: 1271 (time: 0.408102)
+instance_test_6: 1276 (time: 0.409728)
+instance_test_6: 1281 (time: 0.401064)
+instance_test_6: 1276 (time: 0.409873)
+instance_test_6: 1268 (time: 0.971929)
+instance_test_6: 1269 (time: 0.739066)
+instance_test_6: 1267 (time: 0.734991)
+instance_test_6: 1283 (time: 0.436146)
+instance_test_6: 1277 (time: 0.423257)
+instance_test_6: 1272 (time: 0.458561)
+instance_test_6: 1266 (time: 0.438896)
+instance_test_6: 1271 (time: 0.430533)
+instance_test_7: 4215 (time: 0.313349)
+instance_test_7: 4016 (time: 0.354589)
+
+Processing solution file: Solutions/sol-instance_test_6.json-0-2-2_0.txt
+Result: Cost=1271, Time=0.398245, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 85875774 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-1-0-0_0.txt
+Result: Cost=1276, Time=0.407376, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 31068252 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-1-0-1_0.txt
+Result: Cost=1279, Time=0.372708, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 15122172 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-1-0-2_0.txt
+Result: Cost=1285, Time=0.402028, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 63342827 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-1-1-0_0.txt
+Result: Cost=1265, Time=0.399081, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 36994113 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-1-1-1_0.txt
+Result: Cost=1272, Time=0.404492, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 87595802 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-1-1-2_0.txt
+Result: Cost=1274, Time=0.413722, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 30378731 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-1-2-0_0.txt
+Result: Cost=1271, Time=0.408102, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 28239268 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-1-2-1_0.txt
+Result: Cost=1276, Time=0.409728, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 73997963 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-1-2-2_0.txt
+Result: Cost=1281, Time=0.401064, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 47793652 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-2-0-0_0.txt
+Result: Cost=1276, Time=0.409873, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 16514496 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-2-0-1_0.txt
+Result: Cost=1268, Time=0.971929, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 9448577 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-2-0-2_0.txt
+Result: Cost=1269, Time=0.739066, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 63647535 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-2-1-0_0.txt
+Result: Cost=1267, Time=0.734991, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 31365243 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-2-1-1_0.txt
+Result: Cost=1283, Time=0.436146, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 35843839 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-2-1-2_0.txt
+Result: Cost=1277, Time=0.423257, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 88632190 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-2-2-0_0.txt
+Result: Cost=1272, Time=0.458561, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 85390985 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-2-2-1_0.txt
+Result: Cost=1266, Time=0.438896, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_6.json --main::method BSA --main::seed 87907095 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_6.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_6.json-2-2-2_0.txt
+Result: Cost=1271, Time=0.430533, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 87434570 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-0-0-0_0.txt
+Result: Cost=4215, Time=0.313349, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 18993555 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-0-0-1_0.txt
+Result: Cost=4016, Time=0.354589, Status=OK
+instance_test_7: 4202 (time: 0.311466)
+instance_test_7: 4044 (time: 0.325267)
+instance_test_7: 4208 (time: 0.293399)
+instance_test_7: 3954 (time: 0.307503)
+instance_test_7: 4016 (time: 0.318319)
+instance_test_7: 4222 (time: 0.483731)
+instance_test_7: 4041 (time: 0.357703)
+instance_test_7: 4016 (time: 0.35474)
+instance_test_7: 3954 (time: 0.295331)
+instance_test_7: 3963 (time: 0.316904)
+instance_test_7: 3954 (time: 0.372319)
+instance_test_7: 4007 (time: 0.33555)
+instance_test_7: 4198 (time: 0.295915)
+instance_test_7: 4038 (time: 0.323375)
+instance_test_7: 4016 (time: 0.324462)
+instance_test_7: 4016 (time: 0.338696)
+instance_test_7: 4016 (time: 0.342723)
+instance_test_7: 4201 (time: 0.314614)
+instance_test_7: 4043 (time: 0.319903)
+instance_test_7: 3954 (time: 0.305811)
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 57030887 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-0-0-2_0.txt
+Result: Cost=4202, Time=0.311466, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 89523034 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-0-1-0_0.txt
+Result: Cost=4044, Time=0.325267, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 14287889 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-0-1-1_0.txt
+Result: Cost=4208, Time=0.293399, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 8637853 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-0-1-2_0.txt
+Result: Cost=3954, Time=0.307503, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 63405765 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-0-2-0_0.txt
+Result: Cost=4016, Time=0.318319, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 36365852 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-0-2-1_0.txt
+Result: Cost=4222, Time=0.483731, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 34668610 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-0-2-2_0.txt
+Result: Cost=4041, Time=0.357703, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 77179709 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-1-0-0_0.txt
+Result: Cost=4016, Time=0.35474, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 49082782 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-1-0-1_0.txt
+Result: Cost=3954, Time=0.295331, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 76027524 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-1-0-2_0.txt
+Result: Cost=3963, Time=0.316904, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 13303023 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-1-1-0_0.txt
+Result: Cost=3954, Time=0.372319, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 81143467 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-1-1-1_0.txt
+Result: Cost=4007, Time=0.33555, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 15582428 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-1-1-2_0.txt
+Result: Cost=4198, Time=0.295915, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 82957902 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-1-2-0_0.txt
+Result: Cost=4038, Time=0.323375, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 79387240 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-1-2-1_0.txt
+Result: Cost=4016, Time=0.324462, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 79204218 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-1-2-2_0.txt
+Result: Cost=4016, Time=0.338696, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 4481395 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-2-0-0_0.txt
+Result: Cost=4016, Time=0.342723, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 67393121 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-2-0-1_0.txt
+Result: Cost=4201, Time=0.314614, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 26767221 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-2-0-2_0.txt
+Result: Cost=4043, Time=0.319903, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 82351503 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-2-1-0_0.txt
+Result: Cost=3954, Time=0.305811, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 3611322 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-2-1-1_0.txt
+instance_test_7: 4051 (time: 0.306962)
+instance_test_7: 4017 (time: 0.320654)
+instance_test_7: 4041 (time: 0.304829)
+instance_test_7: 3954 (time: 0.303173)
+instance_test_7: 3999 (time: 0.325584)
+instance_test_8: 4672 (time: 0.306782)
+instance_test_8: 4688 (time: 0.311005)
+instance_test_8: 4676 (time: 0.302802)
+instance_test_8: 4686 (time: 0.301307)
+instance_test_8: 4671 (time: 0.319271)
+instance_test_8: 4685 (time: 0.302268)
+instance_test_8: 4678 (time: 0.302518)
+instance_test_8: 4674 (time: 0.302634)
+instance_test_8: 4674 (time: 0.305033)
+instance_test_8: 4669 (time: 0.31372)
+instance_test_8: 4668 (time: 0.32292)
+instance_test_8: 4672 (time: 0.308084)
+instance_test_8: 4680 (time: 0.284998)
+instance_test_8: 4680 (time: 0.289548)
+instance_test_8: 4681 (time: 0.313162)
+instance_test_8: 4685 (time: 0.300494)
+
+Processing solution file: Solutions/sol-instance_test_7.json-2-1-1_0.txt
+Result: Cost=4051, Time=0.306962, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 72941458 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-2-1-2_0.txt
+Result: Cost=4017, Time=0.320654, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 95656402 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-2-2-0_0.txt
+Result: Cost=4041, Time=0.304829, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 57161992 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-2-2-1_0.txt
+Result: Cost=3954, Time=0.303173, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_7.json --main::method BSA --main::seed 81137602 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_7.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_7.json-2-2-2_0.txt
+Result: Cost=3999, Time=0.325584, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 63395145 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-0-0-0_0.txt
+Result: Cost=4672, Time=0.306782, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 5359926 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-0-0-1_0.txt
+Result: Cost=4688, Time=0.311005, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 20833592 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-0-0-2_0.txt
+Result: Cost=4676, Time=0.302802, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 65959505 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-0-1-0_0.txt
+Result: Cost=4686, Time=0.301307, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 37642152 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-0-1-1_0.txt
+Result: Cost=4671, Time=0.319271, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 75296198 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-0-1-2_0.txt
+Result: Cost=4685, Time=0.302268, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 84155415 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-0-2-0_0.txt
+Result: Cost=4678, Time=0.302518, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 45893629 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-0-2-1_0.txt
+Result: Cost=4674, Time=0.302634, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 57122434 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-0-2-2_0.txt
+Result: Cost=4674, Time=0.305033, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 74310999 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-1-0-0_0.txt
+Result: Cost=4669, Time=0.31372, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 54091142 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-1-0-1_0.txt
+Result: Cost=4668, Time=0.32292, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 20845676 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-1-0-2_0.txt
+Result: Cost=4672, Time=0.308084, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 89016975 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-1-1-0_0.txt
+Result: Cost=4680, Time=0.284998, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 44828298 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-1-1-1_0.txt
+Result: Cost=4680, Time=0.289548, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 27820643 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-1-1-2_0.txt
+Result: Cost=4681, Time=0.313162, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 46245867 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-1-2-0_0.txt
+Result: Cost=4685, Time=0.300494, Status=OK
+instance_test_8: 4680 (time: 0.30607)
+instance_test_8: 4669 (time: 0.307298)
+instance_test_8: 4688 (time: 0.307543)
+instance_test_8: 4685 (time: 0.306315)
+instance_test_8: 4695 (time: 0.309269)
+instance_test_8: 4683 (time: 0.30603)
+instance_test_8: 4669 (time: 0.316915)
+instance_test_8: 4685 (time: 0.29543)
+instance_test_8: 4688 (time: 0.304891)
+instance_test_8: 4680 (time: 0.318943)
+instance_test_8: 4684 (time: 0.306718)
+instance_test_9: 2162 (time: 0.654563)
+instance_test_9: 2140 (time: 0.646124)
+instance_test_9: 2122 (time: 0.657173)
+instance_test_9: 2126 (time: 0.639931)
+instance_test_9: 2146 (time: 0.656013)
+instance_test_9: 2156 (time: 0.651015)
+instance_test_9: 2145 (time: 0.654163)
+instance_test_9: 2122 (time: 0.651956)
+instance_test_9: 2130 (time: 0.653026)
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 49177187 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-1-2-1_0.txt
+Result: Cost=4680, Time=0.30607, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 31258686 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-1-2-2_0.txt
+Result: Cost=4669, Time=0.307298, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 98719202 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-2-0-0_0.txt
+Result: Cost=4688, Time=0.307543, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 51480948 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-2-0-1_0.txt
+Result: Cost=4685, Time=0.306315, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 71517310 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-2-0-2_0.txt
+Result: Cost=4695, Time=0.309269, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 13777343 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-2-1-0_0.txt
+Result: Cost=4683, Time=0.30603, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 27363848 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-2-1-1_0.txt
+Result: Cost=4669, Time=0.316915, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 99644452 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-2-1-2_0.txt
+Result: Cost=4685, Time=0.29543, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 77860109 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-2-2-0_0.txt
+Result: Cost=4688, Time=0.304891, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 80000372 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-2-2-1_0.txt
+Result: Cost=4680, Time=0.318943, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_8.json --main::method BSA --main::seed 33933141 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_8.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_8.json-2-2-2_0.txt
+Result: Cost=4684, Time=0.306718, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 64350061 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-0-0-0_0.txt
+Result: Cost=2162, Time=0.654563, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 13795565 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-0-0-1_0.txt
+Result: Cost=2140, Time=0.646124, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 89721727 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-0-0-2_0.txt
+Result: Cost=2122, Time=0.657173, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 86614720 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-0-1-0_0.txt
+Result: Cost=2126, Time=0.639931, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 55712863 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-0-1-1_0.txt
+Result: Cost=2146, Time=0.656013, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 81776892 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-0-1-2_0.txt
+Result: Cost=2156, Time=0.651015, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 44339144 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-0-2-0_0.txt
+Result: Cost=2145, Time=0.654163, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 981395 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-0-2-1_0.txt
+Result: Cost=2122, Time=0.651956, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 56050331 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-0-2-2_0.txt
+Result: Cost=2130, Time=0.653026, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 69160807 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-1-0-0_0.txt
+instance_test_9: 2159 (time: 0.671276)
+instance_test_9: 1075 (time: 0.669048)
+instance_test_9: 2153 (time: 0.724457)
+instance_test_9: 2163 (time: 0.723111)
+instance_test_9: 2134 (time: 0.740301)
+instance_test_9: 2140 (time: 0.728911)
+instance_test_9: 1048 (time: 0.655031)
+instance_test_9: 2159 (time: 0.66024)
+instance_test_9: 2155 (time: 0.652378)
+instance_test_9: 2138 (time: 0.659665)
+instance_test_9: 2135 (time: 0.647019)
+instance_test_9: 2171 (time: 0.65537)
+instance_test_9: 2147 (time: 0.668001)
+instance_test_9: 1067 (time: 0.652489)
+instance_test_9: 2126 (time: 0.663846)
+instance_test_9: 2156 (time: 0.662949)
+instance_test_9: 2160 (time: 0.666714)
+instance_test_9: 2153 (time: 0.695804)
+instance_test_10: 917 (time: 0.503047)
+instance_test_10: 959 (time: 0.498634)
+instance_test_10: 931 (time: 0.544918)
+
+Processing solution file: Solutions/sol-instance_test_9.json-1-0-0_0.txt
+Result: Cost=2159, Time=0.671276, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 59616584 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-1-0-1_0.txt
+Result: Cost=1075, Time=0.669048, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 14610721 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-1-0-2_0.txt
+Result: Cost=2153, Time=0.724457, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 19065411 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-1-1-0_0.txt
+Result: Cost=2163, Time=0.723111, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 92210237 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-1-1-1_0.txt
+Result: Cost=2134, Time=0.740301, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 17928488 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-1-1-2_0.txt
+Result: Cost=2140, Time=0.728911, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 4199559 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-1-2-0_0.txt
+Result: Cost=1048, Time=0.655031, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 7559332 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-1-2-1_0.txt
+Result: Cost=2159, Time=0.66024, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 279951 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-1-2-2_0.txt
+Result: Cost=2155, Time=0.652378, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 8171740 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-2-0-0_0.txt
+Result: Cost=2138, Time=0.659665, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 19691611 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-2-0-1_0.txt
+Result: Cost=2135, Time=0.647019, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 83518655 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-2-0-2_0.txt
+Result: Cost=2171, Time=0.65537, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 6137141 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-2-1-0_0.txt
+Result: Cost=2147, Time=0.668001, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 50290034 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-2-1-1_0.txt
+Result: Cost=1067, Time=0.652489, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 5506726 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-2-1-2_0.txt
+Result: Cost=2126, Time=0.663846, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 22570266 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-2-2-0_0.txt
+Result: Cost=2156, Time=0.662949, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 50014345 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-2-2-1_0.txt
+Result: Cost=2160, Time=0.666714, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_9.json --main::method BSA --main::seed 81816488 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_9.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_9.json-2-2-2_0.txt
+Result: Cost=2153, Time=0.695804, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 77403912 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-0-0-0_0.txt
+Result: Cost=917, Time=0.503047, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 6619123 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-0-0-1_0.txt
+Result: Cost=959, Time=0.498634, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 10013436 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-0-0-2_0.txt
+Result: Cost=931, Time=0.544918, Status=OK
+instance_test_10: 938 (time: 0.520684)
+instance_test_10: 947 (time: 0.499176)
+instance_test_10: 917 (time: 0.501145)
+instance_test_10: 955 (time: 0.512854)
+instance_test_10: 939 (time: 0.509914)
+instance_test_10: 929 (time: 0.503219)
+instance_test_10: 937 (time: 0.517449)
+instance_test_10: 949 (time: 0.522223)
+instance_test_10: 926 (time: 0.50476)
+instance_test_10: 920 (time: 0.515524)
+instance_test_10: 920 (time: 0.579067)
+instance_test_10: 917 (time: 0.589152)
+instance_test_10: 929 (time: 0.521407)
+instance_test_10: 946 (time: 0.51449)
+instance_test_10: 940 (time: 0.513229)
+instance_test_10: 926 (time: 0.529303)
+instance_test_10: 947 (time: 0.507028)
+instance_test_10: 933 (time: 0.540519)
+instance_test_10: 946 (time: 0.510952)
+instance_test_10: 918 (time: 0.531636)
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 73574094 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-0-1-0_0.txt
+Result: Cost=938, Time=0.520684, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 86895994 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-0-1-1_0.txt
+Result: Cost=947, Time=0.499176, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 72352897 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-0-1-2_0.txt
+Result: Cost=917, Time=0.501145, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 29749749 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-0-2-0_0.txt
+Result: Cost=955, Time=0.512854, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 64189276 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-0-2-1_0.txt
+Result: Cost=939, Time=0.509914, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 66625830 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-0-2-2_0.txt
+Result: Cost=929, Time=0.503219, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 26151282 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-1-0-0_0.txt
+Result: Cost=937, Time=0.517449, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 60834928 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-1-0-1_0.txt
+Result: Cost=949, Time=0.522223, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 14728914 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-1-0-2_0.txt
+Result: Cost=926, Time=0.50476, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 4315776 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-1-1-0_0.txt
+Result: Cost=920, Time=0.515524, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 43498986 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-1-1-1_0.txt
+Result: Cost=920, Time=0.579067, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 6434994 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-1-1-2_0.txt
+Result: Cost=917, Time=0.589152, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 8962041 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-1-2-0_0.txt
+Result: Cost=929, Time=0.521407, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 89899947 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-1-2-1_0.txt
+Result: Cost=946, Time=0.51449, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 1581288 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-1-2-2_0.txt
+Result: Cost=940, Time=0.513229, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 9796240 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-2-0-0_0.txt
+Result: Cost=926, Time=0.529303, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 28635957 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-2-0-1_0.txt
+Result: Cost=947, Time=0.507028, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 10498074 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-2-0-2_0.txt
+Result: Cost=933, Time=0.540519, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 54040685 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-2-1-0_0.txt
+Result: Cost=946, Time=0.510952, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 51171047 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-2-1-1_0.txt
+Result: Cost=918, Time=0.531636, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 42472390 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-2-1-2_0.txt
+instance_test_10: 924 (time: 0.517342)
+instance_test_10: 930 (time: 0.51922)
+instance_test_10: 941 (time: 0.509294)
+instance_test_10: 925 (time: 0.517824)
+instance_test_11: 63 (time: 0.465108)
+instance_test_11: 70 (time: 0.473169)
+instance_test_11: 60 (time: 0.465198)
+instance_test_11: 63 (time: 0.472605)
+instance_test_11: 63 (time: 0.474432)
+instance_test_11: 61 (time: 0.47063)
+instance_test_11: 67 (time: 0.437532)
+instance_test_11: 62 (time: 0.478999)
+instance_test_11: 62 (time: 0.473778)
+instance_test_11: 65 (time: 0.478955)
+instance_test_11: 61 (time: 0.53621)
+instance_test_11: 66 (time: 0.488215)
+instance_test_11: 73 (time: 0.483557)
+instance_test_11: 63 (time: 0.495763)
+instance_test_11: 68 (time: 0.480108)
+instance_test_11: 57 (time: 0.474749)
+instance_test_11: 65 (time: 0.475217)
+
+Processing solution file: Solutions/sol-instance_test_10.json-2-1-2_0.txt
+Result: Cost=924, Time=0.517342, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 11244837 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-2-2-0_0.txt
+Result: Cost=930, Time=0.51922, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 94963034 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-2-2-1_0.txt
+Result: Cost=941, Time=0.509294, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_10.json --main::method BSA --main::seed 11127010 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_10.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_10.json-2-2-2_0.txt
+Result: Cost=925, Time=0.517824, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 64790092 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-0-0-0_0.txt
+Result: Cost=63, Time=0.465108, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 48670965 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-0-0-1_0.txt
+Result: Cost=70, Time=0.473169, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 12896365 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-0-0-2_0.txt
+Result: Cost=60, Time=0.465198, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 83672202 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-0-1-0_0.txt
+Result: Cost=63, Time=0.472605, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 39098332 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-0-1-1_0.txt
+Result: Cost=63, Time=0.474432, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 24735901 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-0-1-2_0.txt
+Result: Cost=61, Time=0.47063, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 52000044 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-0-2-0_0.txt
+Result: Cost=67, Time=0.437532, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 87555605 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-0-2-1_0.txt
+Result: Cost=62, Time=0.478999, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 39180630 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-0-2-2_0.txt
+Result: Cost=62, Time=0.473778, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 32098869 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-1-0-0_0.txt
+Result: Cost=65, Time=0.478955, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 93959684 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-1-0-1_0.txt
+Result: Cost=61, Time=0.53621, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 10041151 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-1-0-2_0.txt
+Result: Cost=66, Time=0.488215, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 36614840 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-1-1-0_0.txt
+Result: Cost=73, Time=0.483557, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 62268230 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-1-1-1_0.txt
+Result: Cost=63, Time=0.495763, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 94345322 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-1-1-2_0.txt
+Result: Cost=68, Time=0.480108, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 69086991 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-1-2-0_0.txt
+Result: Cost=57, Time=0.474749, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 55306520 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-1-2-1_0.txtinstance_test_11: 68 (time: 0.474206)
+instance_test_11: 58 (time: 0.47633)
+instance_test_11: 66 (time: 0.392726)
+instance_test_11: 71 (time: 0.256578)
+instance_test_11: 62 (time: 0.483531)
+instance_test_11: 64 (time: 0.43801)
+instance_test_11: 60 (time: 0.337566)
+instance_test_11: 73 (time: 0.480987)
+instance_test_11: 61 (time: 0.475751)
+instance_test_11: 68 (time: 0.491312)
+instance_test_12: 3474 (time: 0.273464)
+instance_test_12: 3467 (time: 0.274833)
+instance_test_12: 3474 (time: 0.268851)
+instance_test_12: 3467 (time: 0.278496)
+instance_test_12: 3467 (time: 0.272775)
+instance_test_12: 3474 (time: 0.262269)
+instance_test_12: 3467 (time: 0.272708)
+instance_test_12: 3467 (time: 0.268388)
+instance_test_12: 3481 (time: 0.264321)
+instance_test_12: 3467 (time: 0.256492)
+
+Result: Cost=65, Time=0.475217, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 48205574 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-1-2-2_0.txt
+Result: Cost=68, Time=0.474206, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 40842905 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-2-0-0_0.txt
+Result: Cost=58, Time=0.47633, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 12967964 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-2-0-1_0.txt
+Result: Cost=66, Time=0.392726, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 83966115 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-2-0-2_0.txt
+Result: Cost=71, Time=0.256578, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 21688175 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-2-1-0_0.txt
+Result: Cost=62, Time=0.483531, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 14964969 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-2-1-1_0.txt
+Result: Cost=64, Time=0.43801, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 57336037 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-2-1-2_0.txt
+Result: Cost=60, Time=0.337566, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 55960255 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-2-2-0_0.txt
+Result: Cost=73, Time=0.480987, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 57566973 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-2-2-1_0.txt
+Result: Cost=61, Time=0.475751, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_11.json --main::method BSA --main::seed 29331271 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_11.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_11.json-2-2-2_0.txt
+Result: Cost=68, Time=0.491312, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 24124303 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-0-0-0_0.txt
+Result: Cost=3474, Time=0.273464, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 90208203 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-0-0-1_0.txt
+Result: Cost=3467, Time=0.274833, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 48088961 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-0-0-2_0.txt
+Result: Cost=3474, Time=0.268851, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 1704910 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-0-1-0_0.txt
+Result: Cost=3467, Time=0.278496, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 41355683 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-0-1-1_0.txt
+Result: Cost=3467, Time=0.272775, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 9891440 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-0-1-2_0.txt
+Result: Cost=3474, Time=0.262269, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 42088703 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-0-2-0_0.txt
+Result: Cost=3467, Time=0.272708, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 21438910 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-0-2-1_0.txt
+Result: Cost=3467, Time=0.268388, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 25748866 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-0-2-2_0.txt
+Result: Cost=3481, Time=0.264321, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 39443420 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-1-0-0_0.txt
+Result: Cost=3467, Time=0.256492, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 47223845 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-1-0-1_0.txt
+instance_test_12: 191 (time: 0.264337)
+instance_test_12: 3474 (time: 0.273746)
+instance_test_12: 3474 (time: 0.267633)
+instance_test_12: 3474 (time: 0.269527)
+instance_test_12: 191 (time: 0.214157)
+instance_test_12: 184 (time: 0.219259)
+instance_test_12: 3467 (time: 0.266723)
+instance_test_12: 3467 (time: 0.276304)
+instance_test_12: 198 (time: 0.207378)
+instance_test_12: 3509 (time: 0.223901)
+instance_test_12: 184 (time: 0.231856)
+instance_test_12: 191 (time: 0.216161)
+instance_test_12: 177 (time: 0.218424)
+instance_test_12: 3495 (time: 0.21324)
+instance_test_12: 198 (time: 0.213961)
+instance_test_12: 3509 (time: 0.218283)
+instance_test_12: 3474 (time: 0.263864)
+instance_test_13: 1370 (time: 0.872746)
+instance_test_13: 1341 (time: 0.858012)
+instance_test_13: 1346 (time: 0.849003)
+instance_test_13: 1366 (time: 0.855403)
+
+Processing solution file: Solutions/sol-instance_test_12.json-1-0-1_0.txt
+Result: Cost=191, Time=0.264337, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 43539833 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-1-0-2_0.txt
+Result: Cost=3474, Time=0.273746, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 36097450 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-1-1-0_0.txt
+Result: Cost=3474, Time=0.267633, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 10444532 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-1-1-1_0.txt
+Result: Cost=3474, Time=0.269527, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 29026906 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-1-1-2_0.txt
+Result: Cost=191, Time=0.214157, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 82557832 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-1-2-0_0.txt
+Result: Cost=184, Time=0.219259, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 47252004 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-1-2-1_0.txt
+Result: Cost=3467, Time=0.266723, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 87171547 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-1-2-2_0.txt
+Result: Cost=3467, Time=0.276304, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 42053275 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-2-0-0_0.txt
+Result: Cost=198, Time=0.207378, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 97073790 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-2-0-1_0.txt
+Result: Cost=3509, Time=0.223901, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 56469923 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-2-0-2_0.txt
+Result: Cost=184, Time=0.231856, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 20200765 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-2-1-0_0.txt
+Result: Cost=191, Time=0.216161, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 44761298 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-2-1-1_0.txt
+Result: Cost=177, Time=0.218424, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 30654325 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-2-1-2_0.txt
+Result: Cost=3495, Time=0.21324, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 48360284 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-2-2-0_0.txt
+Result: Cost=198, Time=0.213961, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 22072334 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-2-2-1_0.txt
+Result: Cost=3509, Time=0.218283, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_12.json --main::method BSA --main::seed 38210189 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_12.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_12.json-2-2-2_0.txt
+Result: Cost=3474, Time=0.263864, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 40010022 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-0-0-0_0.txt
+Result: Cost=1370, Time=0.872746, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 51556697 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-0-0-1_0.txt
+Result: Cost=1341, Time=0.858012, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 44739819 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-0-0-2_0.txt
+Result: Cost=1346, Time=0.849003, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 32527550 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-0-1-0_0.txtinstance_test_13: 1352 (time: 0.867209)
+instance_test_13: 1366 (time: 0.890833)
+instance_test_13: 1361 (time: 0.861828)
+instance_test_13: 1353 (time: 0.875562)
+instance_test_13: 1368 (time: 0.872182)
+instance_test_13: 1351 (time: 0.867756)
+instance_test_13: 1354 (time: 0.871986)
+instance_test_13: 1356 (time: 0.867454)
+instance_test_13: 1356 (time: 0.874863)
+instance_test_13: 1380 (time: 0.879278)
+instance_test_13: 1364 (time: 0.865556)
+instance_test_13: 1358 (time: 0.887949)
+instance_test_13: 1353 (time: 0.911253)
+instance_test_13: 1371 (time: 1.21531)
+instance_test_13: 1372 (time: 1.5385)
+instance_test_13: 1370 (time: 1.1276)
+instance_test_13: 1370 (time: 1.0021)
+instance_test_13: 1353 (time: 0.918979)
+instance_test_13: 1349 (time: 1.03121)
+instance_test_13: 1360 (time: 1.05718)
+
+Result: Cost=1366, Time=0.855403, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 64229355 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-0-1-1_0.txt
+Result: Cost=1352, Time=0.867209, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 84485642 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-0-1-2_0.txt
+Result: Cost=1366, Time=0.890833, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 47348898 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-0-2-0_0.txt
+Result: Cost=1361, Time=0.861828, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 21086367 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-0-2-1_0.txt
+Result: Cost=1353, Time=0.875562, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 82772970 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-0-2-2_0.txt
+Result: Cost=1368, Time=0.872182, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 2147672 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-1-0-0_0.txt
+Result: Cost=1351, Time=0.867756, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 5259275 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-1-0-1_0.txt
+Result: Cost=1354, Time=0.871986, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 61629408 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-1-0-2_0.txt
+Result: Cost=1356, Time=0.867454, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 26622828 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-1-1-0_0.txt
+Result: Cost=1356, Time=0.874863, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 49627600 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-1-1-1_0.txt
+Result: Cost=1380, Time=0.879278, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 66678745 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-1-1-2_0.txt
+Result: Cost=1364, Time=0.865556, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 50503126 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-1-2-0_0.txt
+Result: Cost=1358, Time=0.887949, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 49245853 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-1-2-1_0.txt
+Result: Cost=1353, Time=0.911253, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 96945115 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-1-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-1-2-2_0.txt
+Result: Cost=1371, Time=1.21531, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 29506248 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-2-0-0_0.txt
+Result: Cost=1372, Time=1.5385, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 80879507 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-2-0-1_0.txt
+Result: Cost=1370, Time=1.1276, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 51080439 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-2-0-2_0.txt
+Result: Cost=1370, Time=1.0021, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 54836430 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-2-1-0_0.txt
+Result: Cost=1353, Time=0.918979, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 95134676 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-2-1-1_0.txt
+Result: Cost=1349, Time=1.03121, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 74533068 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-2-1-2_0.txt
+Result: Cost=1360, Time=1.05718, Status=OK
+instance_test_13: 1367 (time: 0.5794)
+instance_test_13: 1370 (time: 0.887643)
+instance_test_13: 1353 (time: 0.882553)
+instance_test_14: 2496 (time: 0.258107)
+instance_test_14: 2482 (time: 0.26988)
+instance_test_14: 2491 (time: 0.248527)
+instance_test_14: 2482 (time: 0.273653)
+instance_test_14: 2482 (time: 0.288446)
+instance_test_14: 2467 (time: 0.289672)
+instance_test_14: 2476 (time: 0.296115)
+instance_test_14: 2466 (time: 0.269626)
+instance_test_14: 2483 (time: 0.26878)
+instance_test_14: 2472 (time: 0.2823)
+instance_test_14: 2469 (time: 0.270457)
+instance_test_14: 2466 (time: 0.256791)
+instance_test_14: 2478 (time: 0.293333)
+instance_test_14: 2473 (time: 0.285365)
+instance_test_14: 2472 (time: 0.281071)
+instance_test_14: 2472 (time: 0.277386)
+instance_test_14: 2469 (time: 0.263248)
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 56286632 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-2-2-0_0.txt
+Result: Cost=1367, Time=0.5794, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 62283916 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-2-2-1_0.txt
+Result: Cost=1370, Time=0.887643, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_13.json --main::method BSA --main::seed 22770910 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_13.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_13.json-2-2-2_0.txt
+Result: Cost=1353, Time=0.882553, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 13674180 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-0-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-0-0-0_0.txt
+Result: Cost=2496, Time=0.258107, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 78028744 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-0-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-0-0-1_0.txt
+Result: Cost=2482, Time=0.26988, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 37320790 --BSA::start_temperature 5.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-0-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-0-0-2_0.txt
+Result: Cost=2491, Time=0.248527, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 36458774 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-0-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-0-1-0_0.txt
+Result: Cost=2482, Time=0.273653, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 76094604 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-0-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-0-1-1_0.txt
+Result: Cost=2482, Time=0.288446, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 85521993 --BSA::start_temperature 5.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-0-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-0-1-2_0.txt
+Result: Cost=2467, Time=0.289672, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 97537402 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-0-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-0-2-0_0.txt
+Result: Cost=2476, Time=0.296115, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 93756153 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-0-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-0-2-1_0.txt
+Result: Cost=2466, Time=0.269626, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 16063589 --BSA::start_temperature 5.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-0-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-0-2-2_0.txt
+Result: Cost=2483, Time=0.26878, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 17559119 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-1-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-1-0-0_0.txt
+Result: Cost=2472, Time=0.2823, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 58513971 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-1-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-1-0-1_0.txt
+Result: Cost=2469, Time=0.270457, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 31991064 --BSA::start_temperature 7.5 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-1-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-1-0-2_0.txt
+Result: Cost=2466, Time=0.256791, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 77847201 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-1-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-1-1-0_0.txt
+Result: Cost=2478, Time=0.293333, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 55902436 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-1-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-1-1-1_0.txt
+Result: Cost=2473, Time=0.285365, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 50678062 --BSA::start_temperature 7.5 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-1-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-1-1-2_0.txt
+Result: Cost=2472, Time=0.281071, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 67825298 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-1-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-1-2-0_0.txt
+Result: Cost=2472, Time=0.277386, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 31833565 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-1-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-1-2-1_0.txt
+Result: Cost=2469, Time=0.263248, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 32168878 --BSA::start_temperature 7.5 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-1-2-2_0.txt
+instance_test_14: 2476 (time: 0.281791)
+instance_test_14: 2482 (time: 0.278003)
+instance_test_14: 2466 (time: 0.264724)
+instance_test_14: 2470 (time: 0.281464)
+instance_test_14: 2473 (time: 0.27861)
+instance_test_14: 2469 (time: 0.303894)
+instance_test_14: 2469 (time: 0.271052)
+instance_test_14: 2469 (time: 0.285514)
+instance_test_14: 2469 (time: 0.272409)
+instance_test_14: 2469 (time: 0.178908)
+
+Processing solution file: Solutions/sol-instance_test_14.json-1-2-2_0.txt
+Result: Cost=2476, Time=0.281791, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 65904698 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-2-0-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-2-0-0_0.txt
+Result: Cost=2482, Time=0.278003, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 90245232 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-2-0-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-2-0-1_0.txt
+Result: Cost=2466, Time=0.264724, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 69886650 --BSA::start_temperature 10.0 --BSA::min_temperature 0.02 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-2-0-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-2-0-2_0.txt
+Result: Cost=2470, Time=0.281464, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 67834103 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-2-1-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-2-1-0_0.txt
+Result: Cost=2473, Time=0.27861, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 54367346 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-2-1-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-2-1-1_0.txt
+Result: Cost=2469, Time=0.303894, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 40981610 --BSA::start_temperature 10.0 --BSA::min_temperature 0.05 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-2-1-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-2-1-2_0.txt
+Result: Cost=2469, Time=0.271052, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 39850708 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.98 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-2-2-0_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-2-2-0_0.txt
+Result: Cost=2469, Time=0.285514, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 29039927 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.99 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-2-2-1_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-2-2-1_0.txt
+Result: Cost=2469, Time=0.272409, Status=OK
+
+./bt_main --main::instance ./Instances/small/instance_test_14.json --main::method BSA --main::seed 94166781 --BSA::start_temperature 10.0 --BSA::min_temperature 0.1 --BSA::cooling_rate 0.995 --BSA::max_evaluations 500000 --main::output_file Solutions/sol-instance_test_14.json-2-2-2_0.txt
+
+Processing solution file: Solutions/sol-instance_test_14.json-2-2-2_0.txt
+Result: Cost=2469, Time=0.178908, Status=OK
+
+Batch execution completed. Check Log_BT_BSA_2026-06-19.log for results.
