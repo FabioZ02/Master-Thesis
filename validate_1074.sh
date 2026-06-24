@@ -78,7 +78,7 @@ for inst_path in "${INSTANCES[@]}"; do
     for seed in $(seq 1 "$N_REPS"); do
         sol_file="$SOL_DIR/${inst_name}_seed${seed}.sol"
 
-        # stdout in modalita output_file = riga singola: "nome: costo (time: T)"
+
         line="$("$BINARY" \
             --main::instance   "$inst_path" \
             --main::method     "$METHOD" \
@@ -92,7 +92,7 @@ for inst_path in "${INSTANCES[@]}"; do
             2>/dev/null)"
         status=$?
 
-        # Estrae costo e tempo dalla riga "nome: 12345 (time: 2.34)"
+
         cost="$(sed -nE 's/.*:[[:space:]]*([0-9]+)[[:space:]]*\(time.*/\1/p' <<<"$line")"
         rtime="$(sed -nE 's/.*time:[[:space:]]*([0-9.]+)\).*/\1/p' <<<"$line")"
 
@@ -107,11 +107,9 @@ for inst_path in "${INSTANCES[@]}"; do
     done
 done
 
-# -----------------------------------------------------------------------------
-# Statistiche per istanza (media, std campionaria, min, max, tempo medio)
-# -----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 echo
-echo "Calcolo statistiche -> $SUMMARY_CSV"
+echo "Computing stats -> $SUMMARY_CSV"
 
 {
     echo "instance,runs,mean_cost,std_cost,min_cost,max_cost,mean_time"
@@ -134,7 +132,7 @@ echo "Calcolo statistiche -> $SUMMARY_CSV"
 } > "$SUMMARY_CSV"
 
 echo
-echo "================= RIEPILOGO ================="
+echo "================= Summary ================="
 column -t -s, "$SUMMARY_CSV"
 echo "============================================="
 echo
