@@ -1,0 +1,159 @@
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 4.4.3.dd8d85f
+# Copyright (C) 2010-2025
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /home/fabio/R/x86_64-pc-linux-gnu-library/4.3/irace
+# called with: --check
+# 2026-06-22 13:38:31 CEST: Checking scenario
+# 2026-06-22 13:38:31 CEST: Reading parameter file '/home/fabio/Master_Thesis/parameters.txt'.
+# --- Parameters Hierarchy ---
+     Parameter Level   Depends.on
+1   start_temp     1   start_temp
+2     min_temp     1     min_temp
+3 cooling_rate     1 cooling_rate
+# ------------------------
+List of 3
+ $ start_temp  :List of 9
+  ..$ name        : chr "start_temp"
+  ..$ type        : chr "r"
+  ..$ domain      : num [1:2] 5 20
+  ..$ label       : chr "--BSA::start_temperature "
+  ..$ is_dependent: logi FALSE
+  ..$ isFixed     : logi FALSE
+  ..$ transform   : chr ""
+  ..$ condition   : logi TRUE
+  ..$ digits      : int 4
+  ..- attr(*, "class")= chr [1:3] "ParamReal" "Parameter" "list"
+ $ min_temp    :List of 9
+  ..$ name        : chr "min_temp"
+  ..$ type        : chr "r"
+  ..$ domain      : num [1:2] 0.001 0.2
+  ..$ label       : chr "--BSA::min_temperature "
+  ..$ is_dependent: logi FALSE
+  ..$ isFixed     : logi FALSE
+  ..$ transform   : chr ""
+  ..$ condition   : logi TRUE
+  ..$ digits      : int 4
+  ..- attr(*, "class")= chr [1:3] "ParamReal" "Parameter" "list"
+ $ cooling_rate:List of 9
+  ..$ name        : chr "cooling_rate"
+  ..$ type        : chr "r"
+  ..$ domain      : num [1:2] 0.9 0.995
+  ..$ label       : chr "--BSA::cooling_rate "
+  ..$ is_dependent: logi FALSE
+  ..$ isFixed     : logi FALSE
+  ..$ transform   : chr ""
+  ..$ condition   : logi TRUE
+  ..$ digits      : int 4
+  ..- attr(*, "class")= chr [1:3] "ParamReal" "Parameter" "list"
+Forbidden:
+NULL
+# 2026-06-22 13:38:31 CEST: Parameters have been read
+## irace scenario:
+scenarioFile = "/home/fabio/Master_Thesis/scenario.txt"
+execDir = "/home/fabio/Master_Thesis"
+parameterFile = "/home/fabio/Master_Thesis/parameters.txt"
+parameters = <environment>
+initConfigurations = NULL
+configurationsFile = ""
+logFile = "/home/fabio/Master_Thesis/irace.Rdata"
+recoveryFile = ""
+instances = c("/home/fabio/Master_Thesis/Instances/medium/instance_test_1.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_10.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_100.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_11.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_12.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_13.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_14.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_15.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_16.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_17.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_18.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_19.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_2.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_20.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_21.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_22.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_23.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_24.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_25.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_26.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_27.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_28.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_29.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_3.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_30.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_31.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_32.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_33.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_34.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_35.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_36.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_37.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_38.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_39.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_4.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_40.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_41.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_42.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_43.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_44.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_45.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_46.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_47.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_48.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_49.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_5.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_50.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_51.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_52.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_53.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_54.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_55.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_56.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_57.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_58.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_59.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_6.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_60.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_61.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_62.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_63.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_64.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_65.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_66.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_67.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_68.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_69.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_7.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_70.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_71.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_72.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_73.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_74.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_75.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_76.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_77.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_78.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_79.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_8.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_80.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_81.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_82.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_83.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_84.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_85.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_86.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_87.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_88.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_89.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_9.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_90.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_91.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_92.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_93.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_94.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_95.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_96.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_97.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_98.json", "/home/fabio/Master_Thesis/Instances/medium/instance_test_99.json", "/home/fabio/Master_Thesis/Instances/medium/instances.csv")
+trainInstancesDir = "/home/fabio/Master_Thesis/Instances/medium"
+trainInstancesFile = ""
+sampleInstances = TRUE
+testInstancesDir = ""
+testInstancesFile = ""
+testInstances = NULL
+testNbElites = 1L
+testIterationElites = FALSE
+testType = "friedman"
+firstTest = 5L
+blockSize = 1L
+eachTest = 1L
+targetRunner = "/home/fabio/Master_Thesis/target_runner"
+targetRunnerLauncher = ""
+targetCmdline = "{configurationID} {instanceID} {seed} {instance} {bound} {targetRunnerArgs}"
+targetRunnerRetries = 0L
+targetRunnerTimeout = 0L
+targetRunnerData = ""
+targetRunnerParallel = NULL
+targetEvaluator = NULL
+deterministic = FALSE
+maxExperiments = 10000L
+minExperiments = NA_character_
+maxTime = 0L
+budgetEstimation = 0.05
+minMeasurableTime = 0.01
+parallel = 0L
+loadBalancing = TRUE
+mpi = FALSE
+batchmode = "0"
+quiet = FALSE
+debugLevel = 2L
+seed = NA_character_
+softRestart = TRUE
+softRestartThreshold = 1e-04
+elitist = TRUE
+elitistNewInstances = 1L
+elitistLimit = 2L
+repairConfiguration = NULL
+capping = FALSE
+cappingAfterFirstTest = FALSE
+cappingType = "median"
+boundType = "candidate"
+boundMax = NULL
+boundDigits = 0L
+boundPar = 1L
+boundAsTimeout = TRUE
+postselection = TRUE
+aclib = FALSE
+nbIterations = 0L
+nbExperimentsPerIteration = 0L
+minNbSurvival = 0L
+nbConfigurations = 0L
+mu = 5L
+confidence = 0.95
+## end of irace scenario
+# 2026-06-22 13:38:31 CEST: Checking target runner.
+# 2026-06-22 13:38:31 CEST: Executing targetRunner (2 times)...
+# 2026-06-22 13:38:31 CEST: /home/fabio/Master_Thesis/target_runner 1 51 1234567 /home/fabio/Master_Thesis/Instances/medium/instance_test_54.json  --BSA::start_temperature 10.2974 --BSA::min_temperature 0.0216 --BSA::cooling_rate 0.9927
+# 2026-06-22 13:38:32 CEST: DONE (1) Elapsed wall-clock seconds: 1.07
+2100# 2026-06-22 13:38:32 CEST: /home/fabio/Master_Thesis/target_runner 2 51 1234567 /home/fabio/Master_Thesis/Instances/medium/instance_test_54.json  --BSA::start_temperature 11.1193 --BSA::min_temperature 0.1781 --BSA::cooling_rate 0.9394
+# 2026-06-22 13:38:34 CEST: DONE (2) Elapsed wall-clock seconds: 1.15
+1580# targetRunner returned:
+[[1]]
+[[1]]$cost
+[1] 2100
+
+[[1]]$outputRaw
+[1] "2100"
+
+[[1]]$call
+[1] "/home/fabio/Master_Thesis/target_runner 1 51 1234567 /home/fabio/Master_Thesis/Instances/medium/instance_test_54.json  --BSA::start_temperature 10.2974 --BSA::min_temperature 0.0216 --BSA::cooling_rate 0.9927"
+
+
+[[2]]
+[[2]]$cost
+[1] 1580
+
+[[2]]$outputRaw
+[1] "1580"
+
+[[2]]$call
+[1] "/home/fabio/Master_Thesis/target_runner 2 51 1234567 /home/fabio/Master_Thesis/Instances/medium/instance_test_54.json  --BSA::start_temperature 11.1193 --BSA::min_temperature 0.1781 --BSA::cooling_rate 0.9394"
+
+
+# 2026-06-22 13:38:34 CEST: Check successful.

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# irace passa questi argomenti di default:
+# $1: id configurazione
+# $2: id istanza
+# $3: seed casuale
+# $4: percorso dell'istanza
+CONFIG_ID=$1
+INSTANCE_ID=$2
+SEED=$3
+INSTANCE=$4
+
+# Rimuoviamo i primi 4 argomenti, in modo che rimangano solo i parametri generati da irace
+shift 4
+
+# Lanciamo il tuo eseguibile EasyLocal++. 
+# Nota: fissiamo le valutazioni a 500000 e attiviamo la modalità irace a 1
+./bt_main --main::instance "$INSTANCE" \
+          --main::method BSA \
+          --main::seed "$SEED" \
+          --BSA::max_evaluations 500000 \
+          --main::irace-enable \
+          "$@"

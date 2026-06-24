@@ -1,0 +1,12 @@
+# Il file script che abbiamo appena creato
+targetRunner = "./target_runner"
+
+# La cartella che contiene le istanze su cui fare il tuning
+# (Ti consiglio di usare le small per fare l'addestramento velocemente)
+trainInstancesDir = "./Instances/medium/tuning_set"
+
+# Il budget totale di esecuzioni consentite 
+maxExperiments = 10000
+
+# Il test statistico per scartare le configurazioni peggiori
+testType = "F-test"

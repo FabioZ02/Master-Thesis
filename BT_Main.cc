@@ -123,6 +123,8 @@ int main(int argc, const char* argv[])
                   ofstream os(output_file);
                   os << out << endl;
                   os << "Cost: " << result.cost.total << endl;
+                  os << "Violations: " << result.cost.violations << endl;   
+                  os << "Objective: " << result.cost.objective << endl;     
                   os << "Time: " << result.running_time << endl;
                   os.close();
                   string instance_name = instance;

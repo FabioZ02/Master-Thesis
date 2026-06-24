@@ -1,0 +1,5 @@
+start_temp      "--BSA::start_temperature "    r     (5.0, 20.0)
+
+min_temp        "--BSA::min_temperature "      r     (0.001, 0.2)
+
+cooling_rate    "--BSA::cooling_rate "         r     (0.900, 0.995)
