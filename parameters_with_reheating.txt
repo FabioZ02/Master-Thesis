@@ -1,0 +1,9 @@
+# --- ereditati (stessi range del tuo BSA) ---
+start_temp        "--BSAwr::start_temperature "              r   (5.0, 20.0)
+min_temp          "--BSAwr::min_temperature "               r   (0.001, 0.2)
+cooling_rate      "--BSAwr::cooling_rate "                  r   (0.900, 0.995)
+
+# --- specifici del reheating ---
+max_reheats       "--BSAwr::max_reheats "                   i   (1, 8)
+reheat_ratio      "--BSAwr::reheat_ratio "                  r   (1.0, 5.0)
+first_share       "--BSAwr::first_descent_evaluations_share " r (0.1, 0.9)
