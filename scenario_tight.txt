@@ -1,0 +1,7 @@
+## irace scenario -- gruppo TESE (Smin/Smax >= 0.60)
+parameterFile      = "./parameters_tight.txt"
+trainInstancesDir  = ""
+trainInstancesFile = "./instances_tight.txt"
+targetRunner       = "./target_runner"
+maxExperiments     = 5000
+parallel           = 4

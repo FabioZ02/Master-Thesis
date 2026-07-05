@@ -1,0 +1,953 @@
+{
+  "PlanningGroups": [
+    {
+      "Rank": 0,
+      "PlannedOrders": [
+        {
+          "OrderId": 2,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 3,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 4,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 5,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 6,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 7,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 8,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 9,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 10,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 11,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 15,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 17,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 20,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 21,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 22,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 24,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 25,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 28,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 30,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 32,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 33,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 34,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 37,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 42,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 49,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 52,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 56,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 57,
+          "ResourceId": 4
+        }
+      ]
+    },
+    {
+      "Rank": 1,
+      "PlannedOrders": [
+        {
+          "OrderId": 1,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 12,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 13,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 14,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 16,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 18,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 19,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 23,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 26,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 31,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 35,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 36,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 38,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 39,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 40,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 43,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 44,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 47,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 48,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 50,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 51,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 53,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 55,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 58,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 59,
+          "ResourceId": 1
+        }
+      ]
+    },
+    {
+      "Rank": 2,
+      "PlannedOrders": [
+        {
+          "OrderId": 27,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 29,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 41,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 45,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 46,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 54,
+          "ResourceId": 1
+        }
+      ]
+    }
+  ]
+}
+Order 60 is not planned!
+Order 61 is not planned!
+Order 62 is not planned!
+Order 63 is not planned!
+Order 64 is not planned!
+Order 65 is not planned!
+Order 66 is not planned!
+Order 67 is not planned!
+Order 68 is not planned!
+Order 69 is not planned!
+Order 70 is not planned!
+Order 71 is not planned!
+Order 72 is not planned!
+Order 73 is not planned!
+Order 74 is not planned!
+Order 75 is not planned!
+Order 76 is not planned!
+Order 77 is not planned!
+Order 78 is not planned!
+Order 79 is not planned!
+Order 80 is not planned!
+Order 81 is not planned!
+Order 82 is not planned!
+Order 83 is not planned!
+Order 84 is not planned!
+Order 85 is not planned!
+Order 86 is not planned!
+Order 87 is not planned!
+Order 88 is not planned!
+Order 89 is not planned!
+Order 90 is not planned!
+Order 91 is not planned!
+Order 92 is not planned!
+Order 93 is not planned!
+Order 94 is not planned!
+Order 95 is not planned!
+Order 96 is not planned!
+Order 97 is not planned!
+Order 98 is not planned!
+Order 99 is not planned!
+Order 100 is not planned!
+Order 101 is not planned!
+Order 102 is not planned!
+Order 103 is not planned!
+Order 104 is not planned!
+Order 105 is not planned!
+Order 106 is not planned!
+Order 107 is not planned!
+Order 108 is not planned!
+Order 109 is not planned!
+Order 110 is not planned!
+Order 111 is not planned!
+Order 112 is not planned!
+Order 113 is not planned!
+Order 114 is not planned!
+Order 115 is not planned!
+Order 116 is not planned!
+Order 117 is not planned!
+Order 118 is not planned!
+Order 119 is not planned!
+Order 120 is not planned!
+Order 121 is not planned!
+Order 122 is not planned!
+Order 123 is not planned!
+Order 124 is not planned!
+Order 125 is not planned!
+Order 126 is not planned!
+Order 127 is not planned!
+Order 128 is not planned!
+Order 129 is not planned!
+Order 130 is not planned!
+Order 131 is not planned!
+Order 132 is not planned!
+Order 133 is not planned!
+Order 134 is not planned!
+Order 135 is not planned!
+Order 136 is not planned!
+Order 137 is not planned!
+Order 138 is not planned!
+Order 139 is not planned!
+Order 140 is not planned!
+Order 141 is not planned!
+Order 142 is not planned!
+Order 143 is not planned!
+Order 144 is not planned!
+Order 145 is not planned!
+Order 146 is not planned!
+Order 147 is not planned!
+Order 148 is not planned!
+Order 149 is not planned!
+Order 150 is not planned!
+Order 151 is not planned!
+Order 152 is not planned!
+Order 153 is not planned!
+Order 154 is not planned!
+Order 155 is not planned!
+Order 156 is not planned!
+Order 157 is not planned!
+Order 158 is not planned!
+Order 159 is not planned!
+Order 160 is not planned!
+Order 161 is not planned!
+Order 162 is not planned!
+Order 163 is not planned!
+Order 164 is not planned!
+Order 165 is not planned!
+Order 166 is not planned!
+Order 167 is not planned!
+Order 168 is not planned!
+Order 169 is not planned!
+Order 170 is not planned!
+Order 171 is not planned!
+Order 172 is not planned!
+Order 173 is not planned!
+Order 174 is not planned!
+Order 175 is not planned!
+Order 176 is not planned!
+Order 177 is not planned!
+Order 178 is not planned!
+Order 179 is not planned!
+Order 180 is not planned!
+Order 181 is not planned!
+Order 182 is not planned!
+Order 183 is not planned!
+Order 184 is not planned!
+Order 185 is not planned!
+Order 186 is not planned!
+Order 187 is not planned!
+Order 188 is not planned!
+Order 189 is not planned!
+Order 190 is not planned!
+Order 191 is not planned!
+Order 192 is not planned!
+Order 193 is not planned!
+Order 194 is not planned!
+Order 195 is not planned!
+Order 196 is not planned!
+Order 197 is not planned!
+Order 198 is not planned!
+Order 199 is not planned!
+Order 200 is not planned!
+Order 201 is not planned!
+Order 202 is not planned!
+Order 203 is not planned!
+Order 204 is not planned!
+Order 205 is not planned!
+Order 206 is not planned!
+Order 207 is not planned!
+Order 208 is not planned!
+Order 209 is not planned!
+Order 210 is not planned!
+Order 211 is not planned!
+Order 212 is not planned!
+Order 213 is not planned!
+Order 214 is not planned!
+Order 215 is not planned!
+Order 216 is not planned!
+Order 217 is not planned!
+Order 218 is not planned!
+Order 219 is not planned!
+Order 220 is not planned!
+Order 221 is not planned!
+Order 222 is not planned!
+Order 223 is not planned!
+Order 224 is not planned!
+Order 225 is not planned!
+Order 226 is not planned!
+Order 227 is not planned!
+Order 228 is not planned!
+Order 229 is not planned!
+Order 230 is not planned!
+Order 231 is not planned!
+Order 232 is not planned!
+Order 233 is not planned!
+Order 234 is not planned!
+Order 235 is not planned!
+Order 236 is not planned!
+Order 237 is not planned!
+Order 238 is not planned!
+Order 239 is not planned!
+Order 240 is not planned!
+Order 241 is not planned!
+Order 242 is not planned!
+Order 243 is not planned!
+Order 244 is not planned!
+Order 245 is not planned!
+Order 246 is not planned!
+Order 247 is not planned!
+Order 248 is not planned!
+Order 249 is not planned!
+Order 250 is not planned!
+Order 251 is not planned!
+Order 252 is not planned!
+Order 253 is not planned!
+Order 254 is not planned!
+Order 255 is not planned!
+Order 256 is not planned!
+Order 257 is not planned!
+Order 258 is not planned!
+Order 259 is not planned!
+Order 260 is not planned!
+Order 261 is not planned!
+Order 262 is not planned!
+Order 263 is not planned!
+Order 264 is not planned!
+Order 265 is not planned!
+Order 266 is not planned!
+Order 267 is not planned!
+Order 268 is not planned!
+Order 269 is not planned!
+Order 270 is not planned!
+Order 271 is not planned!
+Order 272 is not planned!
+Order 273 is not planned!
+Order 274 is not planned!
+Order 275 is not planned!
+Order 276 is not planned!
+Order 277 is not planned!
+Order 278 is not planned!
+Order 279 is not planned!
+Order 280 is not planned!
+Order 281 is not planned!
+Order 282 is not planned!
+Order 283 is not planned!
+Order 284 is not planned!
+Order 285 is not planned!
+Order 286 is not planned!
+Order 287 is not planned!
+Order 288 is not planned!
+Order 289 is not planned!
+Order 290 is not planned!
+Order 291 is not planned!
+Order 292 is not planned!
+Order 293 is not planned!
+Order 294 is not planned!
+Order 295 is not planned!
+Order 296 is not planned!
+Order 297 is not planned!
+Order 298 is not planned!
+Order 299 is not planned!
+Order 300 is not planned!
+Order 301 is not planned!
+Order 302 is not planned!
+Order 303 is not planned!
+Order 304 is not planned!
+Order 305 is not planned!
+Order 306 is not planned!
+Order 307 is not planned!
+Order 308 is not planned!
+Order 309 is not planned!
+Order 310 is not planned!
+Order 311 is not planned!
+Order 312 is not planned!
+Order 313 is not planned!
+Order 314 is not planned!
+Order 315 is not planned!
+Order 316 is not planned!
+Order 317 is not planned!
+Order 318 is not planned!
+Order 319 is not planned!
+Order 320 is not planned!
+Order 321 is not planned!
+Order 322 is not planned!
+Order 323 is not planned!
+Order 324 is not planned!
+Order 325 is not planned!
+Order 326 is not planned!
+Order 327 is not planned!
+Order 328 is not planned!
+Order 329 is not planned!
+Order 330 is not planned!
+Order 331 is not planned!
+Order 332 is not planned!
+Order 333 is not planned!
+Order 334 is not planned!
+Order 335 is not planned!
+Order 336 is not planned!
+Order 337 is not planned!
+Order 338 is not planned!
+Order 339 is not planned!
+Order 340 is not planned!
+Order 341 is not planned!
+Order 342 is not planned!
+Order 343 is not planned!
+Order 344 is not planned!
+Order 345 is not planned!
+Order 346 is not planned!
+Order 347 is not planned!
+Order 348 is not planned!
+Order 349 is not planned!
+Order 350 is not planned!
+Order 351 is not planned!
+Order 352 is not planned!
+Order 353 is not planned!
+Order 354 is not planned!
+Order 355 is not planned!
+Order 356 is not planned!
+Order 357 is not planned!
+Order 358 is not planned!
+Order 359 is not planned!
+Order 360 is not planned!
+Order 361 is not planned!
+Order 362 is not planned!
+Order 363 is not planned!
+Order 364 is not planned!
+Order 365 is not planned!
+Order 366 is not planned!
+Order 367 is not planned!
+Order 368 is not planned!
+Order 369 is not planned!
+Order 370 is not planned!
+Order 371 is not planned!
+Order 372 is not planned!
+Order 373 is not planned!
+Order 374 is not planned!
+Order 375 is not planned!
+Order 376 is not planned!
+Order 377 is not planned!
+Order 378 is not planned!
+Order 379 is not planned!
+Order 380 is not planned!
+Order 381 is not planned!
+Order 382 is not planned!
+Order 383 is not planned!
+Order 384 is not planned!
+Order 385 is not planned!
+Order 386 is not planned!
+Order 387 is not planned!
+Order 388 is not planned!
+Order 389 is not planned!
+Order 390 is not planned!
+Order 391 is not planned!
+Order 392 is not planned!
+Order 393 is not planned!
+Order 394 is not planned!
+Order 395 is not planned!
+Order 396 is not planned!
+Order 397 is not planned!
+Order 398 is not planned!
+Order 399 is not planned!
+Order 400 is not planned!
+Order 401 is not planned!
+Order 402 is not planned!
+Order 403 is not planned!
+Order 404 is not planned!
+Order 405 is not planned!
+Order 406 is not planned!
+Order 407 is not planned!
+Order 408 is not planned!
+Order 409 is not planned!
+Order 410 is not planned!
+Order 411 is not planned!
+Order 412 is not planned!
+Order 413 is not planned!
+Order 414 is not planned!
+Order 415 is not planned!
+Order 416 is not planned!
+Order 417 is not planned!
+Order 418 is not planned!
+Order 419 is not planned!
+Order 420 is not planned!
+Order 421 is not planned!
+Order 422 is not planned!
+Order 423 is not planned!
+Order 424 is not planned!
+Order 425 is not planned!
+Order 426 is not planned!
+Order 427 is not planned!
+Order 428 is not planned!
+Order 429 is not planned!
+Order 430 is not planned!
+Order 431 is not planned!
+Order 432 is not planned!
+Order 433 is not planned!
+Order 434 is not planned!
+Order 435 is not planned!
+Order 436 is not planned!
+Order 437 is not planned!
+Order 438 is not planned!
+Order 439 is not planned!
+Order 440 is not planned!
+Order 441 is not planned!
+Order 442 is not planned!
+Order 443 is not planned!
+Order 444 is not planned!
+Order 445 is not planned!
+Order 446 is not planned!
+Order 447 is not planned!
+Order 448 is not planned!
+Order 449 is not planned!
+Order 450 is not planned!
+Order 451 is not planned!
+Order 452 is not planned!
+Order 453 is not planned!
+Order 454 is not planned!
+Order 455 is not planned!
+Order 456 is not planned!
+Order 457 is not planned!
+Order 458 is not planned!
+Order 459 is not planned!
+Order 460 is not planned!
+Order 461 is not planned!
+Order 462 is not planned!
+Order 463 is not planned!
+Order 464 is not planned!
+Order 465 is not planned!
+Order 466 is not planned!
+Order 467 is not planned!
+Order 468 is not planned!
+Order 469 is not planned!
+Order 470 is not planned!
+Order 471 is not planned!
+Order 472 is not planned!
+Order 473 is not planned!
+Order 474 is not planned!
+Order 475 is not planned!
+Order 476 is not planned!
+Order 477 is not planned!
+Order 478 is not planned!
+Order 479 is not planned!
+Order 480 is not planned!
+Order 481 is not planned!
+Order 482 is not planned!
+Order 483 is not planned!
+Order 484 is not planned!
+Order 485 is not planned!
+Order 486 is not planned!
+Order 487 is not planned!
+Order 488 is not planned!
+Order 489 is not planned!
+Order 490 is not planned!
+Order 491 is not planned!
+Order 492 is not planned!
+Order 493 is not planned!
+Order 494 is not planned!
+Order 495 is not planned!
+Order 496 is not planned!
+Order 497 is not planned!
+Order 498 is not planned!
+Order 499 is not planned!
+Order 500 is not planned!
+Order 501 is not planned!
+Order 502 is not planned!
+Order 503 is not planned!
+Order 504 is not planned!
+Order 505 is not planned!
+Order 506 is not planned!
+Order 507 is not planned!
+Order 508 is not planned!
+Order 509 is not planned!
+Order 510 is not planned!
+Order 511 is not planned!
+Order 512 is not planned!
+Order 513 is not planned!
+Order 514 is not planned!
+Order 515 is not planned!
+Order 516 is not planned!
+Order 517 is not planned!
+Order 518 is not planned!
+Order 519 is not planned!
+Order 520 is not planned!
+Order 521 is not planned!
+Order 522 is not planned!
+Order 523 is not planned!
+Order 524 is not planned!
+Order 525 is not planned!
+Order 526 is not planned!
+Order 527 is not planned!
+Order 528 is not planned!
+Order 529 is not planned!
+Order 530 is not planned!
+Order 531 is not planned!
+Order 532 is not planned!
+Order 533 is not planned!
+Order 534 is not planned!
+Order 535 is not planned!
+Order 536 is not planned!
+Order 537 is not planned!
+Order 538 is not planned!
+Order 539 is not planned!
+Order 540 is not planned!
+Order 541 is not planned!
+Order 542 is not planned!
+Order 543 is not planned!
+Order 544 is not planned!
+Order 545 is not planned!
+Order 546 is not planned!
+Order 547 is not planned!
+Order 548 is not planned!
+Order 549 is not planned!
+Order 550 is not planned!
+Order 551 is not planned!
+Order 552 is not planned!
+Order 553 is not planned!
+Order 554 is not planned!
+Order 555 is not planned!
+Order 556 is not planned!
+Order 557 is not planned!
+Order 558 is not planned!
+Order 559 is not planned!
+Order 560 is not planned!
+Order 561 is not planned!
+Order 562 is not planned!
+Order 563 is not planned!
+Order 564 is not planned!
+Order 565 is not planned!
+Order 566 is not planned!
+Order 567 is not planned!
+Order 568 is not planned!
+Order 569 is not planned!
+Order 570 is not planned!
+Order 571 is not planned!
+Order 572 is not planned!
+Order 573 is not planned!
+Order 574 is not planned!
+Order 575 is not planned!
+Order 576 is not planned!
+Order 577 is not planned!
+Order 578 is not planned!
+Order 579 is not planned!
+Order 580 is not planned!
+Order 581 is not planned!
+Order 582 is not planned!
+Order 583 is not planned!
+Order 584 is not planned!
+Order 585 is not planned!
+Order 586 is not planned!
+Order 587 is not planned!
+Order 588 is not planned!
+Order 589 is not planned!
+Order 590 is not planned!
+Order 591 is not planned!
+Order 592 is not planned!
+Order 593 is not planned!
+Order 594 is not planned!
+Order 595 is not planned!
+Order 596 is not planned!
+Order 597 is not planned!
+Order 598 is not planned!
+Order 599 is not planned!
+Order 600 is not planned!
+Order 601 is not planned!
+Order 602 is not planned!
+Order 603 is not planned!
+Order 604 is not planned!
+Order 605 is not planned!
+Order 606 is not planned!
+Order 607 is not planned!
+Order 608 is not planned!
+Order 609 is not planned!
+Order 610 is not planned!
+Order 611 is not planned!
+Order 612 is not planned!
+Order 613 is not planned!
+Order 614 is not planned!
+Order 615 is not planned!
+Order 616 is not planned!
+Order 617 is not planned!
+Order 618 is not planned!
+Order 619 is not planned!
+Order 620 is not planned!
+Order 621 is not planned!
+Order 622 is not planned!
+Order 623 is not planned!
+Order 624 is not planned!
+Order 625 is not planned!
+Order 626 is not planned!
+Order 627 is not planned!
+Order 628 is not planned!
+Order 629 is not planned!
+Order 630 is not planned!
+Order 631 is not planned!
+Order 632 is not planned!
+Order 633 is not planned!
+Order 634 is not planned!
+Order 635 is not planned!
+Order 636 is not planned!
+Order 637 is not planned!
+Order 638 is not planned!
+Order 639 is not planned!
+Order 640 is not planned!
+Order 641 is not planned!
+Order 642 is not planned!
+Order 643 is not planned!
+Order 644 is not planned!
+Order 645 is not planned!
+Order 646 is not planned!
+Order 647 is not planned!
+Order 648 is not planned!
+Order 649 is not planned!
+Order 650 is not planned!
+Order 651 is not planned!
+Order 652 is not planned!
+Order 653 is not planned!
+Order 654 is not planned!
+Order 655 is not planned!
+Order 656 is not planned!
+Order 657 is not planned!
+Order 658 is not planned!
+Order 659 is not planned!
+Order 660 is not planned!
+Order 661 is not planned!
+Order 662 is not planned!
+Order 663 is not planned!
+Order 664 is not planned!
+Order 665 is not planned!
+Order 666 is not planned!
+Order 667 is not planned!
+Order 668 is not planned!
+Order 669 is not planned!
+Order 670 is not planned!
+Order 671 is not planned!
+Order 672 is not planned!
+Order 673 is not planned!
+Order 674 is not planned!
+Order 675 is not planned!
+Order 676 is not planned!
+Order 677 is not planned!
+Order 678 is not planned!
+Order 679 is not planned!
+Order 680 is not planned!
+Order 681 is not planned!
+Order 682 is not planned!
+Order 683 is not planned!
+Order 684 is not planned!
+Order 685 is not planned!
+Order 686 is not planned!
+Order 687 is not planned!
+Order 688 is not planned!
+Order 689 is not planned!
+Order 690 is not planned!
+Order 691 is not planned!
+Order 692 is not planned!
+Order 693 is not planned!
+Order 694 is not planned!
+Order 695 is not planned!
+Order 696 is not planned!
+Order 697 is not planned!
+Order 698 is not planned!
+Order 699 is not planned!
+Order 700 is not planned!
+Order 701 is not planned!
+Order 702 is not planned!
+Order 703 is not planned!
+Order 6 is planned on resource 5 which is not contained in list of valid resources!
+Order 10 is planned on resource 2 which is not contained in list of valid resources!
+Order 11 is planned on resource 1 which is not contained in list of valid resources!
+Order 21 is planned on resource 5 which is not contained in list of valid resources!
+Order 24 is planned on resource 1 which is not contained in list of valid resources!
+Order 42 is planned on resource 3 which is not contained in list of valid resources!
+Order 57 is planned on resource 4 which is not contained in list of valid resources!
+Order 12 is planned on resource 4 which is not contained in list of valid resources!
+Order 14 is planned on resource 4 which is not contained in list of valid resources!
+Order 18 is planned on resource 5 which is not contained in list of valid resources!
+Order 19 is planned on resource 3 which is not contained in list of valid resources!
+Order 26 is planned on resource 2 which is not contained in list of valid resources!
+Order 43 is planned on resource 4 which is not contained in list of valid resources!
+Order 44 is planned on resource 1 which is not contained in list of valid resources!
+Order 48 is planned on resource 4 which is not contained in list of valid resources!
+Order 45 is planned on resource 4 which is not contained in list of valid resources!
+Resource 4 of planning group with rank 1 has size 530 but maximal group size is 446!
+Resource 1 of planning group with rank 0 has size 288 but minimal group size is 415!
+Resource 2 of planning group with rank 0 has size 203 but minimal group size is 415!
+Resource 3 of planning group with rank 0 has size 183 but minimal group size is 415!
+Resource 4 of planning group with rank 0 has size 300 but minimal group size is 415!
+Resource 5 of planning group with rank 0 has size 414 but minimal group size is 415!
+Resource 6 of planning group with rank 0 has size 0 but minimal group size is 415!
+Resource 7 of planning group with rank 0 has size 0 but minimal group size is 415!
+Resource 8 of planning group with rank 0 has size 0 but minimal group size is 415!
+Resource 1 of planning group with rank 1 has size 116 but minimal group size is 415!
+Resource 2 of planning group with rank 1 has size 249 but minimal group size is 415!
+Resource 3 of planning group with rank 1 has size 203 but minimal group size is 415!
+Resource 5 of planning group with rank 1 has size 312 but minimal group size is 415!
+Resource 6 of planning group with rank 1 has size 0 but minimal group size is 415!
+Resource 7 of planning group with rank 1 has size 0 but minimal group size is 415!
+Resource 8 of planning group with rank 1 has size 0 but minimal group size is 415!
+Resource 1 of planning group with rank 2 has size 83 but minimal group size is 415!
+Resource 2 of planning group with rank 2 has size 0 but minimal group size is 415!
+Resource 3 of planning group with rank 2 has size 33 but minimal group size is 415!
+Resource 4 of planning group with rank 2 has size 118 but minimal group size is 415!
+Resource 5 of planning group with rank 2 has size 51 but minimal group size is 415!
+Resource 6 of planning group with rank 2 has size 0 but minimal group size is 415!
+Resource 7 of planning group with rank 2 has size 0 but minimal group size is 415!
+Resource 8 of planning group with rank 2 has size 0 but minimal group size is 415!
+---------------------
+Calculating values of objective components:
+The absolute (weighted) value of the OrderPriority objective is: 259 (259)
+The exact absolute (weighted) value of the OrderPriority objective is: 260.7704761904762 (260.7704761904762)
+The absolute (weighted) value of the TargetGroupSizeDeviation objective is: 7635 (7635)
+The exact absolute (weighted) value of the TargetGroupSizeDeviation objective is: 7635 (7635)
+The absolute (weighted) value of the BalancedCapacityLoad objective is: 5413 (5413)
+The exact absolute (weighted) value of the BalancedCapacityLoad objective is: 5413 (5413)
+The absolute (weighted) value of the MinGroupSizePenalty objective is: 3957 (18501562878)
+The exact absolute (weighted) value of the MinGroupSizePenalty objective is: 3957 (18501562878)
+The integer (normalized) value of the aggregated objective is: 18501576185 (3957.003692318485)
+The double (normalized) value of the aggregated objective is: 18501576186.770477 (3957.0036926971434)
+
+18501576185

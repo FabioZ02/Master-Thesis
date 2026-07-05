@@ -3,36 +3,73 @@
     {
       "PlannedOrders": [
         {
-          "OrderId": 1,
+          "OrderId": 4,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 7,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 13,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 21,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 28,
+          "ResourceId": 9
+        },
+        {
+          "OrderId": 30,
+          "ResourceId": 7
+        },
+        {
+          "OrderId": 31,
+          "ResourceId": 6
+        },
+        {
+          "OrderId": 35,
+          "ResourceId": 7
+        },
+        {
+          "OrderId": 47,
           "ResourceId": 8
         },
         {
-          "OrderId": 2,
+          "OrderId": 57,
           "ResourceId": 1
+        }
+      ],
+      "Rank": 0
+    },
+    {
+      "PlannedOrders": [
+        {
+          "OrderId": 1,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 2,
+          "ResourceId": 3
         },
         {
           "OrderId": 3,
           "ResourceId": 9
         },
         {
-          "OrderId": 4,
-          "ResourceId": 3
-        },
-        {
           "OrderId": 5,
-          "ResourceId": 9
+          "ResourceId": 4
         },
         {
           "OrderId": 6,
-          "ResourceId": 1
-        },
-        {
-          "OrderId": 7,
-          "ResourceId": 2
+          "ResourceId": 9
         },
         {
           "OrderId": 8,
-          "ResourceId": 9
+          "ResourceId": 5
         },
         {
           "OrderId": 9,
@@ -40,7 +77,7 @@
         },
         {
           "OrderId": 10,
-          "ResourceId": 6
+          "ResourceId": 9
         },
         {
           "OrderId": 11,
@@ -48,27 +85,23 @@
         },
         {
           "OrderId": 12,
-          "ResourceId": 4
-        },
-        {
-          "OrderId": 13,
-          "ResourceId": 1
+          "ResourceId": 2
         },
         {
           "OrderId": 14,
-          "ResourceId": 5
+          "ResourceId": 7
         },
         {
           "OrderId": 15,
-          "ResourceId": 5
+          "ResourceId": 7
         },
         {
           "OrderId": 16,
-          "ResourceId": 5
+          "ResourceId": 2
         },
         {
           "OrderId": 17,
-          "ResourceId": 6
+          "ResourceId": 7
         },
         {
           "OrderId": 18,
@@ -76,15 +109,11 @@
         },
         {
           "OrderId": 19,
-          "ResourceId": 4
-        },
-        {
-          "OrderId": 20,
           "ResourceId": 2
         },
         {
-          "OrderId": 21,
-          "ResourceId": 7
+          "OrderId": 20,
+          "ResourceId": 4
         },
         {
           "OrderId": 22,
@@ -96,11 +125,11 @@
         },
         {
           "OrderId": 24,
-          "ResourceId": 5
+          "ResourceId": 2
         },
         {
           "OrderId": 25,
-          "ResourceId": 5
+          "ResourceId": 3
         },
         {
           "OrderId": 26,
@@ -111,20 +140,8 @@
           "ResourceId": 1
         },
         {
-          "OrderId": 28,
-          "ResourceId": 5
-        },
-        {
           "OrderId": 29,
-          "ResourceId": 2
-        },
-        {
-          "OrderId": 30,
-          "ResourceId": 8
-        },
-        {
-          "OrderId": 31,
-          "ResourceId": 9
+          "ResourceId": 6
         },
         {
           "OrderId": 32,
@@ -132,75 +149,75 @@
         },
         {
           "OrderId": 33,
-          "ResourceId": 5
+          "ResourceId": 1
         },
         {
           "OrderId": 34,
-          "ResourceId": 7
+          "ResourceId": 9
         },
         {
           "OrderId": 36,
-          "ResourceId": 7
-        },
-        {
-          "OrderId": 37,
-          "ResourceId": 8
-        },
-        {
-          "OrderId": 38,
-          "ResourceId": 6
-        },
-        {
-          "OrderId": 39,
-          "ResourceId": 7
-        },
-        {
-          "OrderId": 40,
-          "ResourceId": 1
-        },
-        {
-          "OrderId": 41,
-          "ResourceId": 3
-        },
-        {
-          "OrderId": 42,
-          "ResourceId": 6
-        },
-        {
-          "OrderId": 43,
-          "ResourceId": 6
-        },
-        {
-          "OrderId": 44,
-          "ResourceId": 9
-        },
-        {
-          "OrderId": 45,
-          "ResourceId": 7
-        },
-        {
-          "OrderId": 46,
-          "ResourceId": 4
-        },
-        {
-          "OrderId": 47,
-          "ResourceId": 1
-        },
-        {
-          "OrderId": 48,
-          "ResourceId": 9
-        },
-        {
-          "OrderId": 49,
           "ResourceId": 2
         },
         {
-          "OrderId": 51,
+          "OrderId": 37,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 38,
+          "ResourceId": 8
+        },
+        {
+          "OrderId": 39,
+          "ResourceId": 6
+        },
+        {
+          "OrderId": 40,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 41,
+          "ResourceId": 8
+        },
+        {
+          "OrderId": 42,
+          "ResourceId": 7
+        },
+        {
+          "OrderId": 43,
           "ResourceId": 3
         },
         {
-          "OrderId": 52,
+          "OrderId": 44,
           "ResourceId": 1
+        },
+        {
+          "OrderId": 45,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 46,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 48,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 49,
+          "ResourceId": 8
+        },
+        {
+          "OrderId": 50,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 51,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 52,
+          "ResourceId": 5
         },
         {
           "OrderId": 53,
@@ -208,23 +225,19 @@
         },
         {
           "OrderId": 54,
-          "ResourceId": 8
+          "ResourceId": 5
         },
         {
           "OrderId": 55,
-          "ResourceId": 3
+          "ResourceId": 6
         },
         {
           "OrderId": 56,
-          "ResourceId": 2
-        },
-        {
-          "OrderId": 57,
-          "ResourceId": 3
+          "ResourceId": 7
         },
         {
           "OrderId": 58,
-          "ResourceId": 7
+          "ResourceId": 5
         },
         {
           "OrderId": 59,
@@ -232,36 +245,23 @@
         },
         {
           "OrderId": 60,
-          "ResourceId": 4
+          "ResourceId": 1
         },
         {
           "OrderId": 61,
-          "ResourceId": 3
+          "ResourceId": 5
         },
         {
           "OrderId": 62,
-          "ResourceId": 8
-        },
-        {
-          "OrderId": 63,
-          "ResourceId": 8
-        },
-        {
-          "OrderId": 64,
-          "ResourceId": 3
-        }
-      ],
-      "Rank": 0
-    },
-    {
-      "PlannedOrders": [
-        {
-          "OrderId": 35,
           "ResourceId": 4
         },
         {
-          "OrderId": 50,
-          "ResourceId": 7
+          "OrderId": 63,
+          "ResourceId": 9
+        },
+        {
+          "OrderId": 64,
+          "ResourceId": 6
         }
       ],
       "Rank": 1
@@ -269,7 +269,7 @@
   ]
 }
 
-Cost: 3693
+Cost: 3736
 Violations: 0
-Objective: 3693
-Time: 0.235902
+Objective: 3736
+Time: 0.27498

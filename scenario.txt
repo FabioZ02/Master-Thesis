@@ -1,9 +1,7 @@
 targetRunner = "./target_runner"
 
-trainInstancesDir = "./Instances/medium/tuning_set"
+trainInstancesDir = "./Instances/small/tuning_set"
 
 
-maxExperiments = 10000
+maxExperiments = 5000
 
-
-testType = "F-test"

@@ -14,10 +14,10 @@
 # ====================== DA IMPOSTARE ======================
 # Cartella con le istanze .json da validare.
 # >>> Punta questa riga al set Large / "medium-large" che vuoi testare <<<
-INSTANCE_DIR="$HOME/Master_Thesis/Instances/small"
+INSTANCE_DIR="$HOME/Master_Thesis/Instances/large"
 
 BINARY="$HOME/Master_Thesis/bt_main"   # eseguibile compilato
-N_INSTANCES=25                          # quante istanze (le prime, ordine naturale)
+N_INSTANCES=10                          # quante istanze (le prime, ordine naturale)
 N_REPS=10                               # run per istanza (seed = 1..N_REPS)
 # ==========================================================
 
@@ -31,7 +31,7 @@ METHOD=BSA
 
 # ---- Output ----
 OUTDIR="$HOME/Master_Thesis/validation_1074/small"
-RAW_CSV="$OUTDIR/runs_raw_small.csv"          # una riga per ogni run
+RAW_CSV="$OUTDIR/runs_small.csv"          # una riga per ogni run
 SUMMARY_CSV="$OUTDIR/summary_small.csv"       # una riga per istanza (media, std, ...)
 SOL_DIR="$OUTDIR/solutions_small"             # soluzioni salvate (per il validatore)
 

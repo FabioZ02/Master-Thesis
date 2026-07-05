@@ -1,0 +1,10 @@
+instance,seed,cost,time
+instance_test_1,1,4600,4.05817
+instance_test_1,2,4608,3.36568
+instance_test_1,3,4608,4.12523
+instance_test_1,4,4608,4.11124
+instance_test_1,5,4616,4.20359
+instance_test_1,6,4624,4.19708
+instance_test_1,7,4600,4.05656
+instance_test_1,8,4600,4.02592
+instance_test_1,9,4608,4.00292

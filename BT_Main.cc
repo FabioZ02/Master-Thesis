@@ -36,8 +36,8 @@ int main(int argc, const char* argv[])
     BT_LoadDeviation     cc1(in, 1, false);
     BT_TargetDeviation   cc2(in, 1, false);
     BT_PriorityDeviation cc3(in, 1, false);
-    BT_MinLoadPenalty    cc4(in, 1, true);
-    BT_MaxLoadPenalty    cc5(in, 1, true);
+    BT_MinLoadPenalty    cc4(in, in.ComputeBigM(), false);
+    BT_MaxLoadPenalty    cc5(in, in.ComputeBigM(), false);
 
     // Delta cost components — Shift
     BT_ShiftDeltaLoadDeviation     dcc1_shift(in, cc1);
@@ -77,21 +77,21 @@ int main(int argc, const char* argv[])
     BT_swap_nhe.AddDeltaCostComponent(dcc5_swap);
 
     // Union Neighbourhood
-    SetUnionNeighborhoodExplorer<BT_Input, BT_Output, DefaultCostStructure<int>, decltype(BT_shift_nhe), decltype(BT_swap_nhe)> bt_bnhe(in, BT_sm, "ShiftOrSwap", BT_shift_nhe, BT_swap_nhe, {1 - swap_rate, swap_rate});
+    SetUnionNeighborhoodExplorer<BT_Input, BT_Output, DefaultCostStructure<long long>, decltype(BT_shift_nhe), decltype(BT_swap_nhe)> bt_bnhe(in, BT_sm, "ShiftOrSwap", BT_shift_nhe, BT_swap_nhe, {1 - swap_rate, swap_rate});
 
     // Simulated Annealing using union neighborhood
-    SimulatedAnnealing<BT_Input, BT_Output, decltype(bt_bnhe)::MoveType> bt_bsa(in, BT_sm, bt_bnhe, "BSA");
-    SimulatedAnnealingWithReheating<BT_Input, BT_Output, decltype(bt_bnhe)::MoveType> bt_bsawr(in, BT_sm, bt_bnhe, "BSAwr");
+    SimulatedAnnealing<BT_Input, BT_Output, decltype(bt_bnhe)::MoveType, DefaultCostStructure<long long>> bt_bsa(in, BT_sm, bt_bnhe, "BSA");
+    SimulatedAnnealingWithReheating<BT_Input, BT_Output, decltype(bt_bnhe)::MoveType, DefaultCostStructure<long long>> bt_bsawr(in, BT_sm, bt_bnhe, "BSAwr");
 
     // Tester
-    Tester<BT_Input, BT_Output> tester(in, BT_sm);
-    MoveTester<BT_Input, BT_Output, BT_Shift> shift_move_test(in, BT_sm, BT_shift_nhe, "BT_Shift move", tester);
-    MoveTester<BT_Input, BT_Output, BT_Swap>  swap_move_test(in, BT_sm, BT_swap_nhe,  "BT_Swap move",  tester);
+    Tester<BT_Input, BT_Output, DefaultCostStructure<long long>> tester(in, BT_sm);
+    MoveTester<BT_Input, BT_Output, BT_Shift, DefaultCostStructure<long long>> shift_move_test(in, BT_sm, BT_shift_nhe, "BT_Shift move", tester);
+    MoveTester<BT_Input, BT_Output, BT_Swap, DefaultCostStructure<long long>>  swap_move_test(in, BT_sm, BT_swap_nhe,  "BT_Swap move",  tester);
 
     //Tester for the union neighborhood
-    MoveTester<BT_Input, BT_Output, decltype(bt_bnhe)::MoveType> bimodal_test(in, BT_sm, bt_bnhe, "ShiftOrSwap move", tester);
+    MoveTester<BT_Input, BT_Output, decltype(bt_bnhe)::MoveType, DefaultCostStructure<long long>> bimodal_test(in, BT_sm, bt_bnhe, "ShiftOrSwap move", tester);
 
-    SimpleLocalSearch<BT_Input, BT_Output> bt_solver(in, BT_sm, "BT SOlver");
+    SimpleLocalSearch<BT_Input, BT_Output, DefaultCostStructure<long long>> bt_solver(in, BT_sm, "BT SOlver");
 
     if(!CommandLineParameters::Parse(argc, argv, true, false))
         return 1;
@@ -114,7 +114,7 @@ int main(int argc, const char* argv[])
                     cerr << "Error: method " << string(method) << " not recognized" << endl;
                     exit(1);
                 }
-            SolverResult<BT_Input, BT_Output> result = bt_solver.Solve();
+            SolverResult<BT_Input, BT_Output, DefaultCostStructure<long long>> result = bt_solver.Solve();
             out = result.output;
             if (irace)
                cout << result.cost.total << endl;

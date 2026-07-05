@@ -4,19 +4,31 @@
       "PlannedOrders": [
         {
           "OrderId": 1,
-          "ResourceId": 1
+          "ResourceId": 6
+        },
+        {
+          "OrderId": 2,
+          "ResourceId": 2
         },
         {
           "OrderId": 3,
-          "ResourceId": 4
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 4,
+          "ResourceId": 6
         },
         {
           "OrderId": 5,
-          "ResourceId": 5
+          "ResourceId": 3
         },
         {
           "OrderId": 6,
-          "ResourceId": 4
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 7,
+          "ResourceId": 6
         },
         {
           "OrderId": 8,
@@ -27,16 +39,20 @@
           "ResourceId": 2
         },
         {
+          "OrderId": 10,
+          "ResourceId": 5
+        },
+        {
           "OrderId": 11,
-          "ResourceId": 1
+          "ResourceId": 6
         },
         {
           "OrderId": 12,
-          "ResourceId": 1
+          "ResourceId": 2
         },
         {
           "OrderId": 13,
-          "ResourceId": 3
+          "ResourceId": 4
         },
         {
           "OrderId": 14,
@@ -47,12 +63,16 @@
           "ResourceId": 4
         },
         {
+          "OrderId": 16,
+          "ResourceId": 5
+        },
+        {
           "OrderId": 17,
-          "ResourceId": 6
+          "ResourceId": 1
         },
         {
           "OrderId": 18,
-          "ResourceId": 3
+          "ResourceId": 2
         },
         {
           "OrderId": 19,
@@ -60,48 +80,23 @@
         },
         {
           "OrderId": 20,
-          "ResourceId": 2
+          "ResourceId": 3
         },
         {
           "OrderId": 21,
-          "ResourceId": 2
-        }
-      ],
-      "Rank": 0
-    },
-    {
-      "PlannedOrders": [
-        {
-          "OrderId": 2,
-          "ResourceId": 2
-        },
-        {
-          "OrderId": 4,
           "ResourceId": 5
-        },
-        {
-          "OrderId": 7,
-          "ResourceId": 6
-        },
-        {
-          "OrderId": 10,
-          "ResourceId": 4
-        },
-        {
-          "OrderId": 16,
-          "ResourceId": 1
         },
         {
           "OrderId": 22,
           "ResourceId": 3
         }
       ],
-      "Rank": 1
+      "Rank": 0
     }
   ]
 }
 
-Cost: 888
+Cost: 164
 Violations: 0
-Objective: 888
-Time: 0.205895
+Objective: 164
+Time: 0.171506

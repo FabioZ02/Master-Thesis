@@ -1,0 +1,372 @@
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 4.4.3.dd8d85f
+# Copyright (C) 2010-2025
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /home/fabio/R/x86_64-pc-linux-gnu-library/4.3/irace
+# called with: --scenario scenario_wide.txt
+# 2026-07-02 13:41:07 CEST: Reading parameter file '/home/fabio/Master_Thesis/parameters_wide.txt'.
+# 2026-07-02 13:41:07 CEST: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 4
+# minNbSurvival: 4
+# nbParameters: 5
+# seed: 1089954102
+# confidence level: 0.95
+# budget: 5000
+# mu: 5
+# deterministic: FALSE
+
+# 2026-07-02 13:41:07 CEST: Iteration 1 of 4
+# experimentsUsed: 0
+# remainingBudget: 5000
+# currentBudget: 1250
+# nbConfigurations: 208
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 6 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0011 --min_temp_factor 0.0094 --BSA::cooling_rate 0.997 --BSA::neighbors_accepted_ratio 0.2494 --main::swap_rate 0.5215 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 6 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0011 --min_temp_factor 0.0094 --BSA::cooling_rate 0.997 --BSA::neighbors_accepted_ratio 0.2494 --main::swap_rate 0.5215
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 87.8053 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 163623 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 10 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0008 --min_temp_factor 0.0022 --BSA::cooling_rate 0.9929 --BSA::neighbors_accepted_ratio 0.2338 --main::swap_rate 0.084 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 10 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0008 --min_temp_factor 0.0022 --BSA::cooling_rate 0.9929 --BSA::neighbors_accepted_ratio 0.2338 --main::swap_rate 0.084
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 63.8584 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 163698 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 24 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0007 --min_temp_factor 0.0046 --BSA::cooling_rate 0.992 --BSA::neighbors_accepted_ratio 0.0698 --main::swap_rate 0.3653 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 24 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0007 --min_temp_factor 0.0046 --BSA::cooling_rate 0.992 --BSA::neighbors_accepted_ratio 0.0698 --main::swap_rate 0.3653
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 55.8761 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 163856 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 30 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0035 --min_temp_factor 0.0061 --BSA::cooling_rate 0.9938 --BSA::neighbors_accepted_ratio 0.1791 --main::swap_rate 0.6778 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 30 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0035 --min_temp_factor 0.0061 --BSA::cooling_rate 0.9938 --BSA::neighbors_accepted_ratio 0.1791 --main::swap_rate 0.6778
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 279.38 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 163912 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 34 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0014 --min_temp_factor 0.0032 --BSA::cooling_rate 0.9942 --BSA::neighbors_accepted_ratio 0.2768 --main::swap_rate 0.9121 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 34 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0014 --min_temp_factor 0.0032 --BSA::cooling_rate 0.9942 --BSA::neighbors_accepted_ratio 0.2768 --main::swap_rate 0.9121
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 111.752 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 163949 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 44 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0005 --min_temp_factor 0.0014 --BSA::cooling_rate 0.9948 --BSA::neighbors_accepted_ratio 0.1987 --main::swap_rate 0.4746 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 44 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0005 --min_temp_factor 0.0014 --BSA::cooling_rate 0.9948 --BSA::neighbors_accepted_ratio 0.1987 --main::swap_rate 0.4746
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 39.9115 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164063 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 47 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0038 --min_temp_factor 0.0076 --BSA::cooling_rate 0.9913 --BSA::neighbors_accepted_ratio 0.1674 --main::swap_rate 0.0996 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 47 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0038 --min_temp_factor 0.0076 --BSA::cooling_rate 0.9913 --BSA::neighbors_accepted_ratio 0.1674 --main::swap_rate 0.0996
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 303.327 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164082 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 54 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0009 --min_temp_factor 0.0066 --BSA::cooling_rate 0.9993 --BSA::neighbors_accepted_ratio 0.0971 --main::swap_rate 0.1934 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 54 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0009 --min_temp_factor 0.0066 --BSA::cooling_rate 0.9993 --BSA::neighbors_accepted_ratio 0.0971 --main::swap_rate 0.1934
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 71.8407 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164162 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 59 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0023 --min_temp_factor 0.0049 --BSA::cooling_rate 0.9963 --BSA::neighbors_accepted_ratio 0.2065 --main::swap_rate 0.7559 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 59 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0023 --min_temp_factor 0.0049 --BSA::cooling_rate 0.9963 --BSA::neighbors_accepted_ratio 0.2065 --main::swap_rate 0.7559
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 183.593 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164210 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 63 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0012 --min_temp_factor 0.0028 --BSA::cooling_rate 0.9904 --BSA::neighbors_accepted_ratio 0.1127 --main::swap_rate 0.6309 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 63 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0012 --min_temp_factor 0.0028 --BSA::cooling_rate 0.9904 --BSA::neighbors_accepted_ratio 0.1127 --main::swap_rate 0.6309
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 95.7876 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164260 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 68 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0006 --min_temp_factor 0.0085 --BSA::cooling_rate 0.9931 --BSA::neighbors_accepted_ratio 0.1264 --main::swap_rate 0.8731 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 68 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0006 --min_temp_factor 0.0085 --BSA::cooling_rate 0.9931 --BSA::neighbors_accepted_ratio 0.1264 --main::swap_rate 0.8731
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 47.8938 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164312 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 73 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0016 --min_temp_factor 0.002 --BSA::cooling_rate 0.9961 --BSA::neighbors_accepted_ratio 0.1108 --main::swap_rate 0.3106 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 73 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0016 --min_temp_factor 0.002 --BSA::cooling_rate 0.9961 --BSA::neighbors_accepted_ratio 0.1108 --main::swap_rate 0.3106
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 127.717 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164366 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 80 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0031 --min_temp_factor 0.0036 --BSA::cooling_rate 0.9901 --BSA::neighbors_accepted_ratio 0.267 --main::swap_rate 0.1856 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 80 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0031 --min_temp_factor 0.0036 --BSA::cooling_rate 0.9901 --BSA::neighbors_accepted_ratio 0.267 --main::swap_rate 0.1856
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 247.451 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164443 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 81 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0071 --min_temp_factor 0.0073 --BSA::cooling_rate 0.9952 --BSA::neighbors_accepted_ratio 0.0561 --main::swap_rate 0.9668 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 81 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0071 --min_temp_factor 0.0073 --BSA::cooling_rate 0.9952 --BSA::neighbors_accepted_ratio 0.0561 --main::swap_rate 0.9668
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 566.743 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164451 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 87 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.001 --min_temp_factor 0.0013 --BSA::cooling_rate 0.9916 --BSA::neighbors_accepted_ratio 0.2748 --main::swap_rate 0.5918 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 87 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.001 --min_temp_factor 0.0013 --BSA::cooling_rate 0.9916 --BSA::neighbors_accepted_ratio 0.2748 --main::swap_rate 0.5918
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 79.823 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164519 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 89 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0013 --min_temp_factor 0.0055 --BSA::cooling_rate 0.9982 --BSA::neighbors_accepted_ratio 0.1967 --main::swap_rate 0.0293 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 89 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0013 --min_temp_factor 0.0055 --BSA::cooling_rate 0.9982 --BSA::neighbors_accepted_ratio 0.1967 --main::swap_rate 0.0293
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 103.77 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164533 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 93 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0007 --min_temp_factor 0.001 --BSA::cooling_rate 0.997 --BSA::neighbors_accepted_ratio 0.228 --main::swap_rate 0.1543 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 93 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0007 --min_temp_factor 0.001 --BSA::cooling_rate 0.997 --BSA::neighbors_accepted_ratio 0.228 --main::swap_rate 0.1543
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 55.8761 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164567 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 94 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0098 --min_temp_factor 0.0098 --BSA::cooling_rate 0.9922 --BSA::neighbors_accepted_ratio 0.103 --main::swap_rate 0.6543 2>&1' had status 136
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 94 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0098 --min_temp_factor 0.0098 --BSA::cooling_rate 0.9922 --BSA::neighbors_accepted_ratio 0.103 --main::swap_rate 0.6543
+== irace == The output was:
+/home/fabio/Master_Thesis/target_runner: line 42: 164574 Floating point exception(core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 95 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0026 --min_temp_factor 0.0031 --BSA::cooling_rate 0.9946 --BSA::neighbors_accepted_ratio 0.1655 --main::swap_rate 0.4043 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 95 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0026 --min_temp_factor 0.0031 --BSA::cooling_rate 0.9946 --BSA::neighbors_accepted_ratio 0.1655 --main::swap_rate 0.4043
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 207.54 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164581 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 99 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0008 --min_temp_factor 0.0038 --BSA::cooling_rate 0.9959 --BSA::neighbors_accepted_ratio 0.1537 --main::swap_rate 0.7012 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 99 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0008 --min_temp_factor 0.0038 --BSA::cooling_rate 0.9959 --BSA::neighbors_accepted_ratio 0.1537 --main::swap_rate 0.7012
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 63.8584 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164629 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 106 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0011 --min_temp_factor 0.0016 --BSA::cooling_rate 0.9941 --BSA::neighbors_accepted_ratio 0.0756 --main::swap_rate 0.1387 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 106 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0011 --min_temp_factor 0.0016 --BSA::cooling_rate 0.9941 --BSA::neighbors_accepted_ratio 0.0756 --main::swap_rate 0.1387
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 87.8053 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164726 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 110 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.002 --min_temp_factor 0.0091 --BSA::cooling_rate 0.9977 --BSA::neighbors_accepted_ratio 0.2944 --main::swap_rate 0.2637 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 110 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.002 --min_temp_factor 0.0091 --BSA::cooling_rate 0.9977 --BSA::neighbors_accepted_ratio 0.2944 --main::swap_rate 0.2637
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 159.646 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164779 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 117 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0006 --min_temp_factor 0.0025 --BSA::cooling_rate 0.9986 --BSA::neighbors_accepted_ratio 0.2397 --main::swap_rate 0.9824 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 117 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0006 --min_temp_factor 0.0025 --BSA::cooling_rate 0.9986 --BSA::neighbors_accepted_ratio 0.2397 --main::swap_rate 0.9824
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 47.8938 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164853 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 124 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0017 --min_temp_factor 0.0059 --BSA::cooling_rate 0.9909 --BSA::neighbors_accepted_ratio 0.2241 --main::swap_rate 0.4199 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 124 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0017 --min_temp_factor 0.0059 --BSA::cooling_rate 0.9909 --BSA::neighbors_accepted_ratio 0.2241 --main::swap_rate 0.4199
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 135.699 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 164906 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 135 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0006 --min_temp_factor 0.0019 --BSA::cooling_rate 0.9909 --BSA::neighbors_accepted_ratio 0.1743 --main::swap_rate 0.2207 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 135 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0006 --min_temp_factor 0.0019 --BSA::cooling_rate 0.9909 --BSA::neighbors_accepted_ratio 0.1743 --main::swap_rate 0.2207
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 47.8938 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165001 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 140 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0015 --min_temp_factor 0.008 --BSA::cooling_rate 0.9986 --BSA::neighbors_accepted_ratio 0.0649 --main::swap_rate 0.6582 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 140 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0015 --min_temp_factor 0.008 --BSA::cooling_rate 0.9986 --BSA::neighbors_accepted_ratio 0.0649 --main::swap_rate 0.6582
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 119.734 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165044 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 150 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0009 --min_temp_factor 0.0052 --BSA::cooling_rate 0.9936 --BSA::neighbors_accepted_ratio 0.2602 --main::swap_rate 0.4395 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 150 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0009 --min_temp_factor 0.0052 --BSA::cooling_rate 0.9936 --BSA::neighbors_accepted_ratio 0.2602 --main::swap_rate 0.4395
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 71.8407 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165134 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 155 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0025 --min_temp_factor 0.0069 --BSA::cooling_rate 0.9918 --BSA::neighbors_accepted_ratio 0.1196 --main::swap_rate 0.502 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 155 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0025 --min_temp_factor 0.0069 --BSA::cooling_rate 0.9918 --BSA::neighbors_accepted_ratio 0.1196 --main::swap_rate 0.502
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 199.558 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165177 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 164 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0031 --min_temp_factor 0.0048 --BSA::cooling_rate 0.9994 --BSA::neighbors_accepted_ratio 0.1469 --main::swap_rate 0.9239 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 164 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0031 --min_temp_factor 0.0048 --BSA::cooling_rate 0.9994 --BSA::neighbors_accepted_ratio 0.1469 --main::swap_rate 0.9239
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 247.451 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165252 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 167 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0016 --min_temp_factor 0.0027 --BSA::cooling_rate 0.9934 --BSA::neighbors_accepted_ratio 0.1782 --main::swap_rate 0.5489 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 167 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0016 --min_temp_factor 0.0027 --BSA::cooling_rate 0.9934 --BSA::neighbors_accepted_ratio 0.1782 --main::swap_rate 0.5489
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 127.717 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165281 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 175 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0006 --min_temp_factor 0.0065 --BSA::cooling_rate 0.9964 --BSA::neighbors_accepted_ratio 0.2875 --main::swap_rate 0.1114 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 175 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0006 --min_temp_factor 0.0065 --BSA::cooling_rate 0.9964 --BSA::neighbors_accepted_ratio 0.2875 --main::swap_rate 0.1114
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 47.8938 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165343 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 180 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0052 --min_temp_factor 0.0099 --BSA::cooling_rate 0.9943 --BSA::neighbors_accepted_ratio 0.2328 --main::swap_rate 0.2051 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 180 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0052 --min_temp_factor 0.0099 --BSA::cooling_rate 0.9943 --BSA::neighbors_accepted_ratio 0.2328 --main::swap_rate 0.2051
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 415.08 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165386 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 184 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0007 --min_temp_factor 0.0018 --BSA::cooling_rate 0.9979 --BSA::neighbors_accepted_ratio 0.1391 --main::swap_rate 0.3301 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 184 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0007 --min_temp_factor 0.0018 --BSA::cooling_rate 0.9979 --BSA::neighbors_accepted_ratio 0.1391 --main::swap_rate 0.3301
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 55.8761 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165421 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 185 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0005 --min_temp_factor 0.0007 --BSA::cooling_rate 0.9925 --BSA::neighbors_accepted_ratio 0.061 --main::swap_rate 0.8926 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 185 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0005 --min_temp_factor 0.0007 --BSA::cooling_rate 0.9925 --BSA::neighbors_accepted_ratio 0.061 --main::swap_rate 0.8926
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 39.9115 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165432 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 186 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0072 --min_temp_factor 0.0075 --BSA::cooling_rate 0.9973 --BSA::neighbors_accepted_ratio 0.186 --main::swap_rate 0.3926 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 186 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0072 --min_temp_factor 0.0075 --BSA::cooling_rate 0.9973 --BSA::neighbors_accepted_ratio 0.186 --main::swap_rate 0.3926
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 574.726 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165438 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 188 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0019 --min_temp_factor 0.0024 --BSA::cooling_rate 0.9949 --BSA::neighbors_accepted_ratio 0.2485 --main::swap_rate 0.6426 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 188 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0019 --min_temp_factor 0.0024 --BSA::cooling_rate 0.9949 --BSA::neighbors_accepted_ratio 0.2485 --main::swap_rate 0.6426
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 151.664 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165448 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 189 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.001 --min_temp_factor 0.0042 --BSA::cooling_rate 0.9914 --BSA::neighbors_accepted_ratio 0.0922 --main::swap_rate 0.7676 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 189 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.001 --min_temp_factor 0.0042 --BSA::cooling_rate 0.9914 --BSA::neighbors_accepted_ratio 0.0922 --main::swap_rate 0.7676
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 79.823 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165455 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 193 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0008 --min_temp_factor 0.0089 --BSA::cooling_rate 0.9902 --BSA::neighbors_accepted_ratio 0.1879 --main::swap_rate 0.9473 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 193 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0008 --min_temp_factor 0.0089 --BSA::cooling_rate 0.9902 --BSA::neighbors_accepted_ratio 0.1879 --main::swap_rate 0.9473
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 63.8584 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165489 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 202 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0011 --min_temp_factor 0.0021 --BSA::cooling_rate 0.9992 --BSA::neighbors_accepted_ratio 0.2973 --main::swap_rate 0.3848 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 202 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0011 --min_temp_factor 0.0021 --BSA::cooling_rate 0.9992 --BSA::neighbors_accepted_ratio 0.2973 --main::swap_rate 0.3848
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 87.8053 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165564 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == running command ''/home/fabio/Master_Thesis/target_runner' 208 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0022 --min_temp_factor 0.0038 --BSA::cooling_rate 0.9932 --BSA::neighbors_accepted_ratio 0.0786 --main::swap_rate 0.0098 2>&1' had status 134
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 208 11 1795180996 /home/fabio/Master_Thesis/Instances/small/tuning_set/instance_test_39.json  --start_temp_factor 0.0022 --min_temp_factor 0.0038 --BSA::cooling_rate 0.9932 --BSA::neighbors_accepted_ratio 0.0786 --main::swap_rate 0.0098
+== irace == The output was:
+terminate called after throwing an instance of 'EasyLocal::Core::IncorrectParameterValue'
+  what():  Parameter BSA::start_temperature set to incorrect value 175.611 (should be greater than min_temperature)
+/home/fabio/Master_Thesis/target_runner: line 42: 165620 Aborted                 (core dumped) ./bt_main --main::instance "$INSTANCE" --main::method BSA --main::seed "$SEED" --BSA::max_evaluations 500000 --main::irace-enable --BSA::start_temperature "$START_ABS" --BSA::min_temperature "$MIN_ABS" "${PASS_ARGS[@]}"
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+Error: == irace == A child process triggered a fatal error
+In addition: Warning message:
+In parallel::mclapply(experiments, exec_target_runner, mc.preschedule = !scenario$loadBalancing,  :
+  40 function calls resulted in an error
+Execution halted

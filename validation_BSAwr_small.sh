@@ -21,9 +21,9 @@ REHEAT_RATIO=2.8610
 FIRST_SHARE=0.2348
 
 # Il budget colossale usato per il fine-tuning del Reheating
-MAX_EVAL=300000 
+MAX_EVAL=500000 
 SWAP_RATE=0.5
-METHOD=BSAwr
+METHOD=BSA
 
 # ---- Output ----
 OUTDIR="$HOME/Master_Thesis/validation_BSAwr_1304/small"

@@ -6,7 +6,7 @@
 
 
 BT_SolutionManager::BT_SolutionManager(const BT_Input& pin)
-    : SolutionManager<BT_Input, BT_Output>(pin, "BT_SolutionManager") {}
+    : SolutionManager<BT_Input, BT_Output, DefaultCostStructure<long long>>(pin, "BT_SolutionManager") {}
 
 /* Greedy Algorithm
  Input:  sorted list of tasks T (by priority desc), machines M, compatibility matrix V, Smax
@@ -77,13 +77,26 @@ void BT_SolutionManager::GreedyState(BT_Output& out)
 
 void BT_SolutionManager::RandomState(BT_Output& out)
 {
-    out.Reset();
-    for(unsigned t = 0; t < in.OrdersCount(); t++)
+    // RandomState is the actual SA/HC entry point in EasyLocal.
+    // Prefer the greedy construction (Algorithm 3.1): it packs to Smax and gives
+    // a compact, ~minimal period count. On loose instances this is the right start.
+    GreedyState(out);
+
+    // On tight-compatibility instances the greedy can over-fragment, producing
+    // MORE periods than the theoretical bound UpperBoundPeriods (= floor(sumQ /
+    // (Smin*M)) + 1). Starting SA from such an over-fragmented, thin layout is
+    // worse than a bounded random one (SA cannot cleanly collapse the extra
+    // period). In that case fall back to a random layout that respects the bound.
+    if (out.LastPeriod() + 1 > in.UpperBoundPeriods())
     {
-        unsigned p = rand() % in.UpperBoundPeriods();
-        const auto& valid = in.Order_ValidResourceIds(t);
-        unsigned m = valid[rand() % valid.size()] - 1;
-        out.Assign(t, m, p);
+        out.Reset();
+        for(unsigned t = 0; t < in.OrdersCount(); t++)
+        {
+            unsigned p = rand() % in.UpperBoundPeriods();
+            const auto& valid = in.Order_ValidResourceIds(t);
+            unsigned m = valid[rand() % valid.size()] - 1;
+            out.Assign(t, m, p);
+        }
     }
 }
 
@@ -98,7 +111,7 @@ bool BT_SolutionManager::CheckConsistency(const BT_Output& out) const
 }
 
 // f1: sum_p sum_m (max_m'(MSp,m') - MSp,m)
-int BT_LoadDeviation::ComputeCost(const BT_Output& out) const
+long long BT_LoadDeviation::ComputeCost(const BT_Output& out) const
 {
     long long cost = 0;
     for(unsigned p = 0; p <= out.LastPeriod(); p++)
@@ -130,7 +143,7 @@ void BT_LoadDeviation::PrintViolations(const BT_Output& out, std::ostream& os) c
 }
 
 // f2: sum_p sum_m |S_tar - MSp,m|
-int BT_TargetDeviation::ComputeCost(const BT_Output& out) const
+long long BT_TargetDeviation::ComputeCost(const BT_Output& out) const
 {
     long long cost     = 0;
     long long S_target = in.OrderType_TargetGroupSize(in.Order_TypeId(0) - 1);
@@ -155,7 +168,7 @@ void BT_TargetDeviation::PrintViolations(const BT_Output& out, std::ostream& os)
 
 
 // f3: sum_p sum_t |ceil(avgPrio_p) - prio_t| * [PAt == p]
-int BT_PriorityDeviation::ComputeCost(const BT_Output& out) const
+long long BT_PriorityDeviation::ComputeCost(const BT_Output& out) const
 {
     long long cost = 0;
     for(unsigned p = 0; p <= out.LastPeriod(); p++)
@@ -202,7 +215,7 @@ void BT_PriorityDeviation::PrintViolations(const BT_Output& out, std::ostream& o
 
 
 // penalty: sum_p sum_m max(0, Smin - MSp,m)  for p != remainder
-int BT_MinLoadPenalty::ComputeCost(const BT_Output& out) const
+long long BT_MinLoadPenalty::ComputeCost(const BT_Output& out) const
 {
     long long penalty = 0;
     long long S_min   = in.OrderType_MinGroupSize(in.Order_TypeId(0) - 1);
@@ -231,7 +244,7 @@ void BT_MinLoadPenalty::PrintViolations(const BT_Output& out, std::ostream& os) 
     }
 }
 
-int BT_MaxLoadPenalty::ComputeCost(const BT_Output& out) const
+long long BT_MaxLoadPenalty::ComputeCost(const BT_Output& out) const
 {
     long long penalty = 0;
     long long S_max   = in.OrderType_MaxGroupSize(in.Order_TypeId(0) - 1);
@@ -311,8 +324,14 @@ void BT_ShiftNeighborhoodExplorer::RandomMove(const BT_Output& st, BT_Shift& mv)
     mv.old_period = st.AssignedPeriod(mv.task);
     mv.old_machine = st.AssignedResource(mv.task);
 
+    // Nagler's shift adds at most ONE new period: clamp new_period to [0, LastPeriod+1]
+    // (and never beyond the theoretical upper bound). This avoids creating gaps.
+    unsigned max_period = st.LastPeriod() + 1;
+    if (max_period > in.UpperBoundPeriods() - 1)
+        max_period = in.UpperBoundPeriods() - 1;
+
     do{
-        mv.new_period = Random::Uniform<unsigned>(0, in.UpperBoundPeriods() - 1);
+        mv.new_period = Random::Uniform<unsigned>(0, max_period);
         const auto& valid = in.Order_ValidResourceIds(mv.task);
         unsigned id = Random::Uniform<unsigned>(0, valid.size() - 1);
         mv.new_machine = valid[id] - 1;
@@ -405,244 +424,75 @@ bool BT_ShiftNeighborhoodExplorer::AnyNextMove(const BT_Output& st, BT_Shift& mv
     return true;
 }
 
-int BT_ShiftDeltaLoadDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const 
+long long BT_ShiftDeltaLoadDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const 
 {
-    long long delta = 0;
-    unsigned s_t = in.Order_Quantity(mv.task);
-    unsigned m_count = in.ResourcesCount();
-
-    if (mv.old_period == mv.new_period) 
-    {
-        // Case 1: Shift within the same period
-        unsigned p = mv.old_period;
-        unsigned old_max = 0;
-        unsigned new_max = 0;
-        
-        for (unsigned m = 0; m < m_count; m++) 
-        {
-            unsigned load = st.Load(m, p);
-            old_max = std::max(old_max, load);
-            
-            if (m == mv.old_machine) load -= s_t;
-            else if (m == mv.new_machine) load += s_t;
-            
-            new_max = std::max(new_max, load);
-        }
-        
-        delta = static_cast<long long>(new_max - old_max) * m_count;
-    } 
-    else 
-    {
-        // Case: Shift between different periods
-        // Old period
-        unsigned p0 = mv.old_period;
-        unsigned old_max0 = 0, new_max0 = 0;
-        
-        for (unsigned m = 0; m < m_count; m++) 
-        {
-            unsigned load = st.Load(m, p0);
-            old_max0 = std::max(old_max0, load);
-            
-            if (m == mv.old_machine) load -= s_t;
-            
-            new_max0 = std::max(new_max0, load);
-        }
-        delta += static_cast<long long>(new_max0 - old_max0) * m_count + s_t;
-
-        // --- New period ---
-        unsigned p1 = mv.new_period;
-        unsigned old_max1 = 0, new_max1 = 0;
-        
-        for (unsigned m = 0; m < m_count; m++) 
-        {
-            unsigned load = 0;
-            if(p1 <= st.LastPeriod())
-                load = st.Load(m, p1);
-            old_max1 = std::max(old_max1, load);
-            
-            if (m == mv.new_machine) load += s_t;
-            
-            new_max1 = std::max(new_max1, load);
-        }
-        delta += static_cast<long long>(new_max1 - old_max1) * m_count - s_t;
-    }
-    
-    return delta;
+    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
+    BT_Output after = st;
+    unsigned old_period = mv.old_period;
+    after.Assign(mv.task, mv.new_machine, mv.new_period);
+    bool empty = true;
+    for (unsigned m = 0; m < in.ResourcesCount(); m++)
+        if (after.Load(m, old_period) > 0) { empty = false; break; }
+    if (empty)
+        after.RemovePeriod(old_period);
+    return cc.ComputeCost(after) - cc.ComputeCost(st);
 }
 
-int BT_ShiftDeltaTargetDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
+long long BT_ShiftDeltaTargetDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
 {
-    long long delta = 0;
-    long long S_tar = in.OrderType_TargetGroupSize(in.Order_TypeId(mv.task) - 1);
-    unsigned  qty   = in.Order_Quantity(mv.task);
-
-    // Old period, Old machine
-    long long old_load_old = st.Load(mv.old_machine, mv.old_period);
-    delta -= std::abs(S_tar - old_load_old);
-    delta += std::abs(S_tar - (old_load_old - qty));
-
-    // New Period, new machine
-    if(mv.new_period > (int)st.LastPeriod())
-    {
-        // Nuovo periodo: tutte le macchine partono da 0
-        delta += std::abs(S_tar - (long long)qty);
-        delta += (long long)(in.ResourcesCount() - 1) * S_tar;
-    }
-    else
-    {
-        long long old_load_new = st.Load(mv.new_machine, mv.new_period);
-        delta -= std::abs(S_tar - old_load_new);
-        delta += std::abs(S_tar - (old_load_new + qty));
-    }
-
-    return delta;
+    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
+    BT_Output after = st;
+    unsigned old_period = mv.old_period;
+    after.Assign(mv.task, mv.new_machine, mv.new_period);
+    bool empty = true;
+    for (unsigned m = 0; m < in.ResourcesCount(); m++)
+        if (after.Load(m, old_period) > 0) { empty = false; break; }
+    if (empty)
+        after.RemovePeriod(old_period);
+    return cc.ComputeCost(after) - cc.ComputeCost(st);
 }
 
 
-int BT_ShiftDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
+long long BT_ShiftDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
 {
-    long long delta = 0;
-    if(mv.old_period == mv.new_period) return 0;
-
-    // Cost before in old_period
-    {
-        long long sum_prio = 0;
-        unsigned count = 0;
-        for(unsigned t = 0; t < in.OrdersCount(); t++)
-            if(st.AssignedPeriod(t) == (unsigned)mv.old_period)
-                { sum_prio += in.Order_Priority(t); count++; }
-
-        if(count > 0)
-        {
-            long long avg = (sum_prio + count - 1) / count;
-            for(unsigned t = 0; t < in.OrdersCount(); t++)
-                if(st.AssignedPeriod(t) == (unsigned)mv.old_period)
-                    delta -= std::abs(avg - static_cast<long long>(in.Order_Priority(t)));
-        }
-    }
-
-    // Cost after in old_period (task removed)
-    {
-        long long sum_prio = 0;
-        unsigned count = 0;
-        for(unsigned t = 0; t < in.OrdersCount(); t++)
-            if(t != (unsigned)mv.task && st.AssignedPeriod(t) == (unsigned)mv.old_period)
-                { sum_prio += in.Order_Priority(t); count++; }
-
-        if(count > 0)
-        {
-            long long avg = (sum_prio + count - 1) / count;
-            for(unsigned t = 0; t < in.OrdersCount(); t++)
-                if(t != (unsigned)mv.task && st.AssignedPeriod(t) == (unsigned)mv.old_period)
-                    delta += std::abs(avg - static_cast<long long>(in.Order_Priority(t)));
-        }
-    }
-
-    // Cost before in new_period (only if period exists)
-    if(mv.new_period <= (int)st.LastPeriod())
-    {
-        long long sum_prio = 0;
-        unsigned count = 0;
-        for(unsigned t = 0; t < in.OrdersCount(); t++)
-            if(st.AssignedPeriod(t) == (unsigned)mv.new_period)
-                { sum_prio += in.Order_Priority(t); count++; }
-
-        if(count > 0)
-        {
-            long long avg = (sum_prio + count - 1) / count;
-            for(unsigned t = 0; t < in.OrdersCount(); t++)
-                if(st.AssignedPeriod(t) == (unsigned)mv.new_period)
-                    delta -= std::abs(avg - static_cast<long long>(in.Order_Priority(t)));
-        }
-    }
-
-    // Cost after in new_period (task added)
-    {
-        long long sum_prio = in.Order_Priority(mv.task);
-        unsigned count = 1;
-        for(unsigned t = 0; t < in.OrdersCount(); t++)
-            if(t != (unsigned)mv.task && st.AssignedPeriod(t) == (unsigned)mv.new_period)
-                { sum_prio += in.Order_Priority(t); count++; }
-
-        long long avg = (sum_prio + count - 1) / count;
-        for(unsigned t = 0; t < in.OrdersCount(); t++)
-            if(t == (unsigned)mv.task || st.AssignedPeriod(t) == (unsigned)mv.new_period)
-                delta += std::abs(avg - static_cast<long long>(in.Order_Priority(t)));
-    }
-
-    return delta;
+    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
+    BT_Output after = st;
+    unsigned old_period = mv.old_period;
+    after.Assign(mv.task, mv.new_machine, mv.new_period);
+    bool empty = true;
+    for (unsigned m = 0; m < in.ResourcesCount(); m++)
+        if (after.Load(m, old_period) > 0) { empty = false; break; }
+    if (empty)
+        after.RemovePeriod(old_period);
+    return cc.ComputeCost(after) - cc.ComputeCost(st);
 }
 
-int BT_ShiftDeltaMinLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
+long long BT_ShiftDeltaMinLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
 {
-    long long delta = 0;
-    long long S_min = in.OrderType_MinGroupSize(in.Order_TypeId(mv.task) - 1);
-    unsigned  qty   = in.Order_Quantity(mv.task);
-
-    // Old machine, old period — loses qty
-    // Skipped if old_period is remainder (Smin not enforced)
-    if(!st.IsRemainderPeriod(mv.old_period))
-    {
-        long long load_before = st.Load(mv.old_machine, mv.old_period);
-        long long load_after  = load_before - qty;
-        delta -= std::max(0LL, S_min - load_before);
-        delta += std::max(0LL, S_min - load_after);
-    }
-
-    // New machine, new period — gains qty
-    if(mv.new_period > (int)st.LastPeriod())
-    {
-
-        unsigned old_rem = st.LastPeriod();
-
-        for(unsigned m = 0; m < in.ResourcesCount(); m++)
-        {
-            long long load = st.Load(m, old_rem);
-            if(mv.old_period == (int)old_rem && m == (unsigned)mv.old_machine)
-                load -= qty;
-            delta += std::max(0LL, S_min - load);
-        }
-    }
-    else if(!st.IsRemainderPeriod(mv.new_period))
-    {
-        long long load_before = st.Load(mv.new_machine, mv.new_period);
-        long long load_after  = load_before + qty;
-        delta -= std::max(0LL, S_min - load_before);
-        delta += std::max(0LL, S_min - load_after);
-    }
-
-    return delta;
+    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
+    BT_Output after = st;
+    unsigned old_period = mv.old_period;
+    after.Assign(mv.task, mv.new_machine, mv.new_period);
+    bool empty = true;
+    for (unsigned m = 0; m < in.ResourcesCount(); m++)
+        if (after.Load(m, old_period) > 0) { empty = false; break; }
+    if (empty)
+        after.RemovePeriod(old_period);
+    return cc.ComputeCost(after) - cc.ComputeCost(st);
 }
 
-int BT_ShiftDeltaMaxLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
+long long BT_ShiftDeltaMaxLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
 {
-    long long delta = 0;
-    long long S_max = in.OrderType_MaxGroupSize(in.Order_TypeId(mv.task) - 1);
-    unsigned  qty   = in.Order_Quantity(mv.task);
-
-    // Old machine, old period — loses qty
-    // Skipped if old_period is remainder (Smin not enforced)
-    {
-        long long load_before = st.Load(mv.old_machine, mv.old_period);
-        long long load_after  = load_before - qty;
-        delta -= std::max(0LL, load_before - S_max);
-        delta += std::max(0LL, load_after - S_max );
-    }
-
-    // New machine, new period — gains qty
-    if(mv.new_period > (int)st.LastPeriod())
-    { 
-        delta += std::max(0LL, qty - S_max);
-    }
-    else 
-    {
-        long long load_before = st.Load(mv.new_machine, mv.new_period);
-        long long load_after  = load_before + qty;
-        delta -= std::max(0LL, load_before - S_max);
-        delta += std::max(0LL, load_after - S_max);
-    }
-
-    return delta;
+    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
+    BT_Output after = st;
+    unsigned old_period = mv.old_period;
+    after.Assign(mv.task, mv.new_machine, mv.new_period);
+    bool empty = true;
+    for (unsigned m = 0; m < in.ResourcesCount(); m++)
+        if (after.Load(m, old_period) > 0) { empty = false; break; }
+    if (empty)
+        after.RemovePeriod(old_period);
+    return cc.ComputeCost(after) - cc.ComputeCost(st);
 }
 /*****************************************************************************
   * BT_Swap Neighborhood Methods
@@ -701,16 +551,47 @@ std::ostream& operator<<(std::ostream& os, const BT_Swap& mv)
 
 void BT_SwapNeighborhoodExplorer::RandomMove(const BT_Output& st, BT_Swap& mv) const
 {
-    mv.task1 = Random::Uniform<unsigned>(0, in.OrdersCount() - 1);
-    mv.old_period1  = st.AssignedPeriod(mv.task1);
-    mv.old_machine1 = st.AssignedResource(mv.task1);
-    
+    // NOTE: EasyLocal's SA applies RandomMove via MakeMove WITHOUT calling
+    // FeasibleMove, so compatibility MUST be enforced here. A swap exchanges the
+    // machines of task1 and task2, hence it must keep BOTH assignments compatible:
+    //   - task1 compatible with task2's machine
+    //   - task2 compatible with task1's machine
+    const unsigned n = in.OrdersCount();
 
-    do{
-        mv.task2 = Random::Uniform<unsigned>(0, in.OrdersCount() - 1);
-        mv.old_period2  = st.AssignedPeriod(mv.task2);
-        mv.old_machine2 = st.AssignedResource(mv.task2);
-    } while(mv.task2 == mv.task1);
+    // Try several random task1 until one has at least one compatible swap partner.
+    for (unsigned outer = 0; outer < n; ++outer)
+    {
+        mv.task1        = Random::Uniform<unsigned>(0, n - 1);
+        mv.old_period1  = st.AssignedPeriod(mv.task1);
+        mv.old_machine1 = st.AssignedResource(mv.task1);
+
+        std::vector<unsigned> cand;
+        for (unsigned t2 = 0; t2 < n; ++t2)
+        {
+            if (t2 == (unsigned)mv.task1) continue;
+            int m2 = st.AssignedResource(t2);
+            int p2 = st.AssignedPeriod(t2);
+            // skip null swaps (same machine AND same period)
+            if (m2 == mv.old_machine1 && p2 == mv.old_period1) continue;
+            // both directions must remain compatible after the swap
+            if (in.IsCompatible(mv.task1, m2) && in.IsCompatible(t2, mv.old_machine1))
+                cand.push_back(t2);
+        }
+
+        if (!cand.empty())
+        {
+            mv.task2        = cand[Random::Uniform<unsigned>(0, cand.size() - 1)];
+            mv.old_period2  = st.AssignedPeriod(mv.task2);
+            mv.old_machine2 = st.AssignedResource(mv.task2);
+            return;
+        }
+    }
+
+    // Degenerate fallback: no compatible swap exists anywhere -> emit a no-op
+    // (task2 == task1 makes MakeMove idempotent; SA simply sees delta 0).
+    mv.task2        = mv.task1;
+    mv.old_period2  = mv.old_period1;
+    mv.old_machine2 = mv.old_machine1;
 }
 
 bool BT_SwapNeighborhoodExplorer::FeasibleMove(const BT_Output& st, const BT_Swap& mv) const
@@ -800,243 +681,47 @@ bool BT_SwapNeighborhoodExplorer::AnyNextMove(const BT_Output& st, BT_Swap& mv) 
 }
 
 
-int BT_SwapDeltaLoadDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
+long long BT_SwapDeltaLoadDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
 {
-    long long delta  = 0;
-    unsigned  qty1   = in.Order_Quantity(mv.task1);
-    unsigned  qty2   = in.Order_Quantity(mv.task2);
-    unsigned  m_count = in.ResourcesCount();
-
-    if(mv.old_period1 == mv.old_period2)
-    {
-        // Case 1: Swap within the same period
-        unsigned p       = mv.old_period1;
-        unsigned old_max = 0;
-        unsigned new_max = 0;
-
-        for(unsigned m = 0; m < m_count; m++)
-        {
-            unsigned load = st.Load(m, p);
-            old_max = std::max(old_max, load);
-
-            if     (m == (unsigned)mv.old_machine1) load = load - qty1 + qty2;
-            else if(m == (unsigned)mv.old_machine2) load = load - qty2 + qty1;
-
-            new_max = std::max(new_max, load);
-        }
-
-        delta = static_cast<long long>(new_max - old_max) * m_count;
-    }
-    else
-    {
-        // Case 2: Swap between different periods
-        // Period 1: old_machine1 loses qty1, gains qty2
-        unsigned old_max0 = 0, new_max0 = 0;
-
-        for(unsigned m = 0; m < m_count; m++)
-        {
-            unsigned load = st.Load(m, mv.old_period1);
-            old_max0 = std::max(old_max0, load);
-
-            if(m == (unsigned)mv.old_machine1) load = load - qty1 + qty2;
-
-            new_max0 = std::max(new_max0, load);
-        }
-        // delta load in period1 qty2 - qty1
-        delta += static_cast<long long>(new_max0 - old_max0) * m_count - (long long)(qty2 - qty1);
-
-        // Period 2: old_machine2 loses qty2, gains qty1
-        unsigned old_max1 = 0, new_max1 = 0;
-
-        for(unsigned m = 0; m < m_count; m++)
-        {
-            unsigned load = st.Load(m, mv.old_period2);
-            old_max1 = std::max(old_max1, load);
-
-            if(m == (unsigned)mv.old_machine2) load = load - qty2 + qty1;
-
-            new_max1 = std::max(new_max1, load);
-        }
-        // delta load in period2 = qty1 - qty2
-        delta += static_cast<long long>(new_max1 - old_max1) * m_count - (long long)(qty1 - qty2);
-    }
-
-    return delta;
+    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
+    BT_Output after = st;
+    after.Assign(mv.task1, mv.old_machine2, mv.old_period2);
+    after.Assign(mv.task2, mv.old_machine1, mv.old_period1);
+    return cc.ComputeCost(after) - cc.ComputeCost(st);
 }
 
-int BT_SwapDeltaTargetDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
+long long BT_SwapDeltaTargetDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
 {
-    long long delta = 0;
-    long long S_tar = in.OrderType_TargetGroupSize(in.Order_TypeId(mv.task1) - 1);
-    unsigned  qty1  = in.Order_Quantity(mv.task1);
-    unsigned  qty2  = in.Order_Quantity(mv.task2);
-
-    // (old_machine1, old_period1) — loses qty1, gains qty2
-    long long load1 = st.Load(mv.old_machine1, mv.old_period1);
-    delta -= std::abs(S_tar - load1);
-    delta += std::abs(S_tar - (load1 - qty1 + qty2));
-
-    // (old_machine2, old_period2) — loses qty2, gains qty1
-    long long load2 = st.Load(mv.old_machine2, mv.old_period2);
-    delta -= std::abs(S_tar - load2);
-    delta += std::abs(S_tar - (load2 - qty2 + qty1));
-
-    return delta;
+    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
+    BT_Output after = st;
+    after.Assign(mv.task1, mv.old_machine2, mv.old_period2);
+    after.Assign(mv.task2, mv.old_machine1, mv.old_period1);
+    return cc.ComputeCost(after) - cc.ComputeCost(st);
 }
 
-int BT_SwapDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
+long long BT_SwapDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
 {
-    long long delta = 0;
-    if(mv.old_period1 == mv.old_period2) return 0;
-
-    // Cost function before in old_period1
-    {
-        long long sum_prio = 0;
-        unsigned count     = 0;
-        for(unsigned t     = 0; t < in.OrdersCount(); t++)
-            if(st.AssignedPeriod(t) == (unsigned)mv.old_period1)
-                { sum_prio += in.Order_Priority(t); count++; }
-
-        if(count > 0)
-        {
-            long long avg = ( static_cast<long long>(sum_prio) + count - 1) / count;
-            for(unsigned t = 0; t < in.OrdersCount(); t++)
-                if(st.AssignedPeriod(t) == (unsigned)mv.old_period1)
-                    delta -= std::abs(avg - static_cast<long long>(in.Order_Priority(t)));
-        }
-    }
-
-    // Cost function after in old_period1 (task1 removed, task2 added)
-    {
-        long long sum_prio = 0;
-        unsigned count     = 0;
-        for(unsigned t = 0; t < in.OrdersCount(); t++)
-        {
-            if(t == (unsigned)mv.task1) continue;
-            if(t == (unsigned)mv.task2) continue;
-            if(st.AssignedPeriod(t) == (unsigned)mv.old_period1)
-                { sum_prio += in.Order_Priority(t); count++; }
-        }
-        sum_prio += in.Order_Priority(mv.task2);
-        count++;
-
-        if(count > 0)
-        {
-            long long avg  = ( static_cast<long long>(sum_prio) + count - 1) / count;
-            for(unsigned t = 0; t < in.OrdersCount(); t++)
-            {
-                if(t == (unsigned)mv.task1) continue;
-                if(t == (unsigned)mv.task2) continue;
-                if(st.AssignedPeriod(t) == (unsigned)mv.old_period1)
-                    delta += std::abs(avg - static_cast<long long>(in.Order_Priority(t)));
-            }
-            delta += std::abs(avg - static_cast<long long>(in.Order_Priority(mv.task2)));
-        }
-    }
-
-    if(mv.old_period1 != mv.old_period2)
-    {
-        // Cost function before in old_period2
-        {
-            long long sum_prio = 0;
-            unsigned count    = 0;
-            for(unsigned t     = 0; t < in.OrdersCount(); t++)
-                if(st.AssignedPeriod(t) == (unsigned)mv.old_period2)
-                    { sum_prio += in.Order_Priority(t); count++; }
-
-            if(count > 0)
-            {
-                long long avg = ( static_cast<long long>(sum_prio) + count - 1) / count;
-                for(unsigned t = 0; t < in.OrdersCount(); t++)
-                    if(st.AssignedPeriod(t) == (unsigned)mv.old_period2)
-                        delta -= std::abs(avg - static_cast<long long>(in.Order_Priority(t)));
-            }
-        }
-
-        // Cost function after in old_period2 (task2 removed, task1 added)
-        {
-            long long sum_prio = 0;
-            unsigned count     = 0;
-            for(unsigned t     = 0; t < in.OrdersCount(); t++)
-            {
-                if(t == (unsigned)mv.task1) continue;
-                if(t == (unsigned)mv.task2) continue;
-                if(st.AssignedPeriod(t) == (unsigned)mv.old_period2)
-                    { sum_prio += in.Order_Priority(t); count++; }
-            }
-            sum_prio += in.Order_Priority(mv.task1);
-            count++;
-
-            if(count > 0)
-            {
-                long long avg = ( static_cast<long long>(sum_prio) + count - 1) / count;
-                for(unsigned t = 0; t < in.OrdersCount(); t++)
-                {
-                    if(t == (unsigned)mv.task1) continue;
-                    if(t == (unsigned)mv.task2) continue;
-                    if(st.AssignedPeriod(t) == (unsigned)mv.old_period2)
-                        delta += std::abs(avg - static_cast<long long>(in.Order_Priority(t)));
-                }
-                delta += std::abs(avg - static_cast<long long>(in.Order_Priority(mv.task1)));
-            }
-        }
-    }
-
-    return delta;
+    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
+    BT_Output after = st;
+    after.Assign(mv.task1, mv.old_machine2, mv.old_period2);
+    after.Assign(mv.task2, mv.old_machine1, mv.old_period1);
+    return cc.ComputeCost(after) - cc.ComputeCost(st);
 }
 
-int BT_SwapDeltaMinLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
+long long BT_SwapDeltaMinLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
 {
-    long long delta = 0;
-    long long S_min = in.OrderType_MinGroupSize(in.Order_TypeId(mv.task1) - 1);
-    unsigned  qty1  = in.Order_Quantity(mv.task1);
-    unsigned  qty2  = in.Order_Quantity(mv.task2);
-
-    // (old_machine1, old_period1) — loses qty1, gains qty2
-    if(!st.IsRemainderPeriod(mv.old_period1))
-    {
-        long long load_before = st.Load(mv.old_machine1, mv.old_period1);
-        long long load_after  = load_before - qty1 + qty2;
-        delta -= std::max(0LL, S_min - load_before);
-        delta += std::max(0LL, S_min - load_after);
-    }
-
-    // (old_machine2, old_period2) — loses qty2, gains qty1
-    if(!st.IsRemainderPeriod(mv.old_period2))
-    {
-        long long load_before = st.Load(mv.old_machine2, mv.old_period2);
-        long long load_after  = load_before - qty2 + qty1;
-        delta -= std::max(0LL, S_min - load_before);
-        delta += std::max(0LL, S_min - load_after);
-    }
-
-    return delta;
+    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
+    BT_Output after = st;
+    after.Assign(mv.task1, mv.old_machine2, mv.old_period2);
+    after.Assign(mv.task2, mv.old_machine1, mv.old_period1);
+    return cc.ComputeCost(after) - cc.ComputeCost(st);
 }
 
-int BT_SwapDeltaMaxLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
+long long BT_SwapDeltaMaxLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
 {
-    long long delta = 0;
-    long long S_max = in.OrderType_MaxGroupSize(in.Order_TypeId(mv.task1) - 1); // S_max, non S_min
-    unsigned  qty1  = in.Order_Quantity(mv.task1);
-    unsigned  qty2  = in.Order_Quantity(mv.task2);
-
-    // (old_machine1, old_period1) — loses qty1, gains qty2
-    // Nessun skip per remainder: Smax vale per tutti i periodi
-    {
-        long long load_before = st.Load(mv.old_machine1, mv.old_period1);
-        long long load_after  = load_before - qty1 + qty2;
-        delta -= std::max(0LL, load_before - S_max); // load - S_max, non S_max - load
-        delta += std::max(0LL, load_after  - S_max);
-    }
-
-    // (old_machine2, old_period2) — loses qty2, gains qty1
-    // Nessun skip per remainder: Smax vale per tutti i periodi
-    {
-        long long load_before = st.Load(mv.old_machine2, mv.old_period2);
-        long long load_after  = load_before - qty2 + qty1;
-        delta -= std::max(0LL, load_before - S_max); // load - S_max, non S_max - load
-        delta += std::max(0LL, load_after  - S_max);
-    }
-
-    return delta;
+    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
+    BT_Output after = st;
+    after.Assign(mv.task1, mv.old_machine2, mv.old_period2);
+    after.Assign(mv.task2, mv.old_machine1, mv.old_period1);
+    return cc.ComputeCost(after) - cc.ComputeCost(st);
 }

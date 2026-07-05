@@ -1,0 +1,304 @@
+{
+  "PlanningGroups": [
+    {
+      "Rank": 0,
+      "PlannedOrders": [
+        {
+          "OrderId": 3,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 10,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 12,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 14,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 15,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 16,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 17,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 20,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 21,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 22,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 23,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 24,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 27,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 28,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 30,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 33,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 34,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 35,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 36,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 37,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 38,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 40,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 41,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 43,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 44,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 45,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 47,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 48,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 50,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 51,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 53,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 54,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 58,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 59,
+          "ResourceId": 5
+        }
+      ]
+    },
+    {
+      "Rank": 1,
+      "PlannedOrders": [
+        {
+          "OrderId": 1,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 2,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 4,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 5,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 6,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 7,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 8,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 9,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 11,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 13,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 18,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 19,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 25,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 26,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 29,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 31,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 32,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 39,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 42,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 46,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 49,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 52,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 55,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 56,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 57,
+          "ResourceId": 3
+        }
+      ]
+    }
+  ]
+}
+Order 3 is planned on resource 3 which is not contained in list of valid resources!
+Order 12 is planned on resource 1 which is not contained in list of valid resources!
+Order 15 is planned on resource 4 which is not contained in list of valid resources!
+Order 16 is planned on resource 4 which is not contained in list of valid resources!
+Order 21 is planned on resource 4 which is not contained in list of valid resources!
+Order 22 is planned on resource 1 which is not contained in list of valid resources!
+Order 23 is planned on resource 1 which is not contained in list of valid resources!
+Order 24 is planned on resource 5 which is not contained in list of valid resources!
+Order 30 is planned on resource 1 which is not contained in list of valid resources!
+Order 33 is planned on resource 4 which is not contained in list of valid resources!
+Order 34 is planned on resource 3 which is not contained in list of valid resources!
+Order 35 is planned on resource 2 which is not contained in list of valid resources!
+Order 36 is planned on resource 1 which is not contained in list of valid resources!
+Order 37 is planned on resource 1 which is not contained in list of valid resources!
+Order 38 is planned on resource 2 which is not contained in list of valid resources!
+Order 40 is planned on resource 3 which is not contained in list of valid resources!
+Order 43 is planned on resource 3 which is not contained in list of valid resources!
+Order 44 is planned on resource 5 which is not contained in list of valid resources!
+Order 45 is planned on resource 1 which is not contained in list of valid resources!
+Order 51 is planned on resource 4 which is not contained in list of valid resources!
+Order 53 is planned on resource 2 which is not contained in list of valid resources!
+Order 59 is planned on resource 5 which is not contained in list of valid resources!
+Order 1 is planned on resource 2 which is not contained in list of valid resources!
+Order 2 is planned on resource 5 which is not contained in list of valid resources!
+Order 4 is planned on resource 4 which is not contained in list of valid resources!
+Order 5 is planned on resource 1 which is not contained in list of valid resources!
+Order 8 is planned on resource 1 which is not contained in list of valid resources!
+Order 9 is planned on resource 3 which is not contained in list of valid resources!
+Order 11 is planned on resource 4 which is not contained in list of valid resources!
+Order 18 is planned on resource 1 which is not contained in list of valid resources!
+Order 25 is planned on resource 4 which is not contained in list of valid resources!
+Order 29 is planned on resource 1 which is not contained in list of valid resources!
+Order 31 is planned on resource 4 which is not contained in list of valid resources!
+Order 32 is planned on resource 1 which is not contained in list of valid resources!
+Order 39 is planned on resource 5 which is not contained in list of valid resources!
+Order 42 is planned on resource 4 which is not contained in list of valid resources!
+Order 49 is planned on resource 2 which is not contained in list of valid resources!
+Order 52 is planned on resource 3 which is not contained in list of valid resources!
+Order 56 is planned on resource 1 which is not contained in list of valid resources!
+Order 57 is planned on resource 3 which is not contained in list of valid resources!
+---------------------
+Calculating values of objective components:
+The absolute (weighted) value of the OrderPriority objective is: 202 (202)
+The exact absolute (weighted) value of the OrderPriority objective is: 202.32941176470587 (202.32941176470587)
+The absolute (weighted) value of the TargetGroupSizeDeviation objective is: 46 (46)
+The exact absolute (weighted) value of the TargetGroupSizeDeviation objective is: 46 (46)
+The absolute (weighted) value of the BalancedCapacityLoad objective is: 30 (30)
+The exact absolute (weighted) value of the BalancedCapacityLoad objective is: 30 (30)
+The absolute (weighted) value of the MinGroupSizePenalty objective is: 0 (0)
+The exact absolute (weighted) value of the MinGroupSizePenalty objective is: 0 (0)
+The integer (normalized) value of the aggregated objective is: 278 (0.001943036868775118)
+The double (normalized) value of the aggregated objective is: 278.32941176470587 (0.0019453392400119228)
+
+278

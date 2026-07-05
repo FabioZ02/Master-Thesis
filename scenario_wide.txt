@@ -1,0 +1,8 @@
+## irace scenario -- gruppo LARGHE (Smin/Smax < 0.60)
+parameterFile      = "./parameters_wide.txt"
+trainInstancesDir  = ""
+trainInstancesFile = "./instances_wide.txt"
+targetRunner       = "./target_runner"
+maxExperiments     = 5000
+
+parallel           = 4

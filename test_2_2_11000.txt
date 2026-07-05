@@ -1,0 +1,111 @@
+{
+  "PlanningGroups": [
+    {
+      "Rank": 0,
+      "PlannedOrders": [
+        {
+          "OrderId": 1,
+          "ResourceId": 6
+        },
+        {
+          "OrderId": 2,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 3,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 4,
+          "ResourceId": 6
+        },
+        {
+          "OrderId": 5,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 6,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 7,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 8,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 9,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 10,
+          "ResourceId": 1
+        },
+        {
+          "OrderId": 11,
+          "ResourceId": 6
+        },
+        {
+          "OrderId": 12,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 13,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 14,
+          "ResourceId": 6
+        },
+        {
+          "OrderId": 15,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 16,
+          "ResourceId": 6
+        },
+        {
+          "OrderId": 17,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 18,
+          "ResourceId": 4
+        },
+        {
+          "OrderId": 19,
+          "ResourceId": 2
+        },
+        {
+          "OrderId": 20,
+          "ResourceId": 3
+        },
+        {
+          "OrderId": 21,
+          "ResourceId": 5
+        },
+        {
+          "OrderId": 22,
+          "ResourceId": 3
+        }
+      ]
+    }
+  ]
+}
+---------------------
+Calculating values of objective components:
+The absolute (weighted) value of the OrderPriority objective is: 56 (56)
+The exact absolute (weighted) value of the OrderPriority objective is: 56 (56)
+The absolute (weighted) value of the TargetGroupSizeDeviation objective is: 90 (90)
+The exact absolute (weighted) value of the TargetGroupSizeDeviation objective is: 90 (90)
+The absolute (weighted) value of the BalancedCapacityLoad objective is: 0 (0)
+The exact absolute (weighted) value of the BalancedCapacityLoad objective is: 0 (0)
+The absolute (weighted) value of the MinGroupSizePenalty objective is: 0 (0)
+The exact absolute (weighted) value of the MinGroupSizePenalty objective is: 0 (0)
+The integer (normalized) value of the aggregated objective is: 146 (0.0017830101118655659)
+The double (normalized) value of the aggregated objective is: 146 (0.0017830101118655659)
+
+146

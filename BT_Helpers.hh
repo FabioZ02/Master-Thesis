@@ -37,7 +37,7 @@ class BT_Swap
  * State Manager 
 ***************************************************************************/
 
-class BT_SolutionManager : public SolutionManager<BT_Input, BT_Output>
+class BT_SolutionManager : public SolutionManager<BT_Input, BT_Output, DefaultCostStructure<long long>>
 {
 public:
     BT_SolutionManager(const BT_Input& in);
@@ -46,48 +46,48 @@ public:
     bool CheckConsistency(const BT_Output& out) const override;
 };
 
-class BT_LoadDeviation : public CostComponent<BT_Input, BT_Output>
+class BT_LoadDeviation : public CostComponent<BT_Input, BT_Output, long long>
 {
 public:
-    BT_LoadDeviation(const BT_Input& in, int w, bool soft)
-        : CostComponent<BT_Input, BT_Output>(in, w, soft, "BT_LoadDeviation") {}
-    int ComputeCost(const BT_Output& out) const override;
+    BT_LoadDeviation(const BT_Input& in, long long w, bool soft)
+        : CostComponent<BT_Input, BT_Output, long long>(in, w, soft, "BT_LoadDeviation") {}
+    long long ComputeCost(const BT_Output& out) const override;
     void PrintViolations(const BT_Output& out, std::ostream& os = std::cout) const override;
 };
 
-class BT_TargetDeviation : public CostComponent<BT_Input, BT_Output>
+class BT_TargetDeviation : public CostComponent<BT_Input, BT_Output, long long>
 {
 public:
-    BT_TargetDeviation(const BT_Input& in, int w, bool hard)
-        : CostComponent<BT_Input, BT_Output>(in, w, hard, "BT_TargetDeviation") {}
-    int ComputeCost(const BT_Output& out) const override;
+    BT_TargetDeviation(const BT_Input& in, long long w, bool hard)
+        : CostComponent<BT_Input, BT_Output, long long>(in, w, hard, "BT_TargetDeviation") {}
+    long long ComputeCost(const BT_Output& out) const override;
     void  PrintViolations(const BT_Output& out, std::ostream& os = std::cout) const override;
 };
 
-class BT_PriorityDeviation : public CostComponent<BT_Input, BT_Output>
+class BT_PriorityDeviation : public CostComponent<BT_Input, BT_Output, long long>
 {
 public:
-    BT_PriorityDeviation(const BT_Input& in, int w, bool hard)
-        : CostComponent<BT_Input, BT_Output>(in, w, hard, "BT_PriorityDeviation") {}
-    int ComputeCost(const BT_Output& out) const override;
+    BT_PriorityDeviation(const BT_Input& in, long long w, bool hard)
+        : CostComponent<BT_Input, BT_Output, long long>(in, w, hard, "BT_PriorityDeviation") {}
+    long long ComputeCost(const BT_Output& out) const override;
     void      PrintViolations(const BT_Output& out, std::ostream& os = std::cout) const override;
 };
 
-class BT_MinLoadPenalty : public CostComponent<BT_Input, BT_Output>
+class BT_MinLoadPenalty : public CostComponent<BT_Input, BT_Output, long long>
 {
 public:
-    BT_MinLoadPenalty(const BT_Input& in, int w, bool hard)
-        : CostComponent<BT_Input, BT_Output>(in, w, hard, "BT_MinLoadPenalty") {}
-    int ComputeCost(const BT_Output& out) const override;
+    BT_MinLoadPenalty(const BT_Input& in, long long w, bool hard)
+        : CostComponent<BT_Input, BT_Output, long long>(in, w, hard, "BT_MinLoadPenalty") {}
+    long long ComputeCost(const BT_Output& out) const override;
     void      PrintViolations(const BT_Output& out, std::ostream& os = std::cout) const override;
 };
 
-class BT_MaxLoadPenalty : public CostComponent<BT_Input, BT_Output>
+class BT_MaxLoadPenalty : public CostComponent<BT_Input, BT_Output, long long>
 {
 public:
-    BT_MaxLoadPenalty(const BT_Input& in, int w, bool hard)
-        : CostComponent<BT_Input, BT_Output>(in, w, hard, "BT_MaxLoadPenalty") {}
-    int ComputeCost(const BT_Output& out) const override;
+    BT_MaxLoadPenalty(const BT_Input& in, long long w, bool hard)
+        : CostComponent<BT_Input, BT_Output, long long>(in, w, hard, "BT_MaxLoadPenalty") {}
+    long long ComputeCost(const BT_Output& out) const override;
     void      PrintViolations(const BT_Output& out, std::ostream& os = std::cout) const override;
 };
 
@@ -96,56 +96,56 @@ public:
 ***************************************************************************/
 
 class BT_ShiftDeltaLoadDeviation
-    : public DeltaCostComponent<BT_Input, BT_Output, BT_Shift>
+    : public DeltaCostComponent<BT_Input, BT_Output, BT_Shift, long long>
 {
 public: 
     BT_ShiftDeltaLoadDeviation(const BT_Input& in, BT_LoadDeviation& cc)
-      : DeltaCostComponent<BT_Input, BT_Output, BT_Shift>(in,cc,"BT_ShiftDeltaLoadDeviation") {}
-    int ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
+      : DeltaCostComponent<BT_Input, BT_Output, BT_Shift, long long>(in,cc,"BT_ShiftDeltaLoadDeviation") {}
+    long long ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
 };
 
 class BT_ShiftDeltaTargetDeviation
-    : public DeltaCostComponent<BT_Input, BT_Output, BT_Shift>
+    : public DeltaCostComponent<BT_Input, BT_Output, BT_Shift, long long>
 {
 public:
     BT_ShiftDeltaTargetDeviation(const BT_Input& in, BT_TargetDeviation& cc)
-      : DeltaCostComponent<BT_Input, BT_Output, BT_Shift>(in,cc,"BT_ShiftDeltaTargetDeviation") {}
-    int ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
+      : DeltaCostComponent<BT_Input, BT_Output, BT_Shift, long long>(in,cc,"BT_ShiftDeltaTargetDeviation") {}
+    long long ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
 };
 
 class BT_ShiftDeltaPriorityDeviation
-    : public DeltaCostComponent<BT_Input, BT_Output, BT_Shift>
+    : public DeltaCostComponent<BT_Input, BT_Output, BT_Shift, long long>
 {
 public:
     BT_ShiftDeltaPriorityDeviation(const BT_Input& in, BT_PriorityDeviation& cc)
-       : DeltaCostComponent<BT_Input, BT_Output, BT_Shift>(in, cc, "BT_ShiftDeltaPriorityDeviation") {}
-    int ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
+       : DeltaCostComponent<BT_Input, BT_Output, BT_Shift, long long>(in, cc, "BT_ShiftDeltaPriorityDeviation") {}
+    long long ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
 };
 
 class BT_ShiftDeltaMinLoadPenalty
-    : public DeltaCostComponent<BT_Input, BT_Output, BT_Shift>
+    : public DeltaCostComponent<BT_Input, BT_Output, BT_Shift, long long>
 {
 public:
     BT_ShiftDeltaMinLoadPenalty(const BT_Input& in, BT_MinLoadPenalty& cc)
-        : DeltaCostComponent<BT_Input, BT_Output, BT_Shift>(in, cc, "BT_ShiftDeltaMinLoadPenalty") {}
-    int ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
+        : DeltaCostComponent<BT_Input, BT_Output, BT_Shift, long long>(in, cc, "BT_ShiftDeltaMinLoadPenalty") {}
+    long long ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
 };
 
 class BT_ShiftDeltaMaxLoadPenalty
-    : public DeltaCostComponent<BT_Input, BT_Output, BT_Shift>
+    : public DeltaCostComponent<BT_Input, BT_Output, BT_Shift, long long>
 {
 public:
     BT_ShiftDeltaMaxLoadPenalty(const BT_Input& in, BT_MaxLoadPenalty& cc)
-        : DeltaCostComponent<BT_Input, BT_Output, BT_Shift>(in, cc, "BT_ShiftDeltaMaxLoadPenalty") {}
-    int ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
+        : DeltaCostComponent<BT_Input, BT_Output, BT_Shift, long long>(in, cc, "BT_ShiftDeltaMaxLoadPenalty") {}
+    long long ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const override;
 };
 
 class BT_ShiftNeighborhoodExplorer
-  : public NeighborhoodExplorer<BT_Input, BT_Output, BT_Shift>
+  : public NeighborhoodExplorer<BT_Input, BT_Output, BT_Shift, DefaultCostStructure<long long>>
 {
 public:
-  BT_ShiftNeighborhoodExplorer(const BT_Input& pin, SolutionManager<BT_Input, BT_Output>& psm)
-    : NeighborhoodExplorer<BT_Input, BT_Output, BT_Shift>(pin, psm, "BT_ShiftNeighborhoodExplorer") {}
+  BT_ShiftNeighborhoodExplorer(const BT_Input& pin, SolutionManager<BT_Input, BT_Output, DefaultCostStructure<long long>>& psm)
+    : NeighborhoodExplorer<BT_Input, BT_Output, BT_Shift, DefaultCostStructure<long long>>(pin, psm, "BT_ShiftNeighborhoodExplorer") {}
   void RandomMove(const BT_Output&, BT_Shift&) const override;
   bool FeasibleMove(const BT_Output&, const BT_Shift&) const override;
   void MakeMove(BT_Output&, const BT_Shift&) const override;
@@ -160,56 +160,56 @@ protected:
 ***************************************************************************/
 
 class BT_SwapDeltaLoadDeviation
-    : public DeltaCostComponent<BT_Input, BT_Output, BT_Swap>
+    : public DeltaCostComponent<BT_Input, BT_Output, BT_Swap, long long>
 {
 public: 
     BT_SwapDeltaLoadDeviation(const BT_Input& in, BT_LoadDeviation& cc)
-      : DeltaCostComponent<BT_Input, BT_Output, BT_Swap>(in,cc,"BT_SwapDeltaLoadDeviation") {}
-    int ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const override;
+      : DeltaCostComponent<BT_Input, BT_Output, BT_Swap, long long>(in,cc,"BT_SwapDeltaLoadDeviation") {}
+    long long ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const override;
 };
 
 class BT_SwapDeltaTargetDeviation
-    : public DeltaCostComponent<BT_Input, BT_Output, BT_Swap>
+    : public DeltaCostComponent<BT_Input, BT_Output, BT_Swap, long long>
 {
 public:
     BT_SwapDeltaTargetDeviation(const BT_Input& in, BT_TargetDeviation& cc)
-      : DeltaCostComponent<BT_Input, BT_Output, BT_Swap>(in,cc,"BT_SwapDeltaTargetDeviation") {}
-    int ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const override;
+      : DeltaCostComponent<BT_Input, BT_Output, BT_Swap, long long>(in,cc,"BT_SwapDeltaTargetDeviation") {}
+    long long ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const override;
 };
 
 class BT_SwapDeltaPriorityDeviation
-    : public DeltaCostComponent<BT_Input, BT_Output, BT_Swap>
+    : public DeltaCostComponent<BT_Input, BT_Output, BT_Swap, long long>
 {
 public:
     BT_SwapDeltaPriorityDeviation(const BT_Input& in, BT_PriorityDeviation& cc)
-       : DeltaCostComponent<BT_Input, BT_Output, BT_Swap>(in, cc, "BT_SwapDeltaPriorityDeviation") {}
-    int ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const override;
+       : DeltaCostComponent<BT_Input, BT_Output, BT_Swap, long long>(in, cc, "BT_SwapDeltaPriorityDeviation") {}
+    long long ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const override;
 };
 
 class BT_SwapDeltaMinLoadPenalty
-    : public DeltaCostComponent<BT_Input, BT_Output, BT_Swap>
+    : public DeltaCostComponent<BT_Input, BT_Output, BT_Swap, long long>
 {
 public:
     BT_SwapDeltaMinLoadPenalty(const BT_Input& in, BT_MinLoadPenalty& cc)
-        : DeltaCostComponent<BT_Input, BT_Output, BT_Swap>(in, cc, "BT_SwapDeltaMinLoadPenalty") {}
-    int ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const override;
+        : DeltaCostComponent<BT_Input, BT_Output, BT_Swap, long long>(in, cc, "BT_SwapDeltaMinLoadPenalty") {}
+    long long ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const override;
 };
 
 class BT_SwapDeltaMaxLoadPenalty
-    : public DeltaCostComponent<BT_Input, BT_Output, BT_Swap>
+    : public DeltaCostComponent<BT_Input, BT_Output, BT_Swap, long long>
 {
 public:
     BT_SwapDeltaMaxLoadPenalty(const BT_Input& in, BT_MaxLoadPenalty& cc)
-        : DeltaCostComponent<BT_Input, BT_Output, BT_Swap>(in, cc, "BT_SwapDeltaMaxLoadPenalty") {}
-    int ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const override;
+        : DeltaCostComponent<BT_Input, BT_Output, BT_Swap, long long>(in, cc, "BT_SwapDeltaMaxLoadPenalty") {}
+    long long ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const override;
 };
 
 class BT_SwapNeighborhoodExplorer
-  : public NeighborhoodExplorer<BT_Input, BT_Output, BT_Swap>
+  : public NeighborhoodExplorer<BT_Input, BT_Output, BT_Swap, DefaultCostStructure<long long>>
 {
 public:
-  BT_SwapNeighborhoodExplorer(const BT_Input& pin, SolutionManager<BT_Input, BT_Output>& psm)
-    : NeighborhoodExplorer<BT_Input, BT_Output, BT_Swap>(pin, psm, "BT_SwapNeighborhoodExplorer") {}
+  BT_SwapNeighborhoodExplorer(const BT_Input& pin, SolutionManager<BT_Input, BT_Output, DefaultCostStructure<long long>>& psm)
+    : NeighborhoodExplorer<BT_Input, BT_Output, BT_Swap, DefaultCostStructure<long long>>(pin, psm, "BT_SwapNeighborhoodExplorer") {}
   void RandomMove(const BT_Output&, BT_Swap&) const override;
   bool FeasibleMove(const BT_Output&, const BT_Swap&) const override;
   void MakeMove(BT_Output&, const BT_Swap&) const override;
