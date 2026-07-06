@@ -2,14 +2,6 @@
 #
 # validate_580.sh
 # -----------------------------------------------------------------------------
-# Validazione della configurazione irace vincente (ID 580, tuning su Medium)
-# su un set di istanze. Esegue N_REPS run con seed diversi per ciascuna delle
-# prime N_INSTANCES istanze, raccoglie costo e tempo di ogni run, e calcola
-# media / deviazione standard (campionaria) / min / max per istanza.
-#
-# Config 580:  start_temp=17.7256  min_temp=0.0230  cooling_rate=0.9903 neighbors_accepted_ratio=0.1846
-# Budget per run: max_evaluations=500000 (lo stesso del tuning -> coerenza)
-# -----------------------------------------------------------------------------
 
 # ====================== DA IMPOSTARE ======================
 # Cartella con le istanze .json da validare.

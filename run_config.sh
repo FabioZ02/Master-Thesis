@@ -4,14 +4,14 @@
 # Uso:  ./run_config.sh <istanza.json>
 ################################################################################
 
-# ===== INCOLLA QUI I VALORI DELLA CONFIG ELITE (Configurazione 551) =====
+# ==== =====
 START_FACTOR=0.0013       # start_temp_factor
 MIN_FACTOR=0.0001         # min_temp_factor
 COOLING=0.9962            # cooling_rate
 NAR=0.278                 # neighbors_accepted_ratio
 SWAP=0.6132               # swap_rate
 MAX_EVAL=1250000          # budget di deployment
-# ========================================================================
+# ===========
 
 INSTANCE="$1"
 [ -z "$INSTANCE" ] && { echo "Uso: $0 <istanza.json>"; exit 1; }

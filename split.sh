@@ -2,11 +2,11 @@
 # Divide il tuning set in "larghe" (Smin/Smax < 0.6) e "tese" (>= 0.6)
 # e crea due file-lista per irace (trainInstancesFile).
 
-# ============================ DA IMPOSTARE ==================================
-SRC="$HOME/Master_Thesis/Instances/small/tuning_set"
-CUT=0.60
-OUT_WIDE="$HOME/Master_Thesis/instances_wide.txt"
-OUT_TIGHT="$HOME/Master_Thesis/instances_tight.txt"
+# ============================ ==================================
+SRC="$HOME/Master_Thesis/Instances/large/"
+CUT=0.75
+OUT_WIDE="$HOME/Master_Thesis/split/instances_large_wide.txt"
+OUT_TIGHT="$HOME/Master_Thesis/split/instances_large_tight.txt"
 # ===========================================================================
 
 > "$OUT_WIDE"; > "$OUT_TIGHT"
