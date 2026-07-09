@@ -6,11 +6,11 @@
 # ====================== DA IMPOSTARE ======================
 # Cartella con le istanze .json da validare.
 # >>> Punta questa riga al set Large / "medium-large" che vuoi testare <<<
-INSTANCE_DIR="$HOME/Master_Thesis/Instances/small"
+INSTANCE_DIR="$HOME/Master_Thesis/Instances/medium"
 
 BINARY="$HOME/Master_Thesis/bt_main"   # eseguibile compilato
-N_INSTANCES=15                          # quante istanze (le prime, ordine naturale)
-N_REPS=10                               # run per istanza (seed = 1..N_REPS)
+N_INSTANCES=10                          # quante istanze (le prime, ordine naturale)
+N_REPS=5                               # run per istanza (seed = 1..N_REPS)
 # ==========================================================
 
 # ---- Parametri SA della config 580 (NON modificare per la validazione) ----

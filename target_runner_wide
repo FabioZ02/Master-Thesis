@@ -35,11 +35,14 @@ s=${START_FACTOR:-0.5}*${BIGM}
 m=${MIN_FACTOR:-0.0001}*${BIGM}
 print(m if m < s else s*0.001)")
 
-./bt_main --main::instance "$INSTANCE" \
-          --main::method BSA \
-          --main::seed "$SEED" \
-          --BSA::max_evaluations 500000 \
-          --main::irace-enable \
-          --BSA::start_temperature "$START_ABS" \
-          --BSA::min_temperature "$MIN_ABS" \
-          "${PASS_ARGS[@]}"
+# --- esegui il solver, cattura l'output e restituisci a irace SOLO il numero ---
+OUT=$(/home/fabio/Master_Thesis/bt_main --main::instance "$INSTANCE" \
+                --main::method BSA \
+                --main::seed "$SEED" \
+                --BSA::max_evaluations 500000 \
+                --main::irace-enable \
+                --BSA::start_temperature "$START_ABS" \
+                --BSA::min_temperature "$MIN_ABS" \
+                "${PASS_ARGS[@]}")
+
+echo "$OUT" | tail -n 1

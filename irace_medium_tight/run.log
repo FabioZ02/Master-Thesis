@@ -1,0 +1,599 @@
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 4.4.3.dd8d85f
+# Copyright (C) 2010-2025
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /home/fabio/R/x86_64-pc-linux-gnu-library/4.3/irace
+# called with: --scenario split/scenario_tight_medium.txt
+# 2026-07-06 13:54:24 CEST: Reading parameter file '/home/fabio/Master_Thesis/split/parameters_tight_medium.txt'.
+# 2026-07-06 13:54:25 CEST: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 4
+# minNbSurvival: 4
+# nbParameters: 5
+# seed: 2072276680
+# confidence level: 0.95
+# budget: 3000
+# mu: 5
+# deterministic: FALSE
+
+# 2026-07-06 13:54:25 CEST: Iteration 1 of 4
+# experimentsUsed: 0
+# remainingBudget: 3000
+# currentBudget: 750
+# nbConfigurations: 125
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          1|        125|        120|     1667.000000|        125|00:06:54|   NA|  NA|    NA|
+|x|          2|        125|        122|     2350.500000|        250|00:10:16|+0.03|0.52|1.0110|
+|x|          3|        125|         42|     2699.666667|        375|00:10:25|+0.02|0.34|0.9611|
+|x|          4|        125|         46|     3129.000000|        500|00:16:05|+0.08|0.31|0.9214|
+|=|          5|        125|          8|     2535.000000|        625|00:09:57|+0.01|0.20|0.9849|
+|=|          6|        125|          8|     2830.666667|        750|00:05:27|+0.03|0.19|0.9167|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:           8    mean value:      2830.666667
+Description of the best-so-far configuration:
+  .ID. start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate .PARENT.
+8    8            0.4226           2e-04       0.9902                   0.2348    0.7156       NA
+
+# 2026-07-06 14:53:33 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate
+8              0.4226           2e-04       0.9902                   0.2348    0.7156
+18             0.1497           1e-04       0.9923                   0.1333    0.2469
+122            1.1587           1e-04       0.9994                   0.1313    0.6610
+64             1.7853           1e-04       0.9907                   0.2544    0.9500
+# 2026-07-06 14:53:33 CEST: Iteration 2 of 4
+# experimentsUsed: 750
+# remainingBudget: 2250
+# currentBudget: 750
+# nbConfigurations: 110
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          7|        110|        173|     6623.000000|        110|00:02:29|   NA|  NA|    NA|
+|x|          4|        110|        224|     4850.500000|        216|00:14:21|-0.01|0.50|0.9618|
+|x|          3|        110|        224|     4274.000000|        322|00:09:09|+0.00|0.34|0.8935|
+|x|          1|        110|        155|     4148.250000|        428|00:05:48|+0.03|0.27|0.9521|
+|=|          2|        110|        214|     3862.200000|        534|00:09:18|+0.01|0.21|0.9895|
+|=|          5|        110|        136|     3454.500000|        640|00:07:40|+0.00|0.17|0.9763|
+|=|          6|        110|        136|     3464.285714|        746|00:04:25|+0.03|0.17|0.9639|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:         136    mean value:      3464.285714
+Description of the best-so-far configuration:
+    .ID. start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate .PARENT.
+136  136            0.1097           1e-04        0.993                   0.1877      0.56       18
+
+# 2026-07-06 15:46:48 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate
+136            0.1097           1e-04       0.9930                   0.1877    0.5600
+214            0.2681           1e-04       0.9913                   0.1833    0.2358
+141            0.5007           1e-04       0.9920                   0.2531    0.8500
+189            0.9779           1e-04       0.9930                   0.2017    0.6729
+# 2026-07-06 15:46:48 CEST: Iteration 3 of 4
+# experimentsUsed: 1496
+# remainingBudget: 1504
+# currentBudget: 752
+# nbConfigurations: 97
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          8|         97|        280|     1018.000000|         97|00:03:31|   NA|  NA|    NA|
+|x|          7|         97|        313|     3948.000000|        190|00:02:25|-0.14|0.43|0.7844|
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 4.4.3.dd8d85f
+# Copyright (C) 2010-2025
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /home/fabio/R/x86_64-pc-linux-gnu-library/4.3/irace
+# called with: --scenario split/scenario_tight_medium.txt --recovery /home/fabio/Master_Thesis/irace_medium_tight/irace.Rdata
+Error: == irace == Unknown command-line options: --recovery /home/fabio/Master_Thesis/irace_medium_tight/irace.Rdata
+Execution halted
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 4.4.3.dd8d85f
+# Copyright (C) 2010-2025
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /home/fabio/R/x86_64-pc-linux-gnu-library/4.3/irace
+# called with: --scenario split/scenario_tight_medium.txt --recover /home/fabio/Master_Thesis/irace_medium_tight/irace.Rdata
+Error: == irace == Unknown command-line options: --recover /home/fabio/Master_Thesis/irace_medium_tight/irace.Rdata
+Execution halted
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 4.4.3.dd8d85f
+# Copyright (C) 2010-2025
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /home/fabio/R/x86_64-pc-linux-gnu-library/4.3/irace
+# called with: --scenario split/scenario_tight_medium.txt --recovery-file /home/fabio/Master_Thesis/irace_medium_tight/irace.Rdata
+# 2026-07-06 16:18:46 CEST: Reading parameter file '/home/fabio/Master_Thesis/split/parameters_tight_medium.txt'.
+Error: == irace == log file and recovery file should be different '/home/fabio/Master_Thesis/irace_medium_tight/irace.Rdata'
+Execution halted
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 4.4.3.dd8d85f
+# Copyright (C) 2010-2025
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /home/fabio/R/x86_64-pc-linux-gnu-library/4.3/irace
+# called with: --scenario split/scenario_tight_medium.txt --recovery-file /home/fabio/Master_Thesis/irace_medium_tight/checkpoint.Rdata
+# 2026-07-06 16:20:00 CEST: Reading parameter file '/home/fabio/Master_Thesis/split/parameters_tight_medium.txt'.
+# 2026-07-06 16:20:00 CEST: Recovering from file: '/home/fabio/Master_Thesis/irace_medium_tight/checkpoint.Rdata'
+# 2026-07-06 16:20:00 CEST: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 4
+# minNbSurvival: 4
+# nbParameters: 5
+# seed: 2072276680
+# confidence level: 0.95
+# budget: 3000
+# mu: 5
+# deterministic: FALSE
+
+# 2026-07-06 16:20:00 CEST: Iteration 1 of 4
+# experimentsUsed: 0
+# remainingBudget: 3000
+# currentBudget: 750
+# nbConfigurations: 125
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          1|        125|        120|     1667.000000|        125|00:00:00|   NA|  NA|    NA|
+|x|          2|        125|        122|     2350.500000|        250|00:00:00|+0.03|0.52|1.0110|
+|x|          3|        125|         42|     2699.666667|        375|00:00:00|+0.02|0.34|0.9611|
+|x|          4|        125|         46|     3129.000000|        500|00:00:00|+0.08|0.31|0.9214|
+|=|          5|        125|          8|     2535.000000|        625|00:00:00|+0.01|0.20|0.9849|
+|=|          6|        125|          8|     2830.666667|        750|00:00:00|+0.03|0.19|0.9167|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:           8    mean value:      2830.666667
+Description of the best-so-far configuration:
+  .ID. start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate .PARENT.
+8    8            0.4226           2e-04       0.9902                   0.2348    0.7156       NA
+
+# 2026-07-06 16:20:00 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate
+8              0.4226           2e-04       0.9902                   0.2348    0.7156
+18             0.1497           1e-04       0.9923                   0.1333    0.2469
+122            1.1587           1e-04       0.9994                   0.1313    0.6610
+64             1.7853           1e-04       0.9907                   0.2544    0.9500
+# 2026-07-06 16:20:00 CEST: Iteration 2 of 4
+# experimentsUsed: 750
+# remainingBudget: 2250
+# currentBudget: 750
+# nbConfigurations: 110
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          7|        110|        173|     6623.000000|        110|00:00:00|   NA|  NA|    NA|
+|x|          4|        110|        224|     4850.500000|        216|00:00:00|-0.01|0.50|0.9618|
+|x|          3|        110|        224|     4274.000000|        322|00:00:00|+0.00|0.34|0.8935|
+|x|          1|        110|        155|     4148.250000|        428|00:00:00|+0.03|0.27|0.9521|
+|=|          2|        110|        214|     3862.200000|        534|00:00:00|+0.01|0.21|0.9895|
+|=|          5|        110|        136|     3454.500000|        640|00:00:00|+0.00|0.17|0.9763|
+|=|          6|        110|        136|     3464.285714|        746|00:00:00|+0.03|0.17|0.9639|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:         136    mean value:      3464.285714
+Description of the best-so-far configuration:
+    .ID. start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate .PARENT.
+136  136            0.1097           1e-04        0.993                   0.1877      0.56       18
+
+# 2026-07-06 16:20:01 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate
+136            0.1097           1e-04       0.9930                   0.1877    0.5600
+214            0.2681           1e-04       0.9913                   0.1833    0.2358
+141            0.5007           1e-04       0.9920                   0.2531    0.8500
+189            0.9779           1e-04       0.9930                   0.2017    0.6729
+# 2026-07-06 16:20:01 CEST: Iteration 3 of 4
+# experimentsUsed: 1496
+# remainingBudget: 1504
+# currentBudget: 752
+# nbConfigurations: 97
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          8|         97|        280|     1018.000000|         97|00:00:00|   NA|  NA|    NA|
+# 2026-07-06 16:20:01 CEST: Recovery completed.
+|x|          7|         97|        313|     3948.000000|        190|00:00:00|-0.14|0.43|0.7844|
+|x|          1|         97|        313|     3301.000000|        283|00:06:57|+0.00|0.33|0.8616|
+|x|          3|         97|        313|     3294.000000|        376|00:09:49|+0.02|0.27|0.9214|
+|=|          6|         97|        256|     295852.2000|        469|00:05:17|+0.05|0.24|0.8850|
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 4.4.3.dd8d85f
+# Copyright (C) 2010-2025
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /home/fabio/R/x86_64-pc-linux-gnu-library/4.3/irace
+# called with: --scenario split/scenario_tight_medium.txt --recovery-file /home/fabio/Master_Thesis/irace_medium_tight/checkpoint.Rdata
+# 2026-07-07 11:07:00 CEST: Reading parameter file '/home/fabio/Master_Thesis/split/parameters_tight_medium.txt'.
+# 2026-07-07 11:07:00 CEST: Recovering from file: '/home/fabio/Master_Thesis/irace_medium_tight/checkpoint.Rdata'
+# 2026-07-07 11:07:02 CEST: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 4
+# minNbSurvival: 4
+# nbParameters: 5
+# seed: 2072276680
+# confidence level: 0.95
+# budget: 3000
+# mu: 5
+# deterministic: FALSE
+
+# 2026-07-07 11:07:02 CEST: Iteration 1 of 4
+# experimentsUsed: 0
+# remainingBudget: 3000
+# currentBudget: 750
+# nbConfigurations: 125
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          1|        125|        120|     1667.000000|        125|00:00:00|   NA|  NA|    NA|
+|x|          2|        125|        122|     2350.500000|        250|00:00:00|+0.03|0.52|1.0110|
+|x|          3|        125|         42|     2699.666667|        375|00:00:00|+0.02|0.34|0.9611|
+|x|          4|        125|         46|     3129.000000|        500|00:00:00|+0.08|0.31|0.9214|
+|=|          5|        125|          8|     2535.000000|        625|00:00:00|+0.01|0.20|0.9849|
+|=|          6|        125|          8|     2830.666667|        750|00:00:00|+0.03|0.19|0.9167|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:           8    mean value:      2830.666667
+Description of the best-so-far configuration:
+  .ID. start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate .PARENT.
+8    8            0.4226           2e-04       0.9902                   0.2348    0.7156       NA
+
+# 2026-07-07 11:07:02 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate
+8              0.4226           2e-04       0.9902                   0.2348    0.7156
+18             0.1497           1e-04       0.9923                   0.1333    0.2469
+122            1.1587           1e-04       0.9994                   0.1313    0.6610
+64             1.7853           1e-04       0.9907                   0.2544    0.9500
+# 2026-07-07 11:07:02 CEST: Iteration 2 of 4
+# experimentsUsed: 750
+# remainingBudget: 2250
+# currentBudget: 750
+# nbConfigurations: 110
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          7|        110|        173|     6623.000000|        110|00:00:00|   NA|  NA|    NA|
+|x|          4|        110|        224|     4850.500000|        216|00:00:00|-0.01|0.50|0.9618|
+|x|          3|        110|        224|     4274.000000|        322|00:00:00|+0.00|0.34|0.8935|
+|x|          1|        110|        155|     4148.250000|        428|00:00:00|+0.03|0.27|0.9521|
+|=|          2|        110|        214|     3862.200000|        534|00:00:00|+0.01|0.21|0.9895|
+|=|          5|        110|        136|     3454.500000|        640|00:00:00|+0.00|0.17|0.9763|
+|=|          6|        110|        136|     3464.285714|        746|00:00:00|+0.03|0.17|0.9639|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:         136    mean value:      3464.285714
+Description of the best-so-far configuration:
+    .ID. start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate .PARENT.
+136  136            0.1097           1e-04        0.993                   0.1877      0.56       18
+
+# 2026-07-07 11:07:03 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate
+136            0.1097           1e-04       0.9930                   0.1877    0.5600
+214            0.2681           1e-04       0.9913                   0.1833    0.2358
+141            0.5007           1e-04       0.9920                   0.2531    0.8500
+189            0.9779           1e-04       0.9930                   0.2017    0.6729
+# 2026-07-07 11:07:03 CEST: Iteration 3 of 4
+# experimentsUsed: 1496
+# remainingBudget: 1504
+# currentBudget: 752
+# nbConfigurations: 97
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          8|         97|        280|     1018.000000|         97|00:00:00|   NA|  NA|    NA|
+|x|          7|         97|        313|     3948.000000|        190|00:00:00|-0.14|0.43|0.7844|
+|x|          1|         97|        313|     3301.000000|        283|00:00:00|+0.00|0.33|0.8616|
+|x|          3|         97|        313|     3294.000000|        376|00:00:00|+0.02|0.27|0.9214|
+# 2026-07-07 11:07:03 CEST: Recovery completed.
+|=|          6|         97|        256|     295852.2000|        469|00:00:00|+0.05|0.24|0.8850|
+|-|          4|         71|        141|     247312.0000|        562|00:20:10|-0.07|0.11|0.9803|
+|=|          5|         71|        141|     211983.2857|        629|00:08:33|-0.02|0.12|0.9267|
+|=|          2|         71|        276|     368401.0000|        696|00:09:27|-0.03|0.10|0.9597|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:         276    mean value:      368401.0000
+Description of the best-so-far configuration:
+    .ID. start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate .PARENT.
+276  276            0.1509           1e-04       0.9923                   0.1498    0.5897      136
+
+# 2026-07-07 11:45:15 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    start_temp_factor min_temp_factor cooling_rate neighbors_accepted_ratio swap_rate
+276            0.1509           1e-04       0.9923                   0.1498    0.5897
+291            0.1124           1e-04       0.9928                   0.1826    0.5615
+284            0.1490           1e-04       0.9935                   0.1616    0.5377
+323            0.0663           1e-04       0.9931                   0.2052    0.5473
+# 2026-07-07 11:45:15 CEST: Iteration 4 of 4
+# experimentsUsed: 2192
+# remainingBudget: 808
+# currentBudget: 808
+# nbConfigurations: 93
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          9|         93|        393|     25648054.00|         93|00:10:15|   NA|  NA|    NA|
+|x|          7|         93|        401|     52358382.00|        182|00:03:29|-0.02|0.49|0.9824|
+|x|          1|         93|        328|     62684761.00|        271|00:09:14|-0.04|0.30|1.0296|
+|x|          8|         93|        386|     37229473.75|        360|00:06:12|-0.02|0.23|1.0287|
+|=|          5|         93|        386|     29783581.20|        449|00:11:22|+0.00|0.20|1.0103|
+Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 394 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1042 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9923 --BSA::neighbors_accepted_ratio 0.1875 --main::swap_rate 0.5024
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 395 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1187 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9934 --BSA::neighbors_accepted_ratio 0.1793 --main::swap_rate 0.5236
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 396 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1652 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9923 --BSA::neighbors_accepted_ratio 0.1434 --main::swap_rate 0.6256
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 397 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1769 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9936 --BSA::neighbors_accepted_ratio 0.1615 --main::swap_rate 0.5023
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 398 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1485 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9917 --BSA::neighbors_accepted_ratio 0.1506 --main::swap_rate 0.6115
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 399 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1823 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9932 --BSA::neighbors_accepted_ratio 0.1622 --main::swap_rate 0.5057
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 400 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1708 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9921 --BSA::neighbors_accepted_ratio 0.1537 --main::swap_rate 0.5818
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 401 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1997 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9924 --BSA::neighbors_accepted_ratio 0.1577 --main::swap_rate 0.5688
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 402 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1468 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9921 --BSA::neighbors_accepted_ratio 0.1894 --main::swap_rate 0.5706
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 403 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1874 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9935 --BSA::neighbors_accepted_ratio 0.1747 --main::swap_rate 0.5549
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 404 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1391 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9934 --BSA::neighbors_accepted_ratio 0.1815 --main::swap_rate 0.5618
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 405 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.185 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9926 --BSA::neighbors_accepted_ratio 0.1552 --main::swap_rate 0.6513
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 406 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.0756 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9928 --BSA::neighbors_accepted_ratio 0.196 --main::swap_rate 0.5064
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 407 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1403 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9936 --BSA::neighbors_accepted_ratio 0.1649 --main::swap_rate 0.5476
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 408 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1611 --min_temp_factor 0.0001 --BSA::cooling_rate 0.994 --BSA::neighbors_accepted_ratio 0.1692 --main::swap_rate 0.5295
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 409 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1703 --min_temp_factor 0.0001 --BSA::cooling_rate 0.992 --BSA::neighbors_accepted_ratio 0.1561 --main::swap_rate 0.542
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 410 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1276 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9925 --BSA::neighbors_accepted_ratio 0.1804 --main::swap_rate 0.5712
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 411 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1517 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9939 --BSA::neighbors_accepted_ratio 0.1722 --main::swap_rate 0.5952
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 412 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.1394 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9922 --BSA::neighbors_accepted_ratio 0.1687 --main::swap_rate 0.5356
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+ Error : == irace == error in running command
+== irace == The call to targetRunner was:
+/home/fabio/Master_Thesis/target_runner 413 24 1945316420 /home/fabio/Master_Thesis/Instances/medium/tuning_set/instance_test_35.json  --start_temp_factor 0.0655 --min_temp_factor 0.0001 --BSA::cooling_rate 0.9934 --BSA::neighbors_accepted_ratio 0.2137 --main::swap_rate 0.5378
+== irace == The output was:
+
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/home/fabio/Master_Thesis/irace_medium_tight' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+Error: == irace == A child process triggered a fatal error
+In addition: Warning message:
+In parallel::mclapply(experiments, exec_target_runner, mc.preschedule = !scenario$loadBalancing,  :
+  20 function calls resulted in an error
+Execution halted

@@ -18,7 +18,7 @@ INSTANCE_DIR="$HOME/Master_Thesis/Instances/large"
 
 BINARY="$HOME/Master_Thesis/bt_main"   # eseguibile compilato
 N_INSTANCES=10                          # quante istanze (le prime, ordine naturale)
-N_REPS=10                               # run per istanza (seed = 1..N_REPS)
+N_REPS=5                               # run per istanza (seed = 1..N_REPS)
 # ==========================================================
 
 # ---- Parametri SA della config 1074 (NON modificare per la validazione) ----
@@ -30,10 +30,10 @@ SWAP_RATE=0.5
 METHOD=BSA
 
 # ---- Output ----
-OUTDIR="$HOME/Master_Thesis/validation_1074/small"
-RAW_CSV="$OUTDIR/runs_small.csv"          # una riga per ogni run
-SUMMARY_CSV="$OUTDIR/summary_small.csv"       # una riga per istanza (media, std, ...)
-SOL_DIR="$OUTDIR/solutions_small"             # soluzioni salvate (per il validatore)
+OUTDIR="$HOME/Master_Thesis/validation_1074/medium"
+RAW_CSV="$OUTDIR/runs_medium.csv"          # una riga per ogni run
+SUMMARY_CSV="$OUTDIR/summary_medium.csv"       # una riga per istanza (media, std, ...)
+SOL_DIR="$OUTDIR/solutions_medium"             # soluzioni salvate (per il validatore)
 
 # -----------------------------------------------------------------------------
 set -o pipefail
