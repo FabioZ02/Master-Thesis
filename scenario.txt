@@ -1,7 +1,8 @@
 targetRunner = "./target_runner.sh"
 
-trainInstancesDir = "./Instances/medium/tuning_set"
+trainInstancesDir = "./Instances/small/tuning_set"
 
 
-maxExperiments = 3000
+maxExperiments = 10000
 
+parallel = 6

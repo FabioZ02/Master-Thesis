@@ -1,0 +1,6 @@
+istanza,min,mean,median,std,feasible_runs,total_runs
+instance_test_1,79,84.6,87.0,3.5,5,5
+instance_test_2,267,275.0,278.0,5.7,3,5
+instance_test_3,1747,1753.2,1751.0,5.7,5,5
+instance_test_4,207,220.6,215.0,15.1,5,5
+instance_test_5,150,153.0,153.0,1.9,5,5
