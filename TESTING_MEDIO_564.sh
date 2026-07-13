@@ -1,28 +1,29 @@
 #!/bin/bash
 
-INSTDIR="$HOME/Master_Thesis/Instances/small/tuning_set"
-N_INSTANCES=25            
-SEEDS=10                 
-MAX_EVAL=1000000         
+INSTDIR="$HOME/Master_Thesis/Instances/medium/tuning_set"
+N_INSTANCES=100            
+SEEDS=5                   
+MAX_EVAL=1000000          
 VALIDATOR="$HOME/Master_Thesis/btsp-validator-binary/btsp-validator.dll"
 BIN="$HOME/Master_Thesis/bt_main"
-OUTCSV="$HOME/Master_Thesis/bench223_small.csv"
+OUTCSV="$HOME/Master_Thesis/bench564_medium.csv"
 
 # --- config 223 ---
-START_TEMP=11.2173
-MIN_TEMP=0.0078
-COOLING=0.9917
-NAR=0.2766
-SWAP=0.6463
+START_TEMP=20.9389
+MIN_TEMP=0.0086
+COOLING=0.988
+NAR=0.1666
+SWAP=0.6635
 # ===========================================================================
 
+# seleziona le prime N istanze in ordine naturale
 mapfile -t ALL < <(ls "$INSTDIR"/*.json | sort -V)
 INSTANCES=("${ALL[@]:0:$N_INSTANCES}")
 
-echo "istanza,min,mean,median,std,total_runs" > "$OUTCSV"
+echo "istanza,min,mean,median,std,feasible_runs,total_runs" > "$OUTCSV"
 
-printf "%-18s %8s %10s %10s %9s %s\n" "istanza" "min" "mean" "median" "std" "total_runs"
-printf "%-18s %8s %10s %10s %9s %s\n" "-------" "---" "----" "------" "---" "----------"
+printf "%-18s %8s %10s %10s %9s %s\n" "istanza" "min" "mean" "median" "std" "feas/tot"
+printf "%-18s %8s %10s %10s %9s %s\n" "-------" "---" "----" "------" "---" "--------"
 
 for INST in "${INSTANCES[@]}"; do
     NAME=$(basename "$INST" .json)
@@ -58,6 +59,7 @@ for INST in "${INSTANCES[@]}"; do
         fi
     done
 
+    # statistiche sui costi feasible
     if [ "${#COSTS[@]}" -gt 0 ]; then
         STATS=$(printf "%s\n" "${COSTS[@]}" | sort -n | awk '
             { a[NR]=$1; sum+=$1 }
@@ -79,8 +81,8 @@ for INST in "${INSTANCES[@]}"; do
         MIN="-"; MEAN="-"; MED="-"; STD="-"
     fi
 
-    printf "%-18s %8s %10s %10s %9s %d\n" "$NAME" "$MIN" "$MEAN" "$MED" "$STD" "$SEEDS"
-    echo "$NAME,$MIN,$MEAN,$MED,$STD,$SEEDS" >> "$OUTCSV"
+    printf "%-18s %8s %10s %10s %9s %d/%d\n" "$NAME" "$MIN" "$MEAN" "$MED" "$STD" "$FEAS" "$SEEDS"
+    echo "$NAME,$MIN,$MEAN,$MED,$STD,$FEAS,$SEEDS" >> "$OUTCSV"
 done
 
 echo ""

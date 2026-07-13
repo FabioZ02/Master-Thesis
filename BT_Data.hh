@@ -63,7 +63,6 @@ public:
     unsigned MaxRunTimeMS()          const { return max_run_time_ms; }
 
     // Helpers for the solver
-    // BigM and upper bound on |P|
     long long ComputeBigM()                                      const { return bigM;                                         }
     unsigned  UpperBoundPeriods()                                const { return upper_bound_periods;                          }
     const std::vector<std::vector<bool>>& CompatibilityMatrix()  const { return compatibility_matrix;                         }

@@ -1,6 +1,0 @@
-# name                     switch                                type    range
-start_temp_factor          "--start_temp_factor "                r,log   (0.05, 2.0)
-min_temp_factor            "--min_temp_factor "                  r,log   (1e-4, 1e-2)
-cooling_rate               "--BSA::cooling_rate "                r       (0.990, 0.9995)
-neighbors_accepted_ratio   "--BSA::neighbors_accepted_ratio "    r       (0.05, 0.3)
-swap_rate                  "--main::swap_rate "                  r       (0.0, 1.0)

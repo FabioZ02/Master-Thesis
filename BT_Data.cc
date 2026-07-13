@@ -200,7 +200,7 @@ void BT_Output::Dump(std::ostream& os) const
     os << "\n";
 }
 
-// In BT_Data.cc (aggiungi questa funzione)
+
 void BT_Output::WriteValidatorJSON(std::ostream& os) const
 {
     nlohmann::json j;

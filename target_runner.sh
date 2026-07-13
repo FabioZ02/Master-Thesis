@@ -21,7 +21,6 @@ done
 
 MIN_SAFE=$(python3 -c "s=$START_ABS; m=$MIN_ABS; print(m if m < s else s*0.001)")
 
-# --- esegui il solver, cattura l'output e restituisci a irace SOLO il numero ---
 OUT=$(/home/fabio/Master_Thesis/bt_main --main::instance "$INSTANCE" \
                 --main::method BSA \
                 --main::seed "$SEED" \

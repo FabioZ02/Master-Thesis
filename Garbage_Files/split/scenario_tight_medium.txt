@@ -1,9 +1,0 @@
-## irace scenario -- gruppo TESE (Smin/Smax >= 0.60)
-parameterFile      = "/home/fabio/Master_Thesis/split/parameters_tight_medium.txt"
-trainInstancesDir  = ""
-trainInstancesFile = "/home/fabio/Master_Thesis/split/instances_medium_tight.txt"
-targetRunner       = "/home/fabio/Master_Thesis/target_runner"
-maxExperiments     = 3000
-parallel = 2
-execDir            = "/home/fabio/Master_Thesis/irace_medium_tight"
-logFile            = "/home/fabio/Master_Thesis/irace_medium_tight/irace.Rdata"

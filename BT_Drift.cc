@@ -1,15 +1,5 @@
-// bt_drift.cc — diagnostica drift delta-cost vs ComputeCost
-//
-// Esercita SOLO il vicinato shift con mosse random feasible (accept-all),
-// accumulando il delta-cost esattamente come fa SA, e ogni N mosse confronta
-// l'accumulatore con un ricalcolo full di CostFunctionComponents.
-//
-// Con un delta corretto, drift == 0 IDENTICAMENTE per sempre, a prescindere
-// da quanto peggiora la soluzione. Qualsiasi drift != 0 e' un bug del delta;
-// se compare in sincrono con la colonna rmperiods e' RemovePeriod.
-//
-// Uso: ./bt_drift <instance.json> [num_moves=200000] [check_every=1000] [seed=1]
 
+/*
 #include "BT_Helpers.hh"
 #include <iostream>
 #include <iomanip>
@@ -120,3 +110,4 @@ int main(int argc, const char* argv[])
          << "  drift_total finale=" << (acc_total - (long long)f.total) << "\n";
     return 0;
 }
+    */

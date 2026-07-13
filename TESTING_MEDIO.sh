@@ -1,14 +1,9 @@
 #!/bin/bash
-################################################################################
-# Benchmark config 223 (medium abs) su 25 istanze medie.
-# min / media / mediana / std sui costi FEASIBLE.
-################################################################################
 
-# ============================ DA IMPOSTARE ==================================
 INSTDIR="$HOME/Master_Thesis/Instances/medium/tuning_set"
-N_INSTANCES=25            # prime N istanze (ordine naturale sort -V)
-SEEDS=5                   # run per istanza
-MAX_EVAL=1000000          # 1M valutazioni
+N_INSTANCES=25            
+SEEDS=10                  
+MAX_EVAL=1000000         
 VALIDATOR="$HOME/Master_Thesis/btsp-validator-binary/btsp-validator.dll"
 BIN="$HOME/Master_Thesis/bt_main"
 OUTCSV="$HOME/Master_Thesis/bench223_medium.csv"
@@ -21,14 +16,15 @@ NAR=0.2766
 SWAP=0.6463
 # ===========================================================================
 
-# seleziona le prime N istanze in ordine naturale
 mapfile -t ALL < <(ls "$INSTDIR"/*.json | sort -V)
 INSTANCES=("${ALL[@]:0:$N_INSTANCES}")
 
-echo "istanza,min,mean,median,std,feasible_runs,total_runs" > "$OUTCSV"
+# Rimosso feasible_runs dal CSV
+echo "istanza,min,mean,median,std,total_runs" > "$OUTCSV"
 
-printf "%-18s %8s %10s %10s %9s %s\n" "istanza" "min" "mean" "median" "std" "feas/tot"
-printf "%-18s %8s %10s %10s %9s %s\n" "-------" "---" "----" "------" "---" "--------"
+# Rimosso feas/tot dall'intestazione del terminale
+printf "%-18s %8s %10s %10s %9s %s\n" "istanza" "min" "mean" "median" "std" "total_runs"
+printf "%-18s %8s %10s %10s %9s %s\n" "-------" "---" "----" "------" "---" "----------"
 
 for INST in "${INSTANCES[@]}"; do
     NAME=$(basename "$INST" .json)
@@ -64,7 +60,6 @@ for INST in "${INSTANCES[@]}"; do
         fi
     done
 
-    # statistiche sui costi feasible
     if [ "${#COSTS[@]}" -gt 0 ]; then
         STATS=$(printf "%s\n" "${COSTS[@]}" | sort -n | awk '
             { a[NR]=$1; sum+=$1 }
@@ -86,8 +81,8 @@ for INST in "${INSTANCES[@]}"; do
         MIN="-"; MEAN="-"; MED="-"; STD="-"
     fi
 
-    printf "%-18s %8s %10s %10s %9s %d/%d\n" "$NAME" "$MIN" "$MEAN" "$MED" "$STD" "$FEAS" "$SEEDS"
-    echo "$NAME,$MIN,$MEAN,$MED,$STD,$FEAS,$SEEDS" >> "$OUTCSV"
+    printf "%-18s %8s %10s %10s %9s %d\n" "$NAME" "$MIN" "$MEAN" "$MED" "$STD" "$SEEDS"
+    echo "$NAME,$MIN,$MEAN,$MED,$STD,$SEEDS" >> "$OUTCSV"
 done
 
 echo ""

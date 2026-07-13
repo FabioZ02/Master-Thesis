@@ -324,8 +324,6 @@ void BT_ShiftNeighborhoodExplorer::RandomMove(const BT_Output& st, BT_Shift& mv)
     mv.old_period = st.AssignedPeriod(mv.task);
     mv.old_machine = st.AssignedResource(mv.task);
 
-    // Nagler's shift adds at most ONE new period: clamp new_period to [0, LastPeriod+1]
-    // (and never beyond the theoretical upper bound). This avoids creating gaps.
     unsigned max_period = st.LastPeriod() + 1;
     if (max_period > in.UpperBoundPeriods() - 1)
         max_period = in.UpperBoundPeriods() - 1;
@@ -426,7 +424,6 @@ bool BT_ShiftNeighborhoodExplorer::AnyNextMove(const BT_Output& st, BT_Shift& mv
 
 long long BT_ShiftDeltaLoadDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const 
 {
-    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
     BT_Output after = st;
     unsigned old_period = mv.old_period;
     after.Assign(mv.task, mv.new_machine, mv.new_period);
@@ -440,7 +437,6 @@ long long BT_ShiftDeltaLoadDeviation::ComputeDeltaCost(const BT_Output& st, cons
 
 long long BT_ShiftDeltaTargetDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
 {
-    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
     BT_Output after = st;
     unsigned old_period = mv.old_period;
     after.Assign(mv.task, mv.new_machine, mv.new_period);
@@ -455,7 +451,6 @@ long long BT_ShiftDeltaTargetDeviation::ComputeDeltaCost(const BT_Output& st, co
 
 long long BT_ShiftDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
 {
-    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
     BT_Output after = st;
     unsigned old_period = mv.old_period;
     after.Assign(mv.task, mv.new_machine, mv.new_period);
@@ -469,7 +464,6 @@ long long BT_ShiftDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, 
 
 long long BT_ShiftDeltaMinLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
 {
-    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
     BT_Output after = st;
     unsigned old_period = mv.old_period;
     after.Assign(mv.task, mv.new_machine, mv.new_period);
@@ -483,7 +477,6 @@ long long BT_ShiftDeltaMinLoadPenalty::ComputeDeltaCost(const BT_Output& st, con
 
 long long BT_ShiftDeltaMaxLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Shift& mv) const
 {
-    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
     BT_Output after = st;
     unsigned old_period = mv.old_period;
     after.Assign(mv.task, mv.new_machine, mv.new_period);
@@ -551,11 +544,7 @@ std::ostream& operator<<(std::ostream& os, const BT_Swap& mv)
 
 void BT_SwapNeighborhoodExplorer::RandomMove(const BT_Output& st, BT_Swap& mv) const
 {
-    // NOTE: EasyLocal's SA applies RandomMove via MakeMove WITHOUT calling
-    // FeasibleMove, so compatibility MUST be enforced here. A swap exchanges the
-    // machines of task1 and task2, hence it must keep BOTH assignments compatible:
-    //   - task1 compatible with task2's machine
-    //   - task2 compatible with task1's machine
+
     const unsigned n = in.OrdersCount();
 
     // Try several random task1 until one has at least one compatible swap partner.
@@ -586,9 +575,6 @@ void BT_SwapNeighborhoodExplorer::RandomMove(const BT_Output& st, BT_Swap& mv) c
             return;
         }
     }
-
-    // Degenerate fallback: no compatible swap exists anywhere -> emit a no-op
-    // (task2 == task1 makes MakeMove idempotent; SA simply sees delta 0).
     mv.task2        = mv.task1;
     mv.old_period2  = mv.old_period1;
     mv.old_machine2 = mv.old_machine1;
@@ -683,7 +669,6 @@ bool BT_SwapNeighborhoodExplorer::AnyNextMove(const BT_Output& st, BT_Swap& mv) 
 
 long long BT_SwapDeltaLoadDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
 {
-    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
     BT_Output after = st;
     after.Assign(mv.task1, mv.old_machine2, mv.old_period2);
     after.Assign(mv.task2, mv.old_machine1, mv.old_period1);
@@ -692,7 +677,6 @@ long long BT_SwapDeltaLoadDeviation::ComputeDeltaCost(const BT_Output& st, const
 
 long long BT_SwapDeltaTargetDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
 {
-    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
     BT_Output after = st;
     after.Assign(mv.task1, mv.old_machine2, mv.old_period2);
     after.Assign(mv.task2, mv.old_machine1, mv.old_period1);
@@ -701,7 +685,6 @@ long long BT_SwapDeltaTargetDeviation::ComputeDeltaCost(const BT_Output& st, con
 
 long long BT_SwapDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
 {
-    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
     BT_Output after = st;
     after.Assign(mv.task1, mv.old_machine2, mv.old_period2);
     after.Assign(mv.task2, mv.old_machine1, mv.old_period1);
@@ -710,7 +693,6 @@ long long BT_SwapDeltaPriorityDeviation::ComputeDeltaCost(const BT_Output& st, c
 
 long long BT_SwapDeltaMinLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
 {
-    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
     BT_Output after = st;
     after.Assign(mv.task1, mv.old_machine2, mv.old_period2);
     after.Assign(mv.task2, mv.old_machine1, mv.old_period1);
@@ -719,7 +701,6 @@ long long BT_SwapDeltaMinLoadPenalty::ComputeDeltaCost(const BT_Output& st, cons
 
 long long BT_SwapDeltaMaxLoadPenalty::ComputeDeltaCost(const BT_Output& st, const BT_Swap& mv) const
 {
-    // EXACT delta (drift-free): replica MakeMove su una copia e differenzia il costo pieno.
     BT_Output after = st;
     after.Assign(mv.task1, mv.old_machine2, mv.old_period2);
     after.Assign(mv.task2, mv.old_machine1, mv.old_period1);

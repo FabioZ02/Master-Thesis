@@ -1,5 +1,0 @@
-targetRunner      = "./target_runner_with_reheating.bsh"
-parameterFile     = "./parameters_with_reheating.txt"
-trainInstancesDir = "./Instances/medium/tuning_set"
-maxExperiments    = 10000
-testType          = "F-test"

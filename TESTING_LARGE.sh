@@ -1,10 +1,5 @@
 #!/bin/bash
-################################################################################
-# Benchmark config 223 su prime N istanze LARGE. 5 seed, 1M eval.
-# Scrive CSV riga per riga (ripartibile cambiando START_IDX).
-################################################################################
 
-# ============================ DA IMPOSTARE ==================================
 INSTDIR="$HOME/Master_Thesis/Instances/large"
 START_IDX=21
 END_IDX=100              

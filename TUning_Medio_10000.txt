@@ -1,0 +1,258 @@
+make && irace
+g++ -c -I/home/fabio/easylocal-3/include -Wall -Wfatal-errors -Wno-sign-compare -Wno-deprecated-declarations -O3 BT_Data.cc
+g++ -c -I/home/fabio/easylocal-3/include -Wall -Wfatal-errors -Wno-sign-compare -Wno-deprecated-declarations -O3 BT_Helpers.cc
+g++ -c -I/home/fabio/easylocal-3/include -Wall -Wfatal-errors -Wno-sign-compare -Wno-deprecated-declarations -O3 BT_Main.cc
+g++ BT_Data.o BT_Helpers.o BT_Main.o -lboost_program_options -pthread -o bt_main
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 4.4.3.dd8d85f
+# Copyright (C) 2010-2025
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /home/fabio/R/x86_64-pc-linux-gnu-library/4.3/irace
+# called with: 
+Warning: == irace == A default scenario file '/home/fabio/Master_Thesis/scenario.txt' has been found and will be read.
+# 2026-07-11 12:11:31 CEST: Reading parameter file '/home/fabio/Master_Thesis/parameters.txt'.
+# 2026-07-11 12:11:31 CEST: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 4
+# minNbSurvival: 4
+# nbParameters: 5
+# seed: 1025866609
+# confidence level: 0.95
+# budget: 10000
+# mu: 5
+# deterministic: FALSE
+
+# 2026-07-11 12:11:31 CEST: Iteration 1 of 4
+# experimentsUsed: 0
+# remainingBudget: 10000
+# currentBudget: 2500
+# nbConfigurations: 416
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          1|        416|         13|     3815.000000|        416|03:11:08|   NA|  NA|    NA|
+|x|          2|        416|        305|     4124.500000|        832|01:02:14|-0.08|0.46|0.9513|
+|x|          3|        416|        202|     3823.333333|       1248|00:34:34|+0.02|0.35|0.9278|
+|x|          4|        416|        331|     3632.750000|       1664|00:27:30|+0.04|0.28|0.9760|
+|-|          5|        135|        202|     3415.800000|       2080|01:10:21|-0.14|0.09|0.9879|
+|=|          6|        135|        202|     3513.000000|       2215|00:22:04|-0.08|0.10|0.9850|
+|=|          7|        135|        202|     3597.000000|       2350|00:06:06|-0.05|0.10|0.9682|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:         202    mean value:      3597.000000
+Description of the best-so-far configuration:
+    .ID. start_temperature min_temperature cooling_rate neighbors_accepted_ratio swap_rate .PARENT.
+202  202           24.1441          0.0098        0.988                   0.1626    0.6999       NA
+
+# 2026-07-11 19:05:32 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    start_temperature min_temperature cooling_rate neighbors_accepted_ratio swap_rate
+202           24.1441          0.0098       0.9880                   0.1626    0.6999
+7             23.2120          0.0050       0.9913                   0.1243    0.6858
+331           23.0877          0.0074       0.9880                   0.1794    0.6350
+166           22.3158          0.0366       0.9856                   0.2673    0.6655
+# 2026-07-11 19:05:32 CEST: Iteration 2 of 4
+# experimentsUsed: 2350
+# remainingBudget: 7650
+# currentBudget: 2550
+# nbConfigurations: 322
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          8|        322|        726|     131.0000000|        322|01:11:26|   NA|  NA|    NA|
+|x|          4|        322|        503|     1444.000000|        640|00:20:17|-0.06|0.47|1.0128|
+|x|          6|        322|        503|     2309.666667|        958|00:51:04|+0.02|0.34|0.9625|
+|x|          7|        322|        597|     2745.000000|       1276|00:14:16|+0.02|0.26|0.9589|
+|=|          3|        322|          7|     2320.600000|       1594|00:18:29|+0.01|0.21|0.9773|
+|=|          2|        322|          7|     2678.666667|       1912|00:43:14|+0.02|0.18|0.9767|
+|=|          1|        322|          7|     2882.142857|       2230|01:59:58|+0.00|0.15|0.9877|
+|=|          5|        322|          7|     2878.750000|       2548|00:54:05|+0.00|0.13|0.9894|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:           7    mean value:      2878.750000
+Description of the best-so-far configuration:
+  .ID. start_temperature min_temperature cooling_rate neighbors_accepted_ratio swap_rate .PARENT.
+7    7            23.212           0.005       0.9913                   0.1243    0.6858       NA
+
+# 2026-07-12 01:38:26 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    start_temperature min_temperature cooling_rate neighbors_accepted_ratio swap_rate
+7             23.2120          0.0050       0.9913                   0.1243    0.6858
+677           24.7951          0.0089       0.9882                   0.1595    0.6841
+421           24.5888          0.0073       0.9871                   0.1496    0.6448
+564           20.9389          0.0086       0.9880                   0.1666    0.6635
+# 2026-07-12 01:38:26 CEST: Iteration 3 of 4
+# experimentsUsed: 4898
+# remainingBudget: 5102
+# currentBudget: 2551
+# nbConfigurations: 287
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          9|        287|        946|     4193.000000|        287|00:23:46|   NA|  NA|    NA|
+|x|          4|        287|        918|     3484.500000|        570|00:18:56|-0.10|0.45|1.0614|
+|x|          5|        287|        750|     3270.666667|        853|00:48:41|-0.04|0.31|1.0152|
+|x|          1|        287|        918|     3481.000000|       1136|01:47:00|-0.03|0.23|1.0013|
+|=|          8|        287|        787|     2819.200000|       1419|01:04:06|-0.03|0.18|1.0075|
+|=|          3|        287|        564|     2453.166667|       1702|00:16:36|-0.01|0.16|0.9911|
+|=|          7|        287|        564|     2683.000000|       1985|00:12:26|-0.00|0.14|0.9902|
+|=|          6|        287|        564|     2855.750000|       2268|00:46:31|+0.01|0.13|0.9835|
+|=|          2|        287|          7|     3031.000000|       2551|00:38:16|+0.01|0.12|0.9893|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:           7    mean value:      3031.000000
+Description of the best-so-far configuration:
+  .ID. start_temperature min_temperature cooling_rate neighbors_accepted_ratio swap_rate .PARENT.
+7    7            23.212           0.005       0.9913                   0.1243    0.6858       NA
+
+# 2026-07-12 07:54:50 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    start_temperature min_temperature cooling_rate neighbors_accepted_ratio swap_rate
+7             23.2120          0.0050       0.9913                   0.1243    0.6858
+952           24.8375          0.0066       0.9868                   0.1558    0.6513
+564           20.9389          0.0086       0.9880                   0.1666    0.6635
+677           24.7951          0.0089       0.9882                   0.1595    0.6841
+# 2026-07-12 07:54:50 CEST: Iteration 4 of 4
+# experimentsUsed: 7449
+# remainingBudget: 2551
+# currentBudget: 2551
+# nbConfigurations: 258
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|         10|        258|       1097|     1332.000000|        258|00:17:54|   NA|  NA|    NA|
+|x|          2|        258|       1125|     2860.500000|        512|00:34:18|-0.11|0.44|1.0943|
+|x|          1|        258|       1147|     3289.666667|        766|01:36:25|-0.05|0.30|1.0330|
+|x|          4|        258|       1043|     3810.500000|       1020|00:16:35|-0.05|0.21|1.0422|
+|=|          7|        258|       1091|     3865.400000|       1274|00:11:13|-0.03|0.17|1.0112|
+|=|          6|        258|       1091|     3896.333333|       1528|00:42:37|-0.03|0.14|1.0160|
+|=|          8|        258|       1097|     3363.285714|       1782|00:57:51|-0.00|0.14|1.0069|
+|=|          3|        258|       1092|     3014.000000|       2036|00:15:01|-0.01|0.11|0.9999|
+|=|          5|        258|       1092|     2995.666667|       2290|00:44:32|-0.00|0.11|0.9935|
+|=|          9|        258|       1092|     3119.200000|       2544|00:21:03|+0.00|0.10|0.9853|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:        1092    mean value:      3119.200000
+Description of the best-so-far configuration:
+     .ID. start_temperature min_temperature cooling_rate neighbors_accepted_ratio swap_rate .PARENT.
+1092 1092           23.7686          0.0051       0.9912                   0.1282    0.6908        7
+
+# 2026-07-12 13:52:24 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+     start_temperature min_temperature cooling_rate neighbors_accepted_ratio swap_rate
+1092           23.7686          0.0051       0.9912                   0.1282    0.6908
+564            20.9389          0.0086       0.9880                   0.1666    0.6635
+1030           21.1789          0.0082       0.9879                   0.1659    0.6433
+7              23.2120          0.0050       0.9913                   0.1243    0.6858
+# 2026-07-12 13:52:24 CEST: Stopped because there is not enough budget left to race more than the minimum (4).
+# You may either increase the budget or set 'minNbSurvival' to a lower value.
+# Iteration: 5
+# nbIterations: 5
+# experimentsUsed: 9993
+# timeUsed: 0
+# remainingBudget: 7
+# currentBudget: 7
+# number of elites: 4
+# nbConfigurations: 4
+# Total CPU user time: 549825.5, CPU sys time: 634.421, Wall-clock time: 92453.04
+# 2026-07-12 13:52:24 CEST: Starting post-selection:
+# Configurations selected: 1092, 564, 1030, 7, 952, 677, 1018.
+# Pending instances: 0, 0, 0, 0, 0, 0, 0.
+# 2026-07-12 13:52:24 CEST: seed: 1025866609
+# Configurations: 7
+# Available experiments: 7
+# minSurvival: 1
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . Alive configurations were already evaluated on this instance and nothing is discarded.
+     : All alive configurations are elite, but some need to be evaluated on this instance.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|.|          3|          7|        677|     557.0000000|          0|00:00:00|   NA|  NA|    NA|
+|.|          7|          7|        677|     2312.500000|          0|00:00:00|-0.36|0.32|1.1581|
+|.|          6|          7|        677|     2888.666667|          0|00:00:00|-0.16|0.23|1.0065|
+|.|          8|          7|        677|     2204.750000|          0|00:00:00|-0.08|0.19|0.9397|
+|.|          2|          7|        677|     3174.600000|          0|00:00:00|-0.09|0.13|0.8671|
+|.|          9|          7|        677|     3355.833333|          0|00:00:00|-0.06|0.12|0.8139|
+|.|         10|          7|        677|     3069.571429|          0|00:00:00|-0.04|0.10|0.8001|
+|.|          1|          7|        677|     3198.750000|          0|00:00:00|-0.02|0.10|0.7921|
+|.|          4|          7|        677|     3149.888889|          0|00:00:00|+0.01|0.12|0.7750|
+|.|          5|          7|        677|     3119.400000|          0|00:00:00|+0.02|0.12|0.7661|
+|=|         11|          7|        564|     3096.363636|          7|00:00:42|-0.01|0.08|0.8038|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:         564    mean value:      3096.363636
+Description of the best-so-far configuration:
+    .ID. start_temperature min_temperature cooling_rate neighbors_accepted_ratio swap_rate .PARENT.
+564  564           20.9389          0.0086        0.988                   0.1666    0.6635      202
+
+# 2026-07-12 13:53:07 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+     start_temperature min_temperature cooling_rate neighbors_accepted_ratio swap_rate
+564            20.9389          0.0086       0.9880                   0.1666    0.6635
+1092           23.7686          0.0051       0.9912                   0.1282    0.6908
+7              23.2120          0.0050       0.9913                   0.1243    0.6858
+1030           21.1789          0.0082       0.9879                   0.1659    0.6433
+# Total CPU user time: 549991.4, CPU sys time: 634.879, Wall-clock time: 92495.54
+# Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+     start_temperature min_temperature cooling_rate neighbors_accepted_ratio swap_rate
+564            20.9389          0.0086       0.9880                   0.1666    0.6635
+1092           23.7686          0.0051       0.9912                   0.1282    0.6908
+7              23.2120          0.0050       0.9913                   0.1243    0.6858
+1030           21.1789          0.0082       0.9879                   0.1659    0.6433
+# Best configurations as commandlines (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+564  --BSA::start_temperature 20.9389 --BSA::min_temperature 0.0086 --BSA::cooling_rate 0.988 --BSA::neighbors_accepted_ratio 0.1666 --main::swap_rate 0.6635
+1092 --BSA::start_temperature 23.7686 --BSA::min_temperature 0.0051 --BSA::cooling_rate 0.9912 --BSA::neighbors_accepted_ratio 0.1282 --main::swap_rate 0.6908
+7    --BSA::start_temperature 23.212 --BSA::min_temperature 0.005 --BSA::cooling_rate 0.9913 --BSA::neighbors_accepted_ratio 0.1243 --main::swap_rate 0.6858
+1030 --BSA::start_temperature 21.1789 --BSA::min_temperature 0.0082 --BSA::cooling_rate 0.9879 --BSA::neighbors_accepted_ratio 0.1659 --main::swap_rate 0.6433
+
+
+# Testing of elite configurations: 1 
+# Testing iteration configurations: FALSE 
+# 2026-07-12 13:53:07 CEST: No test instances, skip testing
